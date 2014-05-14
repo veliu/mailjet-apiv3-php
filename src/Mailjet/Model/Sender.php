@@ -40,33 +40,30 @@ use Mailjet\Type\TSenderStatus;
 /**
  * Sender Model
  *
- * API Key sender email address
+ * Manage details related to Sender e-mail adresses. An e-mail address has to be
+ * registered and Confirmed before being used to send e-mails. See the related
+ * MetaSender object if you wish to register a complete Domain.
  */
 class Sender implements ModelInterface
 {
 
     /**
-     * Key used when confirming validity of this sender.
+     * Timestamp when object was created in database.
      */
-    protected $ConfirmKey = null;
-
-    /**
-     * Timestamp when object was created in database
-     */
-    protected $CreatedAt = null;
+    protected $CreatedAt = 'Current time';
 
     /**
      * DNS domain to which sender belongs.
      */
-    protected $DNSID = null;
+    protected $DNSID = Calculated from the Email;
 
     /**
-     * Email Address of this sender
+     * Email Address of this sender.
      */
     protected $Email = null;
 
     /**
-     * Type of emails that can be sent from this address
+     * Type of emails that can be sent from this address.
      */
     protected $EmailType = null;
 
@@ -77,54 +74,27 @@ class Sender implements ModelInterface
     protected $Filename = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Is this the default sender for this API key ?
+     * Is this the default sender for this API key ?.
      */
     protected $IsDefaultSender = false;
 
     /**
-     * User-provided name for this sender
+     * User-provided name for this sender.
      */
     protected $Name = null;
 
     /**
-     * Status of the sender
+     * Status of the sender.
      */
-    protected $Status = 'Inactive';
+    protected $Status = 'Calculated from the Email';
 
     /**
-     * Timestamp of last UMP check for this sender
-     */
-    protected $UMPCheckedAt = null;
-
-    /**
-     * Sets the Key used when confirming validity of this sender.
-     *
-     * @param string
-     * @return Sender
-     */
-    public function setConfirmKey($ConfirmKey = null)
-    {
-        $this->ConfirmKey = $ConfirmKey;
-        return $this;
-    }
-
-    /**
-     * Gets the Key used when confirming validity of this sender.
-     *
-     * @return string
-     */
-    public function getConfirmKey()
-    {
-        return $this->ConfirmKey;
-    }
-
-    /**
-     * Sets the Timestamp when object was created in database
+     * Sets the Timestamp when object was created in database.
      *
      * @param \Datetime
      * @return Sender
@@ -136,7 +106,7 @@ class Sender implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when object was created in database
+     * Gets the Timestamp when object was created in database.
      *
      * @return \Datetime
      */
@@ -168,7 +138,7 @@ class Sender implements ModelInterface
     }
 
     /**
-     * Sets the Email Address of this sender
+     * Sets the Email Address of this sender.
      *
      * @param string
      * @return Sender
@@ -180,7 +150,7 @@ class Sender implements ModelInterface
     }
 
     /**
-     * Gets the Email Address of this sender
+     * Gets the Email Address of this sender.
      *
      * @return string
      */
@@ -190,9 +160,9 @@ class Sender implements ModelInterface
     }
 
     /**
-     * Sets the Type of emails that can be sent from this address
+     * Sets the Type of emails that can be sent from this address.
      *
-     * @param int
+     * @param string
      * @return Sender
      */
     public function setEmailType($EmailType = null)
@@ -202,9 +172,9 @@ class Sender implements ModelInterface
     }
 
     /**
-     * Gets the Type of emails that can be sent from this address
+     * Gets the Type of emails that can be sent from this address.
      *
-     * @return int
+     * @return string
      */
     public function getEmailType()
     {
@@ -236,7 +206,7 @@ class Sender implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Sender
@@ -248,7 +218,7 @@ class Sender implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -258,7 +228,7 @@ class Sender implements ModelInterface
     }
 
     /**
-     * Sets the Is this the default sender for this API key ?
+     * Sets the Is this the default sender for this API key ?.
      *
      * @param bool
      * @return Sender
@@ -270,7 +240,7 @@ class Sender implements ModelInterface
     }
 
     /**
-     * Gets the Is this the default sender for this API key ?
+     * Gets the Is this the default sender for this API key ?.
      *
      * @return bool
      */
@@ -280,7 +250,7 @@ class Sender implements ModelInterface
     }
 
     /**
-     * Sets the User-provided name for this sender
+     * Sets the User-provided name for this sender.
      *
      * @param string
      * @return Sender
@@ -292,7 +262,7 @@ class Sender implements ModelInterface
     }
 
     /**
-     * Gets the User-provided name for this sender
+     * Gets the User-provided name for this sender.
      *
      * @return string
      */
@@ -302,7 +272,7 @@ class Sender implements ModelInterface
     }
 
     /**
-     * Sets the Status of the sender
+     * Sets the Status of the sender.
      *
      * @param TSenderStatus
      * @return Sender
@@ -314,35 +284,13 @@ class Sender implements ModelInterface
     }
 
     /**
-     * Gets the Status of the sender
+     * Gets the Status of the sender.
      *
      * @return TSenderStatus
      */
     public function getStatus()
     {
         return $this->Status;
-    }
-
-    /**
-     * Sets the Timestamp of last UMP check for this sender
-     *
-     * @param \Datetime
-     * @return Sender
-     */
-    public function setUMPCheckedAt(\Datetime $UMPCheckedAt = null)
-    {
-        $this->UMPCheckedAt = $UMPCheckedAt;
-        return $this;
-    }
-
-    /**
-     * Gets the Timestamp of last UMP check for this sender
-     *
-     * @return \Datetime
-     */
-    public function getUMPCheckedAt()
-    {
-        return $this->UMPCheckedAt;
     }
 
 

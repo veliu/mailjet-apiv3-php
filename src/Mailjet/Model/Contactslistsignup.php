@@ -37,7 +37,7 @@ namespace Mailjet\Model;
 /**
  * Contactslistsignup Model
  *
- * Contacts list signup request
+ * Contacts list signup request.
  */
 class Contactslistsignup implements ModelInterface
 {
@@ -53,7 +53,7 @@ class Contactslistsignup implements ModelInterface
     protected $ConfirmIp = null;
 
     /**
-     * Teference to Contact to be signed up.
+     * Reference to Contact to be signed up.
      */
     protected $ContactID = null;
 
@@ -63,7 +63,7 @@ class Contactslistsignup implements ModelInterface
     protected $Email = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
@@ -147,7 +147,7 @@ class Contactslistsignup implements ModelInterface
     }
 
     /**
-     * Sets the Teference to Contact to be signed up.
+     * Sets the Reference to Contact to be signed up.
      *
      * @param int
      * @return Contactslistsignup
@@ -159,7 +159,7 @@ class Contactslistsignup implements ModelInterface
     }
 
     /**
-     * Gets the Teference to Contact to be signed up.
+     * Gets the Reference to Contact to be signed up.
      *
      * @return int
      */
@@ -191,7 +191,7 @@ class Contactslistsignup implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Contactslistsignup
@@ -203,7 +203,7 @@ class Contactslistsignup implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */

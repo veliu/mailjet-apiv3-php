@@ -47,7 +47,8 @@ use Mailjet\Type\TCustomStatus;
 /**
  * Apikey Api
  *
- * Mailjet API Keys
+ * Manage your Mailjet API Keys. API keys are used as credentials to access the API
+ * and SMTP server.
  *
  * @see http://mjdemo.poxx.net/~shubham/apikey.html
  */
@@ -116,11 +117,6 @@ class Apikey extends AbstractApi
             'dataType' => 'TCustomStatus',
             'required' => false
             ),
-        'ExpiredAt' => array(
-            'name' => 'ExpiredAt',
-            'dataType' => '\Datetime',
-            'required' => false
-            ),
         'ID' => array(
             'name' => 'ID',
             'dataType' => 'int',
@@ -136,16 +132,6 @@ class Apikey extends AbstractApi
             'dataType' => 'bool',
             'required' => false
             ),
-        'IsSenderAllowed' => array(
-            'name' => 'IsSenderAllowed',
-            'dataType' => 'bool',
-            'required' => false
-            ),
-        'LastUpdateAt' => array(
-            'name' => 'LastUpdateAt',
-            'dataType' => '\Datetime',
-            'required' => false
-            ),
         'Name' => array(
             'name' => 'Name',
             'dataType' => 'string',
@@ -154,6 +140,21 @@ class Apikey extends AbstractApi
         'Runlevel' => array(
             'name' => 'Runlevel',
             'dataType' => 'TRunLevel',
+            'required' => false
+            ),
+        'SecretKey' => array(
+            'name' => 'SecretKey',
+            'dataType' => 'string',
+            'required' => false
+            ),
+        'TrackHost' => array(
+            'name' => 'TrackHost',
+            'dataType' => 'string',
+            'required' => false
+            ),
+        'UserID' => array(
+            'name' => 'UserID',
+            'dataType' => 'int',
             'required' => false
             )
         );
@@ -168,8 +169,6 @@ class Apikey extends AbstractApi
         $hydrator = $this->getResultSetPrototype()->getHydrator();
         $hydrator->addStrategy('CreatedAt', new TRFC3339DateTimeStrategy());
         $hydrator->addStrategy('CustomStatus', new TCustomStatusStrategy());
-        $hydrator->addStrategy('ExpiredAt', new TRFC3339DateTimeStrategy());
-        $hydrator->addStrategy('LastUpdateAt', new TRFC3339DateTimeStrategy());
         $hydrator->addStrategy('Runlevel', new TRunLevelStrategy());
     }
 

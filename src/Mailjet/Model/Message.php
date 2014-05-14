@@ -39,13 +39,14 @@ use \Datetime;
 /**
  * Message Model
  *
- * API Key messages processed by Mailjet. One record per processed email.
+ * Allows you to list and view the details of a Message (an e-mail) processed by
+ * Mailjet
  */
 class Message implements ModelInterface
 {
 
     /**
-     * Timestamp indicated when the message arrived at Mailjet
+     * Timestamp indicated when the message arrived at Mailjet.
      */
     protected $ArrivedAt = null;
 
@@ -65,32 +66,22 @@ class Message implements ModelInterface
     protected $CampaignID = null;
 
     /**
-     * ?
-     */
-    protected $CheckString = null;
-
-    /**
      * Reference to contact to which message was sent.
      */
     protected $ContactID = null;
 
     /**
-     * Delay between arrival and delivery [?]
+     * Delay between arrival and delivery [?].
      */
     protected $Delay = null;
 
     /**
-     * Reference to destination domain
+     * Reference to destination domain.
      */
     protected $DestinationID = null;
 
     /**
-     * Reference to DSM information for domain.
-     */
-    protected $Dsn = null;
-
-    /**
-     * Time spent processing the text of the message (milliseconds)
+     * Time spent processing the text of the message (milliseconds).
      */
     protected $FilterTime = null;
 
@@ -100,54 +91,39 @@ class Message implements ModelInterface
     protected $FromID = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Was click tracking requested for this message ?
+     * Was click tracking requested for this message ?.
      */
     protected $IsClickTracked = false;
 
     /**
-     * Did the message contain a HTML part ?
+     * Did the message contain a HTML part ?.
      */
     protected $IsHTMLPartIncluded = false;
 
     /**
-     * Was open tracking requested for this message ?
+     * Was open tracking requested for this message ?.
      */
     protected $IsOpenTracked = false;
 
     /**
-     * Did the message contain a text part ?
+     * Did the message contain a text part ?.
      */
     protected $IsTextPartIncluded = false;
 
     /**
-     * Was unsubscription tracking requested for this message ?
+     * Was unsubscription tracking requested for this message ?.
      */
     protected $IsUnsubTracked = false;
 
     /**
-     * Size of the message (in bytes)
+     * Size of the message (in bytes).
      */
     protected $MessageSize = null;
-
-    /**
-     * Subscription plan used to send the message.
-     */
-    protected $PlanSubscriptionID = null;
-
-    /**
-     * IP pool used to send the message.
-     */
-    protected $PoolIPId = null;
-
-    /**
-     * Postfix Queue ID for this message.
-     */
-    protected $PostfixQid = null;
 
     /**
      * Spam assassin score for this message.
@@ -165,7 +141,7 @@ class Message implements ModelInterface
     protected $StateID = null;
 
     /**
-     * Is the state of the message permanent (i.e. will no longer change)
+     * Is the state of the message permanent (i.e. will no longer change).
      */
     protected $StatePermanent = false;
 
@@ -175,12 +151,7 @@ class Message implements ModelInterface
     protected $Status = null;
 
     /**
-     * Timestamp when the message information was last changed.
-     */
-    protected $UpdatedAt = null;
-
-    /**
-     * Sets the Timestamp indicated when the message arrived at Mailjet
+     * Sets the Timestamp indicated when the message arrived at Mailjet.
      *
      * @param \Datetime
      * @return Message
@@ -192,7 +163,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp indicated when the message arrived at Mailjet
+     * Gets the Timestamp indicated when the message arrived at Mailjet.
      *
      * @return \Datetime
      */
@@ -268,28 +239,6 @@ class Message implements ModelInterface
     }
 
     /**
-     * Sets the ?
-     *
-     * @param string
-     * @return Message
-     */
-    public function setCheckString($CheckString = null)
-    {
-        $this->CheckString = $CheckString;
-        return $this;
-    }
-
-    /**
-     * Gets the ?
-     *
-     * @return string
-     */
-    public function getCheckString()
-    {
-        return $this->CheckString;
-    }
-
-    /**
      * Sets the Reference to contact to which message was sent.
      *
      * @param int
@@ -312,7 +261,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Sets the Delay between arrival and delivery [?]
+     * Sets the Delay between arrival and delivery [?].
      *
      * @param string
      * @return Message
@@ -324,7 +273,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Gets the Delay between arrival and delivery [?]
+     * Gets the Delay between arrival and delivery [?].
      *
      * @return string
      */
@@ -334,7 +283,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Sets the Reference to destination domain
+     * Sets the Reference to destination domain.
      *
      * @param int
      * @return Message
@@ -346,7 +295,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Gets the Reference to destination domain
+     * Gets the Reference to destination domain.
      *
      * @return int
      */
@@ -356,29 +305,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Sets the Reference to DSM information for domain.
-     *
-     * @param string
-     * @return Message
-     */
-    public function setDsn($Dsn = null)
-    {
-        $this->Dsn = $Dsn;
-        return $this;
-    }
-
-    /**
-     * Gets the Reference to DSM information for domain.
-     *
-     * @return string
-     */
-    public function getDsn()
-    {
-        return $this->Dsn;
-    }
-
-    /**
-     * Sets the Time spent processing the text of the message (milliseconds)
+     * Sets the Time spent processing the text of the message (milliseconds).
      *
      * @param int
      * @return Message
@@ -390,7 +317,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Gets the Time spent processing the text of the message (milliseconds)
+     * Gets the Time spent processing the text of the message (milliseconds).
      *
      * @return int
      */
@@ -422,7 +349,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Message
@@ -434,7 +361,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -444,7 +371,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Sets the Was click tracking requested for this message ?
+     * Sets the Was click tracking requested for this message ?.
      *
      * @param bool
      * @return Message
@@ -456,7 +383,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Gets the Was click tracking requested for this message ?
+     * Gets the Was click tracking requested for this message ?.
      *
      * @return bool
      */
@@ -466,7 +393,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Sets the Did the message contain a HTML part ?
+     * Sets the Did the message contain a HTML part ?.
      *
      * @param bool
      * @return Message
@@ -478,7 +405,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Gets the Did the message contain a HTML part ?
+     * Gets the Did the message contain a HTML part ?.
      *
      * @return bool
      */
@@ -488,7 +415,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Sets the Was open tracking requested for this message ?
+     * Sets the Was open tracking requested for this message ?.
      *
      * @param bool
      * @return Message
@@ -500,7 +427,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Gets the Was open tracking requested for this message ?
+     * Gets the Was open tracking requested for this message ?.
      *
      * @return bool
      */
@@ -510,7 +437,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Sets the Did the message contain a text part ?
+     * Sets the Did the message contain a text part ?.
      *
      * @param bool
      * @return Message
@@ -522,7 +449,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Gets the Did the message contain a text part ?
+     * Gets the Did the message contain a text part ?.
      *
      * @return bool
      */
@@ -532,7 +459,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Sets the Was unsubscription tracking requested for this message ?
+     * Sets the Was unsubscription tracking requested for this message ?.
      *
      * @param bool
      * @return Message
@@ -544,7 +471,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Gets the Was unsubscription tracking requested for this message ?
+     * Gets the Was unsubscription tracking requested for this message ?.
      *
      * @return bool
      */
@@ -554,7 +481,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Sets the Size of the message (in bytes)
+     * Sets the Size of the message (in bytes).
      *
      * @param int
      * @return Message
@@ -566,79 +493,13 @@ class Message implements ModelInterface
     }
 
     /**
-     * Gets the Size of the message (in bytes)
+     * Gets the Size of the message (in bytes).
      *
      * @return int
      */
     public function getMessageSize()
     {
         return $this->MessageSize;
-    }
-
-    /**
-     * Sets the Subscription plan used to send the message.
-     *
-     * @param int
-     * @return Message
-     */
-    public function setPlanSubscriptionID($PlanSubscriptionID)
-    {
-        $this->PlanSubscriptionID = $PlanSubscriptionID;
-        return $this;
-    }
-
-    /**
-     * Gets the Subscription plan used to send the message.
-     *
-     * @return int
-     */
-    public function getPlanSubscriptionID()
-    {
-        return $this->PlanSubscriptionID;
-    }
-
-    /**
-     * Sets the IP pool used to send the message.
-     *
-     * @param int
-     * @return Message
-     */
-    public function setPoolIPId($PoolIPId = null)
-    {
-        $this->PoolIPId = $PoolIPId;
-        return $this;
-    }
-
-    /**
-     * Gets the IP pool used to send the message.
-     *
-     * @return int
-     */
-    public function getPoolIPId()
-    {
-        return $this->PoolIPId;
-    }
-
-    /**
-     * Sets the Postfix Queue ID for this message.
-     *
-     * @param string
-     * @return Message
-     */
-    public function setPostfixQid($PostfixQid = null)
-    {
-        $this->PostfixQid = $PostfixQid;
-        return $this;
-    }
-
-    /**
-     * Gets the Postfix Queue ID for this message.
-     *
-     * @return string
-     */
-    public function getPostfixQid()
-    {
-        return $this->PostfixQid;
     }
 
     /**
@@ -708,7 +569,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Sets the Is the state of the message permanent (i.e. will no longer change)
+     * Sets the Is the state of the message permanent (i.e. will no longer change).
      *
      * @param bool
      * @return Message
@@ -720,7 +581,7 @@ class Message implements ModelInterface
     }
 
     /**
-     * Gets the Is the state of the message permanent (i.e. will no longer change)
+     * Gets the Is the state of the message permanent (i.e. will no longer change).
      *
      * @return bool
      */
@@ -732,7 +593,7 @@ class Message implements ModelInterface
     /**
      * Sets the Status of the message.
      *
-     * @param int
+     * @param string
      * @return Message
      */
     public function setStatus($Status = null)
@@ -744,33 +605,11 @@ class Message implements ModelInterface
     /**
      * Gets the Status of the message.
      *
-     * @return int
+     * @return string
      */
     public function getStatus()
     {
         return $this->Status;
-    }
-
-    /**
-     * Sets the Timestamp when the message information was last changed.
-     *
-     * @param \Datetime
-     * @return Message
-     */
-    public function setUpdatedAt(\Datetime $UpdatedAt = null)
-    {
-        $this->UpdatedAt = $UpdatedAt;
-        return $this;
-    }
-
-    /**
-     * Gets the Timestamp when the message information was last changed.
-     *
-     * @return \Datetime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->UpdatedAt;
     }
 
 

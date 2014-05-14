@@ -44,7 +44,7 @@ use \Datetime;
 /**
  * Toplinkclicked Api
  *
- * Top links clicked historgram
+ * Top links clicked historgram.
  *
  * @see http://mjdemo.poxx.net/~shubham/toplinkclicked.html
  */
@@ -110,6 +110,10 @@ class Toplinkclicked extends AbstractApi
             ),
         'IsStarred' => array(
             'name' => 'IsStarred',
+            'required' => false
+            ),
+        'Message' => array(
+            'name' => 'Message',
             'required' => false
             ),
         'Period' => array(
@@ -327,6 +331,18 @@ class Toplinkclicked extends AbstractApi
     public function getByIsStarred($IsStarred)
     {
         $result = $this->getList(array('IsStarred' => $IsStarred));
+        return $result;
+    }
+
+    /**
+     * Return list of Mailjet\Model\Toplinkclicked with Message = $Message
+     *
+     * @param int
+     * @return ResultSet\ResultSet
+     */
+    public function getByMessage($Message)
+    {
+        $result = $this->getList(array('Message' => $Message));
         return $result;
     }
 

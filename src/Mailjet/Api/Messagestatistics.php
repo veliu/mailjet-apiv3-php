@@ -44,7 +44,7 @@ use \Datetime;
 /**
  * Messagestatistics Api
  *
- * API key Campaign/Message statistics
+ * API key Campaign/Message statistics.
  *
  * @see http://mjdemo.poxx.net/~shubham/messagestatistics.html
  */

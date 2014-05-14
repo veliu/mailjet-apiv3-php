@@ -39,7 +39,7 @@ use \Datetime;
 /**
  * Senderstatistics Model
  *
- * API Key sender email address message/open/click statistical information
+ * API Key sender email address message/open/click statistical information.
  */
 class Senderstatistics implements ModelInterface
 {
@@ -65,7 +65,7 @@ class Senderstatistics implements ModelInterface
     protected $DeliveredCount = null;
 
     /**
-     * Timestamp of last registered activity for this sender
+     * Timestamp of last registered activity for this sender.
      */
     protected $LastActivityAt = null;
 
@@ -75,12 +75,12 @@ class Senderstatistics implements ModelInterface
     protected $OpenedCount = null;
 
     /**
-     * Total number of messages processed by Mailjet
+     * Total number of messages processed by Mailjet.
      */
     protected $ProcessedCount = null;
 
     /**
-     * Number of messages waiting in send queue
+     * Number of messages waiting in send queue.
      */
     protected $QueuedCount = null;
 
@@ -90,7 +90,7 @@ class Senderstatistics implements ModelInterface
     protected $SenderID = null;
 
     /**
-     * Number of spam complaints
+     * Number of spam complaints.
      */
     protected $SpamComplaintCount = null;
 
@@ -188,7 +188,7 @@ class Senderstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp of last registered activity for this sender
+     * Sets the Timestamp of last registered activity for this sender.
      *
      * @param \Datetime
      * @return Senderstatistics
@@ -200,7 +200,7 @@ class Senderstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp of last registered activity for this sender
+     * Gets the Timestamp of last registered activity for this sender.
      *
      * @return \Datetime
      */
@@ -232,7 +232,7 @@ class Senderstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Total number of messages processed by Mailjet
+     * Sets the Total number of messages processed by Mailjet.
      *
      * @param int
      * @return Senderstatistics
@@ -244,7 +244,7 @@ class Senderstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Total number of messages processed by Mailjet
+     * Gets the Total number of messages processed by Mailjet.
      *
      * @return int
      */
@@ -254,7 +254,7 @@ class Senderstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of messages waiting in send queue
+     * Sets the Number of messages waiting in send queue.
      *
      * @param int
      * @return Senderstatistics
@@ -266,7 +266,7 @@ class Senderstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of messages waiting in send queue
+     * Gets the Number of messages waiting in send queue.
      *
      * @return int
      */
@@ -298,7 +298,7 @@ class Senderstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of spam complaints
+     * Sets the Number of spam complaints.
      *
      * @param int
      * @return Senderstatistics
@@ -310,7 +310,7 @@ class Senderstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of spam complaints
+     * Gets the Number of spam complaints.
      *
      * @return int
      */

@@ -45,7 +45,9 @@ use Zend\InputFilter;
 /**
  * Sender Api
  *
- * API Key sender email address
+ * Manage details related to Sender e-mail adresses. An e-mail address has to be
+ * registered and Confirmed before being used to send e-mails. See the related
+ * MetaSender object if you wish to register a complete Domain.
  *
  * @see http://mjdemo.poxx.net/~shubham/sender.html
  */
@@ -73,6 +75,10 @@ class Sender extends AbstractApi
             'name' => 'LocalPart',
             'required' => false
             ),
+        'ShowDeleted' => array(
+            'name' => 'ShowDeleted',
+            'required' => false
+            ),
         'Status' => array(
             'name' => 'Status',
             'required' => false
@@ -83,11 +89,6 @@ class Sender extends AbstractApi
      * Supported properties
      */
     protected $properties = array(
-        'ConfirmKey' => array(
-            'name' => 'ConfirmKey',
-            'dataType' => 'string',
-            'required' => false
-            ),
         'CreatedAt' => array(
             'name' => 'CreatedAt',
             'dataType' => '\Datetime',
@@ -105,7 +106,7 @@ class Sender extends AbstractApi
             ),
         'EmailType' => array(
             'name' => 'EmailType',
-            'dataType' => 'int',
+            'dataType' => 'string',
             'required' => false
             ),
         'Filename' => array(
@@ -132,11 +133,6 @@ class Sender extends AbstractApi
             'name' => 'Status',
             'dataType' => 'TSenderStatus',
             'required' => false
-            ),
-        'UMPCheckedAt' => array(
-            'name' => 'UMPCheckedAt',
-            'dataType' => '\Datetime',
-            'required' => false
             )
         );
 
@@ -150,7 +146,6 @@ class Sender extends AbstractApi
         $hydrator = $this->getResultSetPrototype()->getHydrator();
         $hydrator->addStrategy('CreatedAt', new TRFC3339DateTimeStrategy());
         $hydrator->addStrategy('Status', new TSenderStatusStrategy());
-        $hydrator->addStrategy('UMPCheckedAt', new TRFC3339DateTimeStrategy());
     }
 
     /**
@@ -203,6 +198,18 @@ class Sender extends AbstractApi
     }
 
     /**
+     * Return list of Mailjet\Model\Sender with ShowDeleted = $ShowDeleted
+     *
+     * @param bool
+     * @return ResultSet\ResultSet
+     */
+    public function getByShowDeleted($ShowDeleted)
+    {
+        $result = $this->getList(array('ShowDeleted' => $ShowDeleted));
+        return $result;
+    }
+
+    /**
      * Return list of Mailjet\Model\Sender with Status = $Status
      *
      * @param string
@@ -249,6 +256,17 @@ class Sender extends AbstractApi
     public function create(Mailjet\Model\Sender &$Sender)
     {
         return parent::_create($Sender);
+    }
+
+    /**
+     * Delete the Sender with id = $id
+     *
+     * @param integer Id to delete
+     * @return bool True on success
+     */
+    public function delete($id)
+    {
+        return parent::_delete($id);
     }
 
 

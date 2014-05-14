@@ -44,7 +44,7 @@ use Zend\InputFilter;
 /**
  * Apikeyaccess Api
  *
- * Access rights description on API keys for subaccounts/users
+ * Access rights description on API keys for subaccounts/users.
  *
  * @see http://mjdemo.poxx.net/~shubham/apikeyaccess.html
  */
@@ -135,16 +135,6 @@ class Apikeyaccess extends AbstractApi
             'dataType' => 'int',
             'required' => false
             ),
-        'Token' => array(
-            'name' => 'Token',
-            'dataType' => 'string',
-            'required' => false
-            ),
-        'UpdatedAt' => array(
-            'name' => 'UpdatedAt',
-            'dataType' => '\Datetime',
-            'required' => false
-            ),
         'UserID' => array(
             'name' => 'UserID',
             'dataType' => 'int',
@@ -162,7 +152,6 @@ class Apikeyaccess extends AbstractApi
         $hydrator = $this->getResultSetPrototype()->getHydrator();
         $hydrator->addStrategy('CreatedAt', new TRFC3339DateTimeStrategy());
         $hydrator->addStrategy('LastActivityAt', new TRFC3339DateTimeStrategy());
-        $hydrator->addStrategy('UpdatedAt', new TRFC3339DateTimeStrategy());
     }
 
     /**

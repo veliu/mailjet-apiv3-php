@@ -37,28 +37,28 @@ namespace Mailjet\Model;
 /**
  * Messagestate Model
  *
- * Message state reference
+ * Message state reference.
  */
 class Messagestate implements ModelInterface
 {
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Reason for this state
+     * Reason for this state.
      */
     protected $RelatedTo = null;
 
     /**
-     * Description of the message state
+     * Description of the message state.
      */
     protected $State = null;
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Messagestate
@@ -70,7 +70,7 @@ class Messagestate implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -80,7 +80,7 @@ class Messagestate implements ModelInterface
     }
 
     /**
-     * Sets the Reason for this state
+     * Sets the Reason for this state.
      *
      * @param string
      * @return Messagestate
@@ -92,7 +92,7 @@ class Messagestate implements ModelInterface
     }
 
     /**
-     * Gets the Reason for this state
+     * Gets the Reason for this state.
      *
      * @return string
      */
@@ -102,7 +102,7 @@ class Messagestate implements ModelInterface
     }
 
     /**
-     * Sets the Description of the message state
+     * Sets the Description of the message state.
      *
      * @param string
      * @return Messagestate
@@ -114,7 +114,7 @@ class Messagestate implements ModelInterface
     }
 
     /**
-     * Gets the Description of the message state
+     * Gets the Description of the message state.
      *
      * @return string
      */

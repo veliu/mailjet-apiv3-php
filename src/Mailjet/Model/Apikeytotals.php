@@ -37,7 +37,7 @@ namespace Mailjet\Model;
 /**
  * Apikeytotals Model
  *
- * Global counts for a API Key (not temporal)
+ * Global counts for an API Key, since its creation.
  */
 class Apikeytotals implements ModelInterface
 {
@@ -63,11 +63,6 @@ class Apikeytotals implements ModelInterface
     protected $DeliveredCount = null;
 
     /**
-     * Unique numerical ID for this object
-     */
-    protected $ID = null;
-
-    /**
      * Timestamp of last registered activity for this API key.
      */
     protected $LastActivity = null;
@@ -78,17 +73,17 @@ class Apikeytotals implements ModelInterface
     protected $OpenedCount = null;
 
     /**
-     * Total number of messages processed by Mailjet
+     * Total number of messages processed by Mailjet.
      */
     protected $ProcessedCount = null;
 
     /**
-     * Number of messages waiting in send queue
+     * Number of messages waiting in send queue.
      */
     protected $QueuedCount = null;
 
     /**
-     * Number of spam complaints
+     * Number of spam complaints.
      */
     protected $SpamcomplaintCount = null;
 
@@ -186,28 +181,6 @@ class Apikeytotals implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
-     *
-     * @param int
-     * @return Apikeytotals
-     */
-    public function setID($ID = null)
-    {
-        $this->ID = $ID;
-        return $this;
-    }
-
-    /**
-     * Gets the Unique numerical ID for this object
-     *
-     * @return int
-     */
-    public function getID()
-    {
-        return $this->ID;
-    }
-
-    /**
      * Sets the Timestamp of last registered activity for this API key.
      *
      * @param int
@@ -252,7 +225,7 @@ class Apikeytotals implements ModelInterface
     }
 
     /**
-     * Sets the Total number of messages processed by Mailjet
+     * Sets the Total number of messages processed by Mailjet.
      *
      * @param int
      * @return Apikeytotals
@@ -264,7 +237,7 @@ class Apikeytotals implements ModelInterface
     }
 
     /**
-     * Gets the Total number of messages processed by Mailjet
+     * Gets the Total number of messages processed by Mailjet.
      *
      * @return int
      */
@@ -274,7 +247,7 @@ class Apikeytotals implements ModelInterface
     }
 
     /**
-     * Sets the Number of messages waiting in send queue
+     * Sets the Number of messages waiting in send queue.
      *
      * @param int
      * @return Apikeytotals
@@ -286,7 +259,7 @@ class Apikeytotals implements ModelInterface
     }
 
     /**
-     * Gets the Number of messages waiting in send queue
+     * Gets the Number of messages waiting in send queue.
      *
      * @return int
      */
@@ -296,7 +269,7 @@ class Apikeytotals implements ModelInterface
     }
 
     /**
-     * Sets the Number of spam complaints
+     * Sets the Number of spam complaints.
      *
      * @param int
      * @return Apikeytotals
@@ -308,7 +281,7 @@ class Apikeytotals implements ModelInterface
     }
 
     /**
-     * Gets the Number of spam complaints
+     * Gets the Number of spam complaints.
      *
      * @return int
      */

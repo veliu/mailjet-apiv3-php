@@ -37,43 +37,43 @@ namespace Mailjet\Model;
 /**
  * Newslettertemplateproperties Model
  *
- * CSS data for a newsletter template
+ * Manage CSS properties for a given newsletter template.
  */
 class Newslettertemplateproperties implements ModelInterface
 {
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * CSS Property name
+     * CSS Property name.
      */
     protected $Name = null;
 
     /**
-     * Property Name
+     * Property Name.
      */
     protected $PropertyName = null;
 
     /**
-     * CSS Selector
+     * CSS Selector.
      */
     protected $Selector = null;
 
     /**
-     * Reference to template
+     * Reference to template.
      */
     protected $TemplateID = null;
 
     /**
-     * Value
+     * Value.
      */
     protected $Value = null;
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Newslettertemplateproperties
@@ -85,7 +85,7 @@ class Newslettertemplateproperties implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -95,7 +95,7 @@ class Newslettertemplateproperties implements ModelInterface
     }
 
     /**
-     * Sets the CSS Property name
+     * Sets the CSS Property name.
      *
      * @param string
      * @return Newslettertemplateproperties
@@ -107,7 +107,7 @@ class Newslettertemplateproperties implements ModelInterface
     }
 
     /**
-     * Gets the CSS Property name
+     * Gets the CSS Property name.
      *
      * @return string
      */
@@ -117,7 +117,7 @@ class Newslettertemplateproperties implements ModelInterface
     }
 
     /**
-     * Sets the Property Name
+     * Sets the Property Name.
      *
      * @param string
      * @return Newslettertemplateproperties
@@ -129,7 +129,7 @@ class Newslettertemplateproperties implements ModelInterface
     }
 
     /**
-     * Gets the Property Name
+     * Gets the Property Name.
      *
      * @return string
      */
@@ -139,7 +139,7 @@ class Newslettertemplateproperties implements ModelInterface
     }
 
     /**
-     * Sets the CSS Selector
+     * Sets the CSS Selector.
      *
      * @param string
      * @return Newslettertemplateproperties
@@ -151,7 +151,7 @@ class Newslettertemplateproperties implements ModelInterface
     }
 
     /**
-     * Gets the CSS Selector
+     * Gets the CSS Selector.
      *
      * @return string
      */
@@ -161,7 +161,7 @@ class Newslettertemplateproperties implements ModelInterface
     }
 
     /**
-     * Sets the Reference to template
+     * Sets the Reference to template.
      *
      * @param int
      * @return Newslettertemplateproperties
@@ -173,7 +173,7 @@ class Newslettertemplateproperties implements ModelInterface
     }
 
     /**
-     * Gets the Reference to template
+     * Gets the Reference to template.
      *
      * @return int
      */
@@ -183,7 +183,7 @@ class Newslettertemplateproperties implements ModelInterface
     }
 
     /**
-     * Sets the Value
+     * Sets the Value.
      *
      * @param string
      * @return Newslettertemplateproperties
@@ -195,7 +195,7 @@ class Newslettertemplateproperties implements ModelInterface
     }
 
     /**
-     * Gets the Value
+     * Gets the Value.
      *
      * @return string
      */

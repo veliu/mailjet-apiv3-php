@@ -37,83 +37,84 @@ namespace Mailjet\Model;
 /**
  * Newslettertemplateblock Model
  *
- * HTML data for a block from a newsletter template
+ * Describes a block of HTML data contained inside a Newsletter Template.HTML data
+ * for a block from a newsletter template.
  */
 class Newslettertemplateblock implements ModelInterface
 {
 
     /**
-     * Align attribute value
+     * Align attribute value.
      */
     protected $Align = null;
 
     /**
-     * Alt attribute value
+     * Alt attribute value.
      */
     protected $Alt = null;
 
     /**
-     * Block type (tag)
+     * Block type (tag).
      */
     protected $BlockType = null;
 
     /**
-     * Color attribute value
+     * Color attribute value.
      */
     protected $Color = null;
 
     /**
-     * Tag content
+     * Tag content.
      */
     protected $Content = null;
 
     /**
-     * Filename
+     * Filename.
      */
     protected $Filename = null;
 
     /**
-     * Font family
+     * Font family.
      */
     protected $Fontfamily = null;
 
     /**
-     * Font size
+     * Font size.
      */
     protected $Fontsize = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Line number
+     * Line number.
      */
     protected $Line = null;
 
     /**
-     * ?
+     * ?.
      */
     protected $Link = null;
 
     /**
-     * Position (sorting)
+     * Position (sorting).
      */
     protected $Pos = null;
 
     /**
-     * Number of siblings
+     * Number of siblings.
      */
     protected $Siblings = null;
 
     /**
-     * Height attribute
+     * Height attribute.
      */
     protected $SrcHeight = null;
 
     /**
-     * ?Width attribute
+     * ?Width attribute.
      */
     protected $SrcWidth = null;
 
@@ -123,17 +124,17 @@ class Newslettertemplateblock implements ModelInterface
     protected $TemplateID = null;
 
     /**
-     * URL in case of external link
+     * URL in case of external link.
      */
     protected $Url = null;
 
     /**
-     * Width attribute
+     * Width attribute.
      */
     protected $Width = null;
 
     /**
-     * Sets the Align attribute value
+     * Sets the Align attribute value.
      *
      * @param string
      * @return Newslettertemplateblock
@@ -145,7 +146,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Align attribute value
+     * Gets the Align attribute value.
      *
      * @return string
      */
@@ -155,7 +156,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the Alt attribute value
+     * Sets the Alt attribute value.
      *
      * @param string
      * @return Newslettertemplateblock
@@ -167,7 +168,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Alt attribute value
+     * Gets the Alt attribute value.
      *
      * @return string
      */
@@ -177,7 +178,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the Block type (tag)
+     * Sets the Block type (tag).
      *
      * @param string
      * @return Newslettertemplateblock
@@ -189,7 +190,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Block type (tag)
+     * Gets the Block type (tag).
      *
      * @return string
      */
@@ -199,7 +200,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the Color attribute value
+     * Sets the Color attribute value.
      *
      * @param string
      * @return Newslettertemplateblock
@@ -211,7 +212,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Color attribute value
+     * Gets the Color attribute value.
      *
      * @return string
      */
@@ -221,7 +222,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the Tag content
+     * Sets the Tag content.
      *
      * @param string
      * @return Newslettertemplateblock
@@ -233,7 +234,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Tag content
+     * Gets the Tag content.
      *
      * @return string
      */
@@ -243,7 +244,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the Filename
+     * Sets the Filename.
      *
      * @param string
      * @return Newslettertemplateblock
@@ -255,7 +256,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Filename
+     * Gets the Filename.
      *
      * @return string
      */
@@ -265,7 +266,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the Font family
+     * Sets the Font family.
      *
      * @param string
      * @return Newslettertemplateblock
@@ -277,7 +278,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Font family
+     * Gets the Font family.
      *
      * @return string
      */
@@ -287,7 +288,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the Font size
+     * Sets the Font size.
      *
      * @param string
      * @return Newslettertemplateblock
@@ -299,7 +300,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Font size
+     * Gets the Font size.
      *
      * @return string
      */
@@ -309,7 +310,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Newslettertemplateblock
@@ -321,7 +322,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -331,7 +332,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the Line number
+     * Sets the Line number.
      *
      * @param int
      * @return Newslettertemplateblock
@@ -343,7 +344,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Line number
+     * Gets the Line number.
      *
      * @return int
      */
@@ -353,7 +354,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the ?
+     * Sets the ?.
      *
      * @param string
      * @return Newslettertemplateblock
@@ -365,7 +366,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the ?
+     * Gets the ?.
      *
      * @return string
      */
@@ -375,7 +376,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the Position (sorting)
+     * Sets the Position (sorting).
      *
      * @param int
      * @return Newslettertemplateblock
@@ -387,7 +388,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Position (sorting)
+     * Gets the Position (sorting).
      *
      * @return int
      */
@@ -397,7 +398,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the Number of siblings
+     * Sets the Number of siblings.
      *
      * @param int
      * @return Newslettertemplateblock
@@ -409,7 +410,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Number of siblings
+     * Gets the Number of siblings.
      *
      * @return int
      */
@@ -419,7 +420,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the Height attribute
+     * Sets the Height attribute.
      *
      * @param int
      * @return Newslettertemplateblock
@@ -431,7 +432,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Height attribute
+     * Gets the Height attribute.
      *
      * @return int
      */
@@ -441,7 +442,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the ?Width attribute
+     * Sets the ?Width attribute.
      *
      * @param int
      * @return Newslettertemplateblock
@@ -453,7 +454,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the ?Width attribute
+     * Gets the ?Width attribute.
      *
      * @return int
      */
@@ -485,7 +486,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the URL in case of external link
+     * Sets the URL in case of external link.
      *
      * @param string
      * @return Newslettertemplateblock
@@ -497,7 +498,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the URL in case of external link
+     * Gets the URL in case of external link.
      *
      * @return string
      */
@@ -507,7 +508,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Sets the Width attribute
+     * Sets the Width attribute.
      *
      * @param string
      * @return Newslettertemplateblock
@@ -519,7 +520,7 @@ class Newslettertemplateblock implements ModelInterface
     }
 
     /**
-     * Gets the Width attribute
+     * Gets the Width attribute.
      *
      * @return string
      */

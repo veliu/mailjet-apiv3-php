@@ -41,7 +41,7 @@ use Mailjet\Api\ResultSet\Exception;
 /**
  * Manycontacts Model
  *
- * Special resource to add more than 1 contact in 1 call
+ * Manage contacts within a contactlist in a single call
  */
 class Manycontacts implements ModelInterface
 {
@@ -52,7 +52,7 @@ class Manycontacts implements ModelInterface
     protected $Action = 'Add';
 
     /**
-     * Array of email addresses
+     * Array of email addresses.
      */
     protected $Addresses = null;
 
@@ -62,7 +62,7 @@ class Manycontacts implements ModelInterface
     protected $Errors = null;
 
     /**
-     * Should subscription be enforced ?
+     * Should subscription be enforced ?.
      */
     protected $Force = false;
 
@@ -99,7 +99,7 @@ class Manycontacts implements ModelInterface
     }
 
     /**
-     * Sets the Array of email addresses
+     * Sets the Array of email addresses.
      *
      * @param array
      * @return Manycontacts
@@ -111,7 +111,7 @@ class Manycontacts implements ModelInterface
     }
 
     /**
-     * Gets the Array of email addresses
+     * Gets the Array of email addresses.
      *
      * @return array
      */
@@ -143,7 +143,7 @@ class Manycontacts implements ModelInterface
     }
 
     /**
-     * Sets the Should subscription be enforced ?
+     * Sets the Should subscription be enforced ?.
      *
      * @param bool
      * @return Manycontacts
@@ -155,7 +155,7 @@ class Manycontacts implements ModelInterface
     }
 
     /**
-     * Gets the Should subscription be enforced ?
+     * Gets the Should subscription be enforced ?.
      *
      * @return bool
      */

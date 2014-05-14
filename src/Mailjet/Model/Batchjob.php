@@ -37,7 +37,7 @@ namespace Mailjet\Model;
 /**
  * Batchjob Model
  *
- * Batch jobs in the mailjet system.
+ * Batch jobs running on the Mailjet infrastructure. Currently not documented.
  */
 class Batchjob implements ModelInterface
 {
@@ -59,12 +59,12 @@ class Batchjob implements ModelInterface
     protected $Blocksize = null;
 
     /**
-     * Total number of items to process. (if applicable)
+     * Total number of items to process. (if applicable).
      */
     protected $Count = null;
 
     /**
-     * Current item being processed (if applicable)
+     * Current item being processed (if applicable).
      */
     protected $Current = null;
 
@@ -79,12 +79,12 @@ class Batchjob implements ModelInterface
     protected $Errcount = null;
 
     /**
-     * Maximum amount of errors allowed before aborting the job (as a percentage %)
+     * Maximum amount of errors allowed before aborting the job (as a percentage %).
      */
     protected $ErrTreshold = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
@@ -101,15 +101,15 @@ class Batchjob implements ModelInterface
     /**
      * Type of job.
      */
-    protected $JobType = null;
+    protected $JobType = 'Unknown';
 
     /**
-     * Method to use when handling job (e.g. contact import: force, noforce etc.)
+     * Method to use when handling job (e.g. contact import: force, noforce etc.).
      */
-    protected $Method = null;
+    protected $Method = 'Unknown';
 
     /**
-     * Reference to object being handled (e.g. contact import: the contactslist ID.)
+     * Reference to object being handled (e.g. contact import: the contactslist ID.).
      */
     protected $RefId = null;
 
@@ -121,7 +121,7 @@ class Batchjob implements ModelInterface
     /**
      * Current status of the job. Can be set to Abort to cancel treatment.
      */
-    protected $Status = null;
+    protected $Status = 'Allocated';
 
     /**
      * General purpose processing speed limit indicator.
@@ -197,7 +197,7 @@ class Batchjob implements ModelInterface
     }
 
     /**
-     * Sets the Total number of items to process. (if applicable)
+     * Sets the Total number of items to process. (if applicable).
      *
      * @param int
      * @return Batchjob
@@ -209,7 +209,7 @@ class Batchjob implements ModelInterface
     }
 
     /**
-     * Gets the Total number of items to process. (if applicable)
+     * Gets the Total number of items to process. (if applicable).
      *
      * @return int
      */
@@ -219,7 +219,7 @@ class Batchjob implements ModelInterface
     }
 
     /**
-     * Sets the Current item being processed (if applicable)
+     * Sets the Current item being processed (if applicable).
      *
      * @param int
      * @return Batchjob
@@ -231,7 +231,7 @@ class Batchjob implements ModelInterface
     }
 
     /**
-     * Gets the Current item being processed (if applicable)
+     * Gets the Current item being processed (if applicable).
      *
      * @return int
      */
@@ -286,7 +286,7 @@ class Batchjob implements ModelInterface
 
     /**
      * Sets the Maximum amount of errors allowed before aborting the job (as a
-     * percentage %)
+     * percentage %).
      *
      * @param int
      * @return Batchjob
@@ -299,7 +299,7 @@ class Batchjob implements ModelInterface
 
     /**
      * Gets the Maximum amount of errors allowed before aborting the job (as a
-     * percentage %)
+     * percentage %).
      *
      * @return int
      */
@@ -309,7 +309,7 @@ class Batchjob implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Batchjob
@@ -321,7 +321,7 @@ class Batchjob implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -398,7 +398,7 @@ class Batchjob implements ModelInterface
 
     /**
      * Sets the Method to use when handling job (e.g. contact import: force, noforce
-     * etc.)
+     * etc.).
      *
      * @param string
      * @return Batchjob
@@ -411,7 +411,7 @@ class Batchjob implements ModelInterface
 
     /**
      * Gets the Method to use when handling job (e.g. contact import: force, noforce
-     * etc.)
+     * etc.).
      *
      * @return string
      */
@@ -422,7 +422,7 @@ class Batchjob implements ModelInterface
 
     /**
      * Sets the Reference to object being handled (e.g. contact import: the
-     * contactslist ID.)
+     * contactslist ID.).
      *
      * @param int
      * @return Batchjob
@@ -435,7 +435,7 @@ class Batchjob implements ModelInterface
 
     /**
      * Gets the Reference to object being handled (e.g. contact import: the
-     * contactslist ID.)
+     * contactslist ID.).
      *
      * @return int
      */

@@ -39,15 +39,15 @@ use \Datetime;
 /**
  * Contact Model
  *
- * API Key contacts (email addresses)
+ * Manage the details of a Contact.
  */
 class Contact implements ModelInterface
 {
 
     /**
-     * Timestamp when object was created in database
+     * Timestamp when object was created in database.
      */
-    protected $CreatedAt = null;
+    protected $CreatedAt = 'Current time';
 
     /**
      * Number of messages delivered to this contact.
@@ -55,52 +55,52 @@ class Contact implements ModelInterface
     protected $DeliveredCount = null;
 
     /**
-     * Email address of this contact
+     * Email address of this contact.
      */
     protected $Email = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Is an opt-in for a contactslist subscription pending ?
+     * Is an opt-in for a contactslist subscription pending ?.
      */
     protected $IsOptInPending = false;
 
     /**
-     * Is this contact complaining of spam ?
+     * Is this contact complaining of spam ?.
      */
     protected $IsSpamComplaining = false;
 
     /**
-     * Timestamp of last registered activity for this contact
+     * Timestamp of last registered activity for this contact.
      */
     protected $LastActivityAt = null;
 
     /**
-     * Timestamp of last update of this contact
+     * Timestamp of last update of this contact.
      */
     protected $LastUpdateAt = null;
 
     /**
-     * User-provided name for this contact
+     * User-provided name for this contact.
      */
     protected $Name = null;
 
     /**
-     * Timestamp of last unsubscribe request.
+     * Timestamp of last unsubscribe from all lists request.
      */
     protected $UnsubscribedAt = null;
 
     /**
-     * Description of who initiated the unsubscribe request.
+     * Description of who initiated the unsubscribe from all lists request.
      */
     protected $UnsubscribedBy = null;
 
     /**
-     * Sets the Timestamp when object was created in database
+     * Sets the Timestamp when object was created in database.
      *
      * @param \Datetime
      * @return Contact
@@ -112,7 +112,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when object was created in database
+     * Gets the Timestamp when object was created in database.
      *
      * @return \Datetime
      */
@@ -144,7 +144,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Sets the Email address of this contact
+     * Sets the Email address of this contact.
      *
      * @param string
      * @return Contact
@@ -156,7 +156,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Gets the Email address of this contact
+     * Gets the Email address of this contact.
      *
      * @return string
      */
@@ -166,7 +166,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Contact
@@ -178,7 +178,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -188,7 +188,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Sets the Is an opt-in for a contactslist subscription pending ?
+     * Sets the Is an opt-in for a contactslist subscription pending ?.
      *
      * @param bool
      * @return Contact
@@ -200,7 +200,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Gets the Is an opt-in for a contactslist subscription pending ?
+     * Gets the Is an opt-in for a contactslist subscription pending ?.
      *
      * @return bool
      */
@@ -210,7 +210,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Sets the Is this contact complaining of spam ?
+     * Sets the Is this contact complaining of spam ?.
      *
      * @param bool
      * @return Contact
@@ -222,7 +222,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Gets the Is this contact complaining of spam ?
+     * Gets the Is this contact complaining of spam ?.
      *
      * @return bool
      */
@@ -232,7 +232,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp of last registered activity for this contact
+     * Sets the Timestamp of last registered activity for this contact.
      *
      * @param \Datetime
      * @return Contact
@@ -244,7 +244,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp of last registered activity for this contact
+     * Gets the Timestamp of last registered activity for this contact.
      *
      * @return \Datetime
      */
@@ -254,7 +254,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp of last update of this contact
+     * Sets the Timestamp of last update of this contact.
      *
      * @param \Datetime
      * @return Contact
@@ -266,7 +266,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp of last update of this contact
+     * Gets the Timestamp of last update of this contact.
      *
      * @return \Datetime
      */
@@ -276,7 +276,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Sets the User-provided name for this contact
+     * Sets the User-provided name for this contact.
      *
      * @param string
      * @return Contact
@@ -288,7 +288,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Gets the User-provided name for this contact
+     * Gets the User-provided name for this contact.
      *
      * @return string
      */
@@ -298,7 +298,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp of last unsubscribe request.
+     * Sets the Timestamp of last unsubscribe from all lists request.
      *
      * @param \Datetime
      * @return Contact
@@ -310,7 +310,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp of last unsubscribe request.
+     * Gets the Timestamp of last unsubscribe from all lists request.
      *
      * @return \Datetime
      */
@@ -320,7 +320,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Sets the Description of who initiated the unsubscribe request.
+     * Sets the Description of who initiated the unsubscribe from all lists request.
      *
      * @param string
      * @return Contact
@@ -332,7 +332,7 @@ class Contact implements ModelInterface
     }
 
     /**
-     * Gets the Description of who initiated the unsubscribe request.
+     * Gets the Description of who initiated the unsubscribe from all lists request.
      *
      * @return string
      */

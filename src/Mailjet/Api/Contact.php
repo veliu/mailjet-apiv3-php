@@ -45,7 +45,7 @@ use \Datetime;
 /**
  * Contact Api
  *
- * API Key contacts (email addresses)
+ * Manage the details of a Contact.
  *
  * @see http://mjdemo.poxx.net/~shubham/contact.html
  */

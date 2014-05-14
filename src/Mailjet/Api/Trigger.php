@@ -43,7 +43,7 @@ use Zend\InputFilter;
 /**
  * Trigger Api
  *
- * Triggers for outgoing events
+ * Triggers for outgoing events.
  *
  * @see http://mjdemo.poxx.net/~shubham/trigger.html
  */
@@ -90,7 +90,7 @@ class Trigger extends AbstractApi
             ),
         'Event' => array(
             'name' => 'Event',
-            'dataType' => 'int',
+            'dataType' => 'string',
             'required' => false
             ),
         'ID' => array(

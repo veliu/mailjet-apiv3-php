@@ -44,7 +44,7 @@ use \Datetime;
 /**
  * Geostatistics Api
  *
- * API Key click statistics grouped per country.
+ * Message click/open statistics grouped per country
  *
  * @see http://mjdemo.poxx.net/~shubham/geostatistics.html
  */

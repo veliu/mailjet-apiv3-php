@@ -37,43 +37,43 @@ namespace Mailjet\Model;
 /**
  * Newsletterproperties Model
  *
- * CSS data for a newsletter
+ * CSS data for a newsletter.
  */
 class Newsletterproperties implements ModelInterface
 {
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * CSS Property name
+     * CSS Property name.
      */
     protected $Name = null;
 
     /**
-     * Reference to newsletter
+     * Reference to newsletter.
      */
     protected $NewsLetterID = null;
 
     /**
-     * Property Name
+     * Property Name.
      */
     protected $PropertyName = null;
 
     /**
-     * CSS Selector
+     * CSS Selector.
      */
     protected $Selector = null;
 
     /**
-     * Value
+     * Value.
      */
     protected $Value = null;
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Newsletterproperties
@@ -85,7 +85,7 @@ class Newsletterproperties implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -95,7 +95,7 @@ class Newsletterproperties implements ModelInterface
     }
 
     /**
-     * Sets the CSS Property name
+     * Sets the CSS Property name.
      *
      * @param string
      * @return Newsletterproperties
@@ -107,7 +107,7 @@ class Newsletterproperties implements ModelInterface
     }
 
     /**
-     * Gets the CSS Property name
+     * Gets the CSS Property name.
      *
      * @return string
      */
@@ -117,7 +117,7 @@ class Newsletterproperties implements ModelInterface
     }
 
     /**
-     * Sets the Reference to newsletter
+     * Sets the Reference to newsletter.
      *
      * @param int
      * @return Newsletterproperties
@@ -129,7 +129,7 @@ class Newsletterproperties implements ModelInterface
     }
 
     /**
-     * Gets the Reference to newsletter
+     * Gets the Reference to newsletter.
      *
      * @return int
      */
@@ -139,7 +139,7 @@ class Newsletterproperties implements ModelInterface
     }
 
     /**
-     * Sets the Property Name
+     * Sets the Property Name.
      *
      * @param string
      * @return Newsletterproperties
@@ -151,7 +151,7 @@ class Newsletterproperties implements ModelInterface
     }
 
     /**
-     * Gets the Property Name
+     * Gets the Property Name.
      *
      * @return string
      */
@@ -161,7 +161,7 @@ class Newsletterproperties implements ModelInterface
     }
 
     /**
-     * Sets the CSS Selector
+     * Sets the CSS Selector.
      *
      * @param string
      * @return Newsletterproperties
@@ -173,7 +173,7 @@ class Newsletterproperties implements ModelInterface
     }
 
     /**
-     * Gets the CSS Selector
+     * Gets the CSS Selector.
      *
      * @return string
      */
@@ -183,7 +183,7 @@ class Newsletterproperties implements ModelInterface
     }
 
     /**
-     * Sets the Value
+     * Sets the Value.
      *
      * @param string
      * @return Newsletterproperties
@@ -195,7 +195,7 @@ class Newsletterproperties implements ModelInterface
     }
 
     /**
-     * Gets the Value
+     * Gets the Value.
      *
      * @return string
      */

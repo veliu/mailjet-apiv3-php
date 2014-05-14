@@ -39,13 +39,13 @@ use \Datetime;
 /**
  * Newsletter Model
  *
- * Newsletter data
+ * Newsletter data.
  */
 class Newsletter implements ModelInterface
 {
 
     /**
-     * Callback URL
+     * Callback URL.
      */
     protected $Callback = null;
 
@@ -60,9 +60,9 @@ class Newsletter implements ModelInterface
     protected $ContactsListID = null;
 
     /**
-     * Timestamp when object was created in database
+     * Timestamp when object was created in database.
      */
-    protected $CreatedAt = null;
+    protected $CreatedAt = 'Current time';
 
     /**
      * When the newsletter was delivered.
@@ -70,24 +70,19 @@ class Newsletter implements ModelInterface
     protected $DeliveredAt = null;
 
     /**
-     * Edit mode for newsletter
+     * Edit mode for newsletter.
      */
-    protected $EditMode = null;
+    protected $EditMode = 'tool';
 
     /**
-     * Edit type
+     * Edit type.
      */
-    protected $EditType = null;
-
-    /**
-     * Raw SMTP message sent by Mailjet
-     */
-    protected $EmailSMTPMsg = null;
+    protected $EditType = 'full';
 
     /**
      * Footer type to generate.
      */
-    protected $Footer = null;
+    protected $Footer = 'default';
 
     /**
      * Address to use in footer.
@@ -100,47 +95,47 @@ class Newsletter implements ModelInterface
     protected $FooterWYSIWYGType = null;
 
     /**
-     * Filename to use in header
+     * Filename to use in header.
      */
     protected $HeaderFilename = null;
 
     /**
-     * Link used in header
+     * Link used in header.
      */
     protected $HeaderLink = null;
 
     /**
-     * Text of header
+     * Text of header.
      */
     protected $HeaderText = null;
 
     /**
-     * URL used in header
+     * URL used in header.
      */
     protected $HeaderUrl = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * IP address used to create newsletter
+     * IP address used to create newsletter.
      */
     protected $Ip = null;
 
     /**
-     * Has the newsletter been handled by Mailjet ?
+     * Has the newsletter been handled by Mailjet ?.
      */
     protected $IsHandled = false;
 
     /**
-     * Is this a starred newsletter ?
+     * Is this a starred newsletter ?.
      */
     protected $IsStarred = false;
 
     /**
-     * Does the newsletter include a text version ?
+     * Does the newsletter include a text version ?.
      */
     protected $IsTextPartIncluded = false;
 
@@ -155,27 +150,22 @@ class Newsletter implements ModelInterface
     protected $ModifiedAt = null;
 
     /**
-     * Modification status of the newsletter.
-     */
-    protected $ModStatus = null;
-
-    /**
      * Type of permalink that should be added to the newsletter.
      */
-    protected $Permalink = null;
+    protected $Permalink = 'default';
 
     /**
-     * Host for the permalink
+     * Host for the permalink.
      */
     protected $PermalinkHost = null;
 
     /**
-     * ?
+     * ?.
      */
     protected $PermalinkWYSIWYGType = null;
 
     /**
-     * ?
+     * ?.
      */
     protected $PolitenessMode = null;
 
@@ -185,27 +175,32 @@ class Newsletter implements ModelInterface
     protected $ReplyEmail = null;
 
     /**
-     * Sender
+     *
+     */
+    protected $Segmentation = null;
+
+    /**
+     * Sender.
      */
     protected $Sender = null;
 
     /**
-     * Sender email address in headers
+     * Sender email address in headers.
      */
     protected $SenderEmail = null;
 
     /**
-     * Name of the sender in Sender headers
+     * Name of the sender in Sender headers.
      */
     protected $SenderName = null;
 
     /**
-     * Status of the newsletter
+     * Status of the newsletter.
      */
-    protected $Status = null;
+    protected $Status = 1 if not yet delivered;
 
     /**
-     * Newsletter subject
+     * Newsletter subject.
      */
     protected $Subject = null;
 
@@ -216,27 +211,22 @@ class Newsletter implements ModelInterface
     protected $TemplateID = null;
 
     /**
-     * Address used for testing
+     * Address used for testing.
      */
     protected $TestAddress = null;
 
     /**
-     * Newsletter title
+     * Newsletter title.
      */
     protected $Title = null;
 
     /**
-     * Timestamp when newsletter data was last updated.
-     */
-    protected $UpdatedAt = null;
-
-    /**
-     * URL where an online version of the newsletter can be found [?]
+     * URL where an online version of the newsletter can be found [?].
      */
     protected $Url = null;
 
     /**
-     * Sets the Callback URL
+     * Sets the Callback URL.
      *
      * @param string
      * @return Newsletter
@@ -248,7 +238,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Callback URL
+     * Gets the Callback URL.
      *
      * @return string
      */
@@ -302,7 +292,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp when object was created in database
+     * Sets the Timestamp when object was created in database.
      *
      * @param \Datetime
      * @return Newsletter
@@ -314,7 +304,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when object was created in database
+     * Gets the Timestamp when object was created in database.
      *
      * @return \Datetime
      */
@@ -346,7 +336,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Edit mode for newsletter
+     * Sets the Edit mode for newsletter.
      *
      * @param string
      * @return Newsletter
@@ -358,7 +348,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Edit mode for newsletter
+     * Gets the Edit mode for newsletter.
      *
      * @return string
      */
@@ -368,7 +358,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Edit type
+     * Sets the Edit type.
      *
      * @param string
      * @return Newsletter
@@ -380,35 +370,13 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Edit type
+     * Gets the Edit type.
      *
      * @return string
      */
     public function getEditType()
     {
         return $this->EditType;
-    }
-
-    /**
-     * Sets the Raw SMTP message sent by Mailjet
-     *
-     * @param string
-     * @return Newsletter
-     */
-    public function setEmailSMTPMsg($EmailSMTPMsg = null)
-    {
-        $this->EmailSMTPMsg = $EmailSMTPMsg;
-        return $this;
-    }
-
-    /**
-     * Gets the Raw SMTP message sent by Mailjet
-     *
-     * @return string
-     */
-    public function getEmailSMTPMsg()
-    {
-        return $this->EmailSMTPMsg;
     }
 
     /**
@@ -478,7 +446,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Filename to use in header
+     * Sets the Filename to use in header.
      *
      * @param string
      * @return Newsletter
@@ -490,7 +458,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Filename to use in header
+     * Gets the Filename to use in header.
      *
      * @return string
      */
@@ -500,7 +468,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Link used in header
+     * Sets the Link used in header.
      *
      * @param string
      * @return Newsletter
@@ -512,7 +480,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Link used in header
+     * Gets the Link used in header.
      *
      * @return string
      */
@@ -522,7 +490,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Text of header
+     * Sets the Text of header.
      *
      * @param string
      * @return Newsletter
@@ -534,7 +502,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Text of header
+     * Gets the Text of header.
      *
      * @return string
      */
@@ -544,7 +512,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the URL used in header
+     * Sets the URL used in header.
      *
      * @param string
      * @return Newsletter
@@ -556,7 +524,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the URL used in header
+     * Gets the URL used in header.
      *
      * @return string
      */
@@ -566,7 +534,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Newsletter
@@ -578,7 +546,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -588,7 +556,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the IP address used to create newsletter
+     * Sets the IP address used to create newsletter.
      *
      * @param string
      * @return Newsletter
@@ -600,7 +568,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the IP address used to create newsletter
+     * Gets the IP address used to create newsletter.
      *
      * @return string
      */
@@ -610,7 +578,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Has the newsletter been handled by Mailjet ?
+     * Sets the Has the newsletter been handled by Mailjet ?.
      *
      * @param bool
      * @return Newsletter
@@ -622,7 +590,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Has the newsletter been handled by Mailjet ?
+     * Gets the Has the newsletter been handled by Mailjet ?.
      *
      * @return bool
      */
@@ -632,7 +600,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Is this a starred newsletter ?
+     * Sets the Is this a starred newsletter ?.
      *
      * @param bool
      * @return Newsletter
@@ -644,7 +612,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Is this a starred newsletter ?
+     * Gets the Is this a starred newsletter ?.
      *
      * @return bool
      */
@@ -654,7 +622,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Does the newsletter include a text version ?
+     * Sets the Does the newsletter include a text version ?.
      *
      * @param bool
      * @return Newsletter
@@ -666,7 +634,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Does the newsletter include a text version ?
+     * Gets the Does the newsletter include a text version ?.
      *
      * @return bool
      */
@@ -720,28 +688,6 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Modification status of the newsletter.
-     *
-     * @param int
-     * @return Newsletter
-     */
-    public function setModStatus($ModStatus = null)
-    {
-        $this->ModStatus = $ModStatus;
-        return $this;
-    }
-
-    /**
-     * Gets the Modification status of the newsletter.
-     *
-     * @return int
-     */
-    public function getModStatus()
-    {
-        return $this->ModStatus;
-    }
-
-    /**
      * Sets the Type of permalink that should be added to the newsletter.
      *
      * @param string
@@ -764,7 +710,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Host for the permalink
+     * Sets the Host for the permalink.
      *
      * @param string
      * @return Newsletter
@@ -776,7 +722,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Host for the permalink
+     * Gets the Host for the permalink.
      *
      * @return string
      */
@@ -786,7 +732,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the ?
+     * Sets the ?.
      *
      * @param int
      * @return Newsletter
@@ -798,7 +744,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the ?
+     * Gets the ?.
      *
      * @return int
      */
@@ -808,7 +754,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the ?
+     * Sets the ?.
      *
      * @param int
      * @return Newsletter
@@ -820,7 +766,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the ?
+     * Gets the ?.
      *
      * @return int
      */
@@ -852,7 +798,29 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Sender
+     * Sets the 
+     *
+     * @param int
+     * @return Newsletter
+     */
+    public function setSegmentation($Segmentation = null)
+    {
+        $this->Segmentation = $Segmentation;
+        return $this;
+    }
+
+    /**
+     * Gets the 
+     *
+     * @return int
+     */
+    public function getSegmentation()
+    {
+        return $this->Segmentation;
+    }
+
+    /**
+     * Sets the Sender.
      *
      * @param string
      * @return Newsletter
@@ -864,7 +832,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Sender
+     * Gets the Sender.
      *
      * @return string
      */
@@ -874,7 +842,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Sender email address in headers
+     * Sets the Sender email address in headers.
      *
      * @param string
      * @return Newsletter
@@ -886,7 +854,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Sender email address in headers
+     * Gets the Sender email address in headers.
      *
      * @return string
      */
@@ -896,7 +864,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Name of the sender in Sender headers
+     * Sets the Name of the sender in Sender headers.
      *
      * @param string
      * @return Newsletter
@@ -908,7 +876,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Name of the sender in Sender headers
+     * Gets the Name of the sender in Sender headers.
      *
      * @return string
      */
@@ -918,7 +886,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Status of the newsletter
+     * Sets the Status of the newsletter.
      *
      * @param int
      * @return Newsletter
@@ -930,7 +898,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Status of the newsletter
+     * Gets the Status of the newsletter.
      *
      * @return int
      */
@@ -940,7 +908,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Newsletter subject
+     * Sets the Newsletter subject.
      *
      * @param string
      * @return Newsletter
@@ -952,7 +920,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Newsletter subject
+     * Gets the Newsletter subject.
      *
      * @return string
      */
@@ -986,7 +954,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Address used for testing
+     * Sets the Address used for testing.
      *
      * @param string
      * @return Newsletter
@@ -998,7 +966,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Address used for testing
+     * Gets the Address used for testing.
      *
      * @return string
      */
@@ -1008,7 +976,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Newsletter title
+     * Sets the Newsletter title.
      *
      * @param string
      * @return Newsletter
@@ -1020,7 +988,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the Newsletter title
+     * Gets the Newsletter title.
      *
      * @return string
      */
@@ -1030,29 +998,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp when newsletter data was last updated.
-     *
-     * @param \Datetime
-     * @return Newsletter
-     */
-    public function setUpdatedAt(\Datetime $UpdatedAt = null)
-    {
-        $this->UpdatedAt = $UpdatedAt;
-        return $this;
-    }
-
-    /**
-     * Gets the Timestamp when newsletter data was last updated.
-     *
-     * @return \Datetime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->UpdatedAt;
-    }
-
-    /**
-     * Sets the URL where an online version of the newsletter can be found [?]
+     * Sets the URL where an online version of the newsletter can be found [?].
      *
      * @param string
      * @return Newsletter
@@ -1064,7 +1010,7 @@ class Newsletter implements ModelInterface
     }
 
     /**
-     * Gets the URL where an online version of the newsletter can be found [?]
+     * Gets the URL where an online version of the newsletter can be found [?].
      *
      * @return string
      */

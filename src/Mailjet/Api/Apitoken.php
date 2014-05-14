@@ -44,7 +44,8 @@ use Zend\InputFilter;
 /**
  * Apitoken Api
  *
- * Access token for API
+ * Access token for API, used to give access to an API Key in conjunction with our
+ * IFrame API.
  *
  * @see http://mjdemo.poxx.net/~shubham/apitoken.html
  */

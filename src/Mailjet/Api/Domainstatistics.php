@@ -44,7 +44,7 @@ use \Datetime;
 /**
  * Domainstatistics Api
  *
- * API key Campaign/Message/click statistics grouped per domain.
+ * View Campaign/Message/Click statistics grouped per domain.
  *
  * @see http://mjdemo.poxx.net/~shubham/domainstatistics.html
  */

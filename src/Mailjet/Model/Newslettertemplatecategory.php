@@ -37,18 +37,19 @@ namespace Mailjet\Model;
 /**
  * Newslettertemplatecategory Model
  *
- * Global newsletter template categories
+ * Manage categories for your newsletters. Allows you to group newsletters by
+ * category.
  */
 class Newslettertemplatecategory implements ModelInterface
 {
 
     /**
-     * Category description (localized)
+     * Category description (localized).
      */
     protected $Description = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
@@ -68,7 +69,7 @@ class Newslettertemplatecategory implements ModelInterface
     protected $Value = null;
 
     /**
-     * Sets the Category description (localized)
+     * Sets the Category description (localized).
      *
      * @param string
      * @return Newslettertemplatecategory
@@ -80,7 +81,7 @@ class Newslettertemplatecategory implements ModelInterface
     }
 
     /**
-     * Gets the Category description (localized)
+     * Gets the Category description (localized).
      *
      * @return string
      */
@@ -90,7 +91,7 @@ class Newslettertemplatecategory implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Newslettertemplatecategory
@@ -102,7 +103,7 @@ class Newslettertemplatecategory implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */

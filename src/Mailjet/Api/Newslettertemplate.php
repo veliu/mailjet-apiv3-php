@@ -44,7 +44,7 @@ use Zend\InputFilter;
 /**
  * Newslettertemplate Api
  *
- * Newsletter templates
+ * Manages a Newsletter Template Properties.
  *
  * @see http://mjdemo.poxx.net/~shubham/newslettertemplate.html
  */
@@ -153,11 +153,6 @@ class Newslettertemplate extends AbstractApi
             'name' => 'Status',
             'dataType' => 'int',
             'required' => false
-            ),
-        'UpdatedAt' => array(
-            'name' => 'UpdatedAt',
-            'dataType' => '\Datetime',
-            'required' => false
             )
         );
 
@@ -170,7 +165,6 @@ class Newslettertemplate extends AbstractApi
         $this->setUrl('http://api.mailjet.com/v3/REST/newslettertemplate/');
         $hydrator = $this->getResultSetPrototype()->getHydrator();
         $hydrator->addStrategy('CreatedAt', new TRFC3339DateTimeStrategy());
-        $hydrator->addStrategy('UpdatedAt', new TRFC3339DateTimeStrategy());
     }
 
     /**

@@ -44,7 +44,7 @@ use Zend\InputFilter;
 /**
  * Myprofile Api
  *
- * User profile data: payment information etc.
+ * Manage user profile data such as address, payment information etc.
  *
  * @see http://mjdemo.poxx.net/~shubham/myprofile.html
  */
@@ -103,11 +103,6 @@ class Myprofile extends AbstractApi
             'dataType' => 'string',
             'required' => false
             ),
-        'CompanyNameEu' => array(
-            'name' => 'CompanyNameEu',
-            'dataType' => 'string',
-            'required' => false
-            ),
         'ContactPhone' => array(
             'name' => 'ContactPhone',
             'dataType' => 'string',
@@ -155,16 +150,6 @@ class Myprofile extends AbstractApi
             ),
         'VATNumber' => array(
             'name' => 'VATNumber',
-            'dataType' => 'string',
-            'required' => false
-            ),
-        'VATNumberStatus' => array(
-            'name' => 'VATNumberStatus',
-            'dataType' => 'int',
-            'required' => false
-            ),
-        'VATNumberTrusted' => array(
-            'name' => 'VATNumberTrusted',
             'dataType' => 'string',
             'required' => false
             ),

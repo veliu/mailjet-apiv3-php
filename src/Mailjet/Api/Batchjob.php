@@ -44,7 +44,7 @@ use \Datetime;
 /**
  * Batchjob Api
  *
- * Batch jobs in the mailjet system.
+ * Batch jobs running on the Mailjet infrastructure. Currently not documented.
  *
  * @see http://mjdemo.poxx.net/~shubham/batchjob.html
  */
@@ -66,6 +66,10 @@ class Batchjob extends AbstractApi
             ),
         'Data' => array(
             'name' => 'Data',
+            'required' => false
+            ),
+        'JobType' => array(
+            'name' => 'JobType',
             'required' => false
             ),
         'MaxJobEnd' => array(
@@ -241,6 +245,18 @@ class Batchjob extends AbstractApi
     public function getByData($Data)
     {
         $result = $this->getList(array('Data' => $Data));
+        return $result;
+    }
+
+    /**
+     * Return list of Mailjet\Model\Batchjob with JobType = $JobType
+     *
+     * @param string
+     * @return ResultSet\ResultSet
+     */
+    public function getByJobType($JobType)
+    {
+        $result = $this->getList(array('JobType' => $JobType));
         return $result;
     }
 

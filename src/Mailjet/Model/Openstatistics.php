@@ -37,7 +37,7 @@ namespace Mailjet\Model;
 /**
  * Openstatistics Model
  *
- * API Key Statistical message open information
+ * Retrieve statistics on e-mails opened at least once by their recipients.
  */
 class Openstatistics implements ModelInterface
 {
@@ -48,12 +48,12 @@ class Openstatistics implements ModelInterface
     protected $OpenedCount = null;
 
     /**
-     * Delay between delivery and open (in seconds)
+     * Delay between delivery and open (in seconds).
      */
     protected $OpenedDelay = null;
 
     /**
-     * Total number of messages processed by Mailjet
+     * Total number of messages processed by Mailjet.
      */
     protected $ProcessedCount = null;
 
@@ -80,7 +80,7 @@ class Openstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Delay between delivery and open (in seconds)
+     * Sets the Delay between delivery and open (in seconds).
      *
      * @param string
      * @return Openstatistics
@@ -92,7 +92,7 @@ class Openstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Delay between delivery and open (in seconds)
+     * Gets the Delay between delivery and open (in seconds).
      *
      * @return string
      */
@@ -102,7 +102,7 @@ class Openstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Total number of messages processed by Mailjet
+     * Sets the Total number of messages processed by Mailjet.
      *
      * @param int
      * @return Openstatistics
@@ -114,7 +114,7 @@ class Openstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Total number of messages processed by Mailjet
+     * Gets the Total number of messages processed by Mailjet.
      *
      * @return int
      */

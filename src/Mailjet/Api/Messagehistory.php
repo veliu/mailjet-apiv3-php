@@ -44,7 +44,7 @@ use Zend\InputFilter;
 /**
  * Messagehistory Api
  *
- * Event history of a message
+ * Event history of a message.
  *
  * @see http://mjdemo.poxx.net/~shubham/messagehistory.html
  */

@@ -39,7 +39,7 @@ use \Datetime;
 /**
  * Contactstatistics Model
  *
- * Message/Click Statistics for a contact
+ * View message statistics for a given contact.
  */
 class Contactstatistics implements ModelInterface
 {
@@ -70,7 +70,7 @@ class Contactstatistics implements ModelInterface
     protected $DeliveredCount = null;
 
     /**
-     * Timestamp of last registered activity for this contact
+     * Timestamp of last registered activity for this contact.
      */
     protected $LastActivityAt = null;
 
@@ -80,19 +80,24 @@ class Contactstatistics implements ModelInterface
     protected $OpenedCount = null;
 
     /**
-     * Total number of messages processed by Mailjet
+     * Total number of messages processed by Mailjet.
      */
     protected $ProcessedCount = null;
 
     /**
-     * Number of messages waiting in send queue
+     * Number of messages waiting in send queue.
      */
     protected $QueuedCount = null;
 
     /**
-     * Number of spam complaints
+     * Number of spam complaints.
      */
     protected $SpamComplaintCount = null;
+
+    /**
+     *
+     */
+    protected $UnsubscribedCount = null;
 
     /**
      * Sets the Number of blocked messages.
@@ -205,7 +210,7 @@ class Contactstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp of last registered activity for this contact
+     * Sets the Timestamp of last registered activity for this contact.
      *
      * @param \Datetime
      * @return Contactstatistics
@@ -217,7 +222,7 @@ class Contactstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp of last registered activity for this contact
+     * Gets the Timestamp of last registered activity for this contact.
      *
      * @return \Datetime
      */
@@ -249,7 +254,7 @@ class Contactstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Total number of messages processed by Mailjet
+     * Sets the Total number of messages processed by Mailjet.
      *
      * @param int
      * @return Contactstatistics
@@ -261,7 +266,7 @@ class Contactstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Total number of messages processed by Mailjet
+     * Gets the Total number of messages processed by Mailjet.
      *
      * @return int
      */
@@ -271,7 +276,7 @@ class Contactstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of messages waiting in send queue
+     * Sets the Number of messages waiting in send queue.
      *
      * @param int
      * @return Contactstatistics
@@ -283,7 +288,7 @@ class Contactstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of messages waiting in send queue
+     * Gets the Number of messages waiting in send queue.
      *
      * @return int
      */
@@ -293,7 +298,7 @@ class Contactstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of spam complaints
+     * Sets the Number of spam complaints.
      *
      * @param int
      * @return Contactstatistics
@@ -305,13 +310,35 @@ class Contactstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of spam complaints
+     * Gets the Number of spam complaints.
      *
      * @return int
      */
     public function getSpamComplaintCount()
     {
         return $this->SpamComplaintCount;
+    }
+
+    /**
+     * Sets the 
+     *
+     * @param int
+     * @return Contactstatistics
+     */
+    public function setUnsubscribedCount($UnsubscribedCount = null)
+    {
+        $this->UnsubscribedCount = $UnsubscribedCount;
+        return $this;
+    }
+
+    /**
+     * Gets the 
+     *
+     * @return int
+     */
+    public function getUnsubscribedCount()
+    {
+        return $this->UnsubscribedCount;
     }
 
 

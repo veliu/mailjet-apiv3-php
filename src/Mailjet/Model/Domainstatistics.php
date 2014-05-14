@@ -37,7 +37,7 @@ namespace Mailjet\Model;
 /**
  * Domainstatistics Model
  *
- * API key Campaign/Message/click statistics grouped per domain.
+ * View Campaign/Message/Click statistics grouped per domain.
  */
 class Domainstatistics implements ModelInterface
 {
@@ -63,12 +63,12 @@ class Domainstatistics implements ModelInterface
     protected $DeliveredCount = null;
 
     /**
-     * Domain name (lowercase)
+     * Domain name (lowercase).
      */
     protected $Domain = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
@@ -78,17 +78,17 @@ class Domainstatistics implements ModelInterface
     protected $OpenedCount = null;
 
     /**
-     * Total number of messages processed by Mailjet
+     * Total number of messages processed by Mailjet.
      */
     protected $ProcessedCount = null;
 
     /**
-     * Number of messages waiting in send queue
+     * Number of messages waiting in send queue.
      */
     protected $QueuedCount = null;
 
     /**
-     * Number of spam complaints
+     * Number of spam complaints.
      */
     protected $SpamComplaintCount = null;
 
@@ -186,7 +186,7 @@ class Domainstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Domain name (lowercase)
+     * Sets the Domain name (lowercase).
      *
      * @param string
      * @return Domainstatistics
@@ -198,7 +198,7 @@ class Domainstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Domain name (lowercase)
+     * Gets the Domain name (lowercase).
      *
      * @return string
      */
@@ -208,7 +208,7 @@ class Domainstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Domainstatistics
@@ -220,7 +220,7 @@ class Domainstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -252,7 +252,7 @@ class Domainstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Total number of messages processed by Mailjet
+     * Sets the Total number of messages processed by Mailjet.
      *
      * @param int
      * @return Domainstatistics
@@ -264,7 +264,7 @@ class Domainstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Total number of messages processed by Mailjet
+     * Gets the Total number of messages processed by Mailjet.
      *
      * @return int
      */
@@ -274,7 +274,7 @@ class Domainstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of messages waiting in send queue
+     * Sets the Number of messages waiting in send queue.
      *
      * @param int
      * @return Domainstatistics
@@ -286,7 +286,7 @@ class Domainstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of messages waiting in send queue
+     * Gets the Number of messages waiting in send queue.
      *
      * @return int
      */
@@ -296,7 +296,7 @@ class Domainstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of spam complaints
+     * Sets the Number of spam complaints.
      *
      * @param int
      * @return Domainstatistics
@@ -308,7 +308,7 @@ class Domainstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of spam complaints
+     * Gets the Number of spam complaints.
      *
      * @return int
      */

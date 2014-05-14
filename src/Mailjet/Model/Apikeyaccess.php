@@ -39,7 +39,7 @@ use \Datetime;
 /**
  * Apikeyaccess Model
  *
- * Access rights description on API keys for subaccounts/users
+ * Access rights description on API keys for subaccounts/users.
  */
 class Apikeyaccess implements ModelInterface
 {
@@ -55,49 +55,39 @@ class Apikeyaccess implements ModelInterface
     protected $APIKeyID = null;
 
     /**
-     * Timestamp when object was created in database
+     * Timestamp when object was created in database.
      */
-    protected $CreatedAt = null;
+    protected $CreatedAt = 'Current time';
 
     /**
-     * Custom name for this set of rights
+     * Custom name for this set of rights.
      */
     protected $CustomName = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Is this object active (rights enforced) or not
+     * Is this object active (rights enforced) or not.
      */
     protected $IsActive = false;
 
     /**
-     * Timestamp of last registered activity for this API Key
+     * Timestamp of last registered activity for this API Key.
      */
     protected $LastActivityAt = null;
 
     /**
-     * Reference to Real user
+     * Reference to Real user.
      */
     protected $RealUserID = null;
 
     /**
-     * Reference to subaccount
+     * Reference to subaccount.
      */
     protected $SubaccountID = null;
-
-    /**
-     * Unique Token used to retrieve these access rights.
-     */
-    protected $Token = null;
-
-    /**
-     * Timestamp when object was last updated in database.
-     */
-    protected $UpdatedAt = null;
 
     /**
      * Reference to user for whom access is described.
@@ -149,7 +139,7 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp when object was created in database
+     * Sets the Timestamp when object was created in database.
      *
      * @param \Datetime
      * @return Apikeyaccess
@@ -161,7 +151,7 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when object was created in database
+     * Gets the Timestamp when object was created in database.
      *
      * @return \Datetime
      */
@@ -171,7 +161,7 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Sets the Custom name for this set of rights
+     * Sets the Custom name for this set of rights.
      *
      * @param string
      * @return Apikeyaccess
@@ -183,7 +173,7 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Gets the Custom name for this set of rights
+     * Gets the Custom name for this set of rights.
      *
      * @return string
      */
@@ -193,7 +183,7 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Apikeyaccess
@@ -205,7 +195,7 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -215,7 +205,7 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Sets the Is this object active (rights enforced) or not
+     * Sets the Is this object active (rights enforced) or not.
      *
      * @param bool
      * @return Apikeyaccess
@@ -227,7 +217,7 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Gets the Is this object active (rights enforced) or not
+     * Gets the Is this object active (rights enforced) or not.
      *
      * @return bool
      */
@@ -237,7 +227,7 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp of last registered activity for this API Key
+     * Sets the Timestamp of last registered activity for this API Key.
      *
      * @param \Datetime
      * @return Apikeyaccess
@@ -249,7 +239,7 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp of last registered activity for this API Key
+     * Gets the Timestamp of last registered activity for this API Key.
      *
      * @return \Datetime
      */
@@ -259,7 +249,7 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Sets the Reference to Real user
+     * Sets the Reference to Real user.
      *
      * @param int
      * @return Apikeyaccess
@@ -271,7 +261,7 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Gets the Reference to Real user
+     * Gets the Reference to Real user.
      *
      * @return int
      */
@@ -281,7 +271,7 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Sets the Reference to subaccount
+     * Sets the Reference to subaccount.
      *
      * @param int
      * @return Apikeyaccess
@@ -293,57 +283,13 @@ class Apikeyaccess implements ModelInterface
     }
 
     /**
-     * Gets the Reference to subaccount
+     * Gets the Reference to subaccount.
      *
      * @return int
      */
     public function getSubaccountID()
     {
         return $this->SubaccountID;
-    }
-
-    /**
-     * Sets the Unique Token used to retrieve these access rights.
-     *
-     * @param string
-     * @return Apikeyaccess
-     */
-    public function setToken($Token = null)
-    {
-        $this->Token = $Token;
-        return $this;
-    }
-
-    /**
-     * Gets the Unique Token used to retrieve these access rights.
-     *
-     * @return string
-     */
-    public function getToken()
-    {
-        return $this->Token;
-    }
-
-    /**
-     * Sets the Timestamp when object was last updated in database.
-     *
-     * @param \Datetime
-     * @return Apikeyaccess
-     */
-    public function setUpdatedAt(\Datetime $UpdatedAt = null)
-    {
-        $this->UpdatedAt = $UpdatedAt;
-        return $this;
-    }
-
-    /**
-     * Gets the Timestamp when object was last updated in database.
-     *
-     * @return \Datetime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->UpdatedAt;
     }
 
     /**

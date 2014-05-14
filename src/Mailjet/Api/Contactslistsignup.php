@@ -43,7 +43,7 @@ use Zend\InputFilter;
 /**
  * Contactslistsignup Api
  *
- * Contacts list signup request
+ * Contacts list signup request.
  *
  * @see http://mjdemo.poxx.net/~shubham/contactslistsignup.html
  */

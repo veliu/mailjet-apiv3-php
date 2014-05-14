@@ -37,33 +37,33 @@ namespace Mailjet\Model;
 /**
  * Preferences Model
  *
- * User preferences in key=value format
+ * User preferences in key=value format.
  */
 class Preferences implements ModelInterface
 {
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Name of preference
+     * Name of preference.
      */
     protected $Key = null;
 
     /**
-     * User for which this is the preference
+     * User for which this is the preference.
      */
     protected $UserID = null;
 
     /**
-     * Value of preference
+     * Value of preference.
      */
     protected $Value = null;
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Preferences
@@ -75,7 +75,7 @@ class Preferences implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -85,7 +85,7 @@ class Preferences implements ModelInterface
     }
 
     /**
-     * Sets the Name of preference
+     * Sets the Name of preference.
      *
      * @param string
      * @return Preferences
@@ -97,7 +97,7 @@ class Preferences implements ModelInterface
     }
 
     /**
-     * Gets the Name of preference
+     * Gets the Name of preference.
      *
      * @return string
      */
@@ -107,7 +107,7 @@ class Preferences implements ModelInterface
     }
 
     /**
-     * Sets the User for which this is the preference
+     * Sets the User for which this is the preference.
      *
      * @param int
      * @return Preferences
@@ -119,7 +119,7 @@ class Preferences implements ModelInterface
     }
 
     /**
-     * Gets the User for which this is the preference
+     * Gets the User for which this is the preference.
      *
      * @return int
      */
@@ -129,7 +129,7 @@ class Preferences implements ModelInterface
     }
 
     /**
-     * Sets the Value of preference
+     * Sets the Value of preference.
      *
      * @param string
      * @return Preferences
@@ -141,7 +141,7 @@ class Preferences implements ModelInterface
     }
 
     /**
-     * Gets the Value of preference
+     * Gets the Value of preference.
      *
      * @return string
      */

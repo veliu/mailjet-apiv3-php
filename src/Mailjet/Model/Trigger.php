@@ -37,15 +37,15 @@ namespace Mailjet\Model;
 /**
  * Trigger Model
  *
- * Triggers for outgoing events
+ * Triggers for outgoing events.
  */
 class Trigger implements ModelInterface
 {
 
     /**
-     * Timestamp when object was written to the database
+     * Timestamp when object was written to the database.
      */
-    protected $AddedTs = null;
+    protected $AddedTs = Current time;
 
     /**
      * Reference to API key to whom this trigger belongs.
@@ -53,17 +53,17 @@ class Trigger implements ModelInterface
     protected $APIKey = null;
 
     /**
-     * JSON with event details
+     * JSON with event details.
      */
     protected $Details = null;
 
     /**
-     * Type of event
+     * Type of event.
      */
     protected $Event = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
@@ -73,7 +73,7 @@ class Trigger implements ModelInterface
     protected $User = null;
 
     /**
-     * Sets the Timestamp when object was written to the database
+     * Sets the Timestamp when object was written to the database.
      *
      * @param int
      * @return Trigger
@@ -85,7 +85,7 @@ class Trigger implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when object was written to the database
+     * Gets the Timestamp when object was written to the database.
      *
      * @return int
      */
@@ -117,7 +117,7 @@ class Trigger implements ModelInterface
     }
 
     /**
-     * Sets the JSON with event details
+     * Sets the JSON with event details.
      *
      * @param string
      * @return Trigger
@@ -129,7 +129,7 @@ class Trigger implements ModelInterface
     }
 
     /**
-     * Gets the JSON with event details
+     * Gets the JSON with event details.
      *
      * @return string
      */
@@ -139,9 +139,9 @@ class Trigger implements ModelInterface
     }
 
     /**
-     * Sets the Type of event
+     * Sets the Type of event.
      *
-     * @param int
+     * @param string
      * @return Trigger
      */
     public function setEvent($Event = null)
@@ -151,9 +151,9 @@ class Trigger implements ModelInterface
     }
 
     /**
-     * Gets the Type of event
+     * Gets the Type of event.
      *
-     * @return int
+     * @return string
      */
     public function getEvent()
     {
@@ -161,7 +161,7 @@ class Trigger implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Trigger
@@ -173,7 +173,7 @@ class Trigger implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */

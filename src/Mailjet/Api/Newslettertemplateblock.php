@@ -43,7 +43,8 @@ use Zend\InputFilter;
 /**
  * Newslettertemplateblock Api
  *
- * HTML data for a block from a newsletter template
+ * Describes a block of HTML data contained inside a Newsletter Template.HTML data
+ * for a block from a newsletter template.
  *
  * @see http://mjdemo.poxx.net/~shubham/newslettertemplateblock.html
  */

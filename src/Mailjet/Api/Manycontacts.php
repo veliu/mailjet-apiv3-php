@@ -45,7 +45,7 @@ use Zend\InputFilter;
 /**
  * Manycontacts Api
  *
- * Special resource to add more than 1 contact in 1 call
+ * Manage contacts within a contactlist in a single call
  *
  * @see http://mjdemo.poxx.net/~shubham/manycontacts.html
  */

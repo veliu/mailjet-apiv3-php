@@ -113,6 +113,46 @@ class Api extends AbstractApi
     }
 
     /**
+     * Helper for contactdata calls
+     *
+     * @return Contactdata
+     */
+    public function contactdata()
+    {
+        return $this->api('Contactdata');
+    }
+
+    /**
+     * Helper for contactfilter calls
+     *
+     * @return Contactfilter
+     */
+    public function contactfilter()
+    {
+        return $this->api('Contactfilter');
+    }
+
+    /**
+     * Helper for contacthistorydata calls
+     *
+     * @return Contacthistorydata
+     */
+    public function contacthistorydata()
+    {
+        return $this->api('Contacthistorydata');
+    }
+
+    /**
+     * Helper for contactmetadata calls
+     *
+     * @return Contactmetadata
+     */
+    public function contactmetadata()
+    {
+        return $this->api('Contactmetadata');
+    }
+
+    /**
      * Helper for contactslist calls
      *
      * @return Contactslist
@@ -140,6 +180,16 @@ class Api extends AbstractApi
     public function contactstatistics()
     {
         return $this->api('Contactstatistics');
+    }
+
+    /**
+     * Helper for csvimport calls
+     *
+     * @return Csvimport
+     */
+    public function csvimport()
+    {
+        return $this->api('Csvimport');
     }
 
     /**
@@ -230,16 +280,6 @@ class Api extends AbstractApi
     public function message()
     {
         return $this->api('Message');
-    }
-
-    /**
-     * Helper for messageclientstatistics calls
-     *
-     * @return Messageclientstatistics
-     */
-    public function messageclientstatistics()
-    {
-        return $this->api('Messageclientstatistics');
     }
 
     /**
@@ -410,6 +450,16 @@ class Api extends AbstractApi
     public function openstatistics()
     {
         return $this->api('Openstatistics');
+    }
+
+    /**
+     * Helper for parseroute calls
+     *
+     * @return Parseroute
+     */
+    public function parseroute()
+    {
+        return $this->api('Parseroute');
     }
 
     /**

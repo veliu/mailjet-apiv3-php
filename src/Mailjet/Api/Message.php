@@ -44,7 +44,8 @@ use Zend\InputFilter;
 /**
  * Message Api
  *
- * API Key messages processed by Mailjet. One record per processed email.
+ * Allows you to list and view the details of a Message (an e-mail) processed by
+ * Mailjet
  *
  * @see http://mjdemo.poxx.net/~shubham/message.html
  */
@@ -110,11 +111,6 @@ class Message extends AbstractApi
             'dataType' => 'int',
             'required' => true
             ),
-        'CheckString' => array(
-            'name' => 'CheckString',
-            'dataType' => 'string',
-            'required' => false
-            ),
         'ContactID' => array(
             'name' => 'ContactID',
             'dataType' => 'int',
@@ -129,11 +125,6 @@ class Message extends AbstractApi
             'name' => 'DestinationID',
             'dataType' => 'int',
             'required' => true
-            ),
-        'Dsn' => array(
-            'name' => 'Dsn',
-            'dataType' => 'string',
-            'required' => false
             ),
         'FilterTime' => array(
             'name' => 'FilterTime',
@@ -180,21 +171,6 @@ class Message extends AbstractApi
             'dataType' => 'int',
             'required' => false
             ),
-        'PlanSubscriptionID' => array(
-            'name' => 'PlanSubscriptionID',
-            'dataType' => 'int',
-            'required' => true
-            ),
-        'PoolIPId' => array(
-            'name' => 'PoolIPId',
-            'dataType' => 'int',
-            'required' => false
-            ),
-        'PostfixQid' => array(
-            'name' => 'PostfixQid',
-            'dataType' => 'string',
-            'required' => false
-            ),
         'SpamassassinScore' => array(
             'name' => 'SpamassassinScore',
             'dataType' => 'string',
@@ -217,12 +193,7 @@ class Message extends AbstractApi
             ),
         'Status' => array(
             'name' => 'Status',
-            'dataType' => 'int',
-            'required' => false
-            ),
-        'UpdatedAt' => array(
-            'name' => 'UpdatedAt',
-            'dataType' => '\Datetime',
+            'dataType' => 'string',
             'required' => false
             )
         );
@@ -236,7 +207,6 @@ class Message extends AbstractApi
         $this->setUrl('http://api.mailjet.com/v3/REST/message/');
         $hydrator = $this->getResultSetPrototype()->getHydrator();
         $hydrator->addStrategy('ArrivedAt', new TRFC3339DateTimeStrategy());
-        $hydrator->addStrategy('UpdatedAt', new TRFC3339DateTimeStrategy());
     }
 
     /**

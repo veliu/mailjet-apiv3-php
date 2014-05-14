@@ -60,12 +60,12 @@ class Messageinformation implements ModelInterface
     protected $ContactID = null;
 
     /**
-     * Timestamp when object was created in database
+     * Timestamp when object was created in database.
      */
     protected $CreatedAt = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
@@ -80,7 +80,7 @@ class Messageinformation implements ModelInterface
     protected $OpenTrackedCount = null;
 
     /**
-     * Number of messages waiting in send queue
+     * Number of messages waiting in send queue.
      */
     protected $QueuedCount = null;
 
@@ -171,7 +171,7 @@ class Messageinformation implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp when object was created in database
+     * Sets the Timestamp when object was created in database.
      *
      * @param \Datetime
      * @return Messageinformation
@@ -183,7 +183,7 @@ class Messageinformation implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when object was created in database
+     * Gets the Timestamp when object was created in database.
      *
      * @return \Datetime
      */
@@ -193,7 +193,7 @@ class Messageinformation implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Messageinformation
@@ -205,7 +205,7 @@ class Messageinformation implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -259,7 +259,7 @@ class Messageinformation implements ModelInterface
     }
 
     /**
-     * Sets the Number of messages waiting in send queue
+     * Sets the Number of messages waiting in send queue.
      *
      * @param int
      * @return Messageinformation
@@ -271,7 +271,7 @@ class Messageinformation implements ModelInterface
     }
 
     /**
-     * Gets the Number of messages waiting in send queue
+     * Gets the Number of messages waiting in send queue.
      *
      * @return int
      */

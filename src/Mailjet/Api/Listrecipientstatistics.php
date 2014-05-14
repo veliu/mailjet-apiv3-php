@@ -45,7 +45,7 @@ use \Datetime;
 /**
  * Listrecipientstatistics Api
  *
- * Message/Click Statistics for a list recipient
+ * View statistics on Messages sent to the recipients of a given list.
  *
  * @see http://mjdemo.poxx.net/~shubham/listrecipientstatistics.html
  */
@@ -121,6 +121,10 @@ class Listrecipientstatistics extends AbstractApi
             'name' => 'Sent',
             'required' => false
             ),
+        'ShowExtraData' => array(
+            'name' => 'ShowExtraData',
+            'required' => false
+            ),
         'Spam' => array(
             'name' => 'Spam',
             'required' => false
@@ -147,6 +151,11 @@ class Listrecipientstatistics extends AbstractApi
             ),
         'ClickedCount' => array(
             'name' => 'ClickedCount',
+            'dataType' => 'int',
+            'required' => false
+            ),
+        'Data' => array(
+            'name' => 'Data',
             'dataType' => 'int',
             'required' => false
             ),
@@ -182,6 +191,11 @@ class Listrecipientstatistics extends AbstractApi
             ),
         'SpamComplaintCount' => array(
             'name' => 'SpamComplaintCount',
+            'dataType' => 'int',
+            'required' => false
+            ),
+        'UnsubscribedCount' => array(
+            'name' => 'UnsubscribedCount',
             'dataType' => 'int',
             'required' => false
             )
@@ -397,6 +411,19 @@ class Listrecipientstatistics extends AbstractApi
     public function getBySent($Sent)
     {
         $result = $this->getList(array('Sent' => $Sent));
+        return $result;
+    }
+
+    /**
+     * Return list of Mailjet\Model\Listrecipientstatistics with ShowExtraData =
+     * $ShowExtraData
+     *
+     * @param bool
+     * @return ResultSet\ResultSet
+     */
+    public function getByShowExtraData($ShowExtraData)
+    {
+        $result = $this->getList(array('ShowExtraData' => $ShowExtraData));
         return $result;
     }
 

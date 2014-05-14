@@ -45,7 +45,7 @@ use \Datetime;
 /**
  * Clickstatistics Api
  *
- * Click statistics for messages
+ * Click statistics for messages.
  *
  * @see http://mjdemo.poxx.net/~shubham/clickstatistics.html
  */

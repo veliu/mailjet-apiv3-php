@@ -45,7 +45,7 @@ use \Datetime;
 /**
  * Contactstatistics Api
  *
- * Message/Click Statistics for a contact
+ * View message statistics for a given contact.
  *
  * @see http://mjdemo.poxx.net/~shubham/contactstatistics.html
  */
@@ -158,6 +158,11 @@ class Contactstatistics extends AbstractApi
             ),
         'SpamComplaintCount' => array(
             'name' => 'SpamComplaintCount',
+            'dataType' => 'int',
+            'required' => false
+            ),
+        'UnsubscribedCount' => array(
+            'name' => 'UnsubscribedCount',
             'dataType' => 'int',
             'required' => false
             )

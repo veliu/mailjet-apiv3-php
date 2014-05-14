@@ -43,7 +43,8 @@ use Zend\InputFilter;
 /**
  * Newslettertemplatecategory Api
  *
- * Global newsletter template categories
+ * Manage categories for your newsletters. Allows you to group newsletters by
+ * category.
  *
  * @see http://mjdemo.poxx.net/~shubham/newslettertemplatecategory.html
  */

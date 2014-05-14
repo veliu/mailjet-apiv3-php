@@ -34,12 +34,11 @@
 
 namespace Mailjet\Model;
 
-use \Datetime;
-
 /**
  * Eventcallbackurl Model
  *
- * URLs for event mechanisms (triggers) of Mailjet
+ * Manage event-driven callback URLs, also called webhooks, used by the Mailjet
+ * platform when a specific action is triggered
  */
 class Eventcallbackurl implements ModelInterface
 {
@@ -55,34 +54,29 @@ class Eventcallbackurl implements ModelInterface
     protected $EventType = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Is this a backup URL ?
+     * Is this a backup URL ?.
      */
     protected $IsBackup = false;
 
     /**
-     * Status of the event
+     * Status of the event.
      */
-    protected $Status = null;
+    protected $Status = '1';
 
     /**
-     * Timestamp indicating when this object was last modified.
-     */
-    protected $UpdatedAt = null;
-
-    /**
-     * URL to use
+     * URL to use.
      */
     protected $Url = null;
 
     /**
      * Event API version for which this URL is valid.
      */
-    protected $Version = null;
+    protected $Version = 1;
 
     /**
      * Sets the API Key for which the callback URL is registered.
@@ -109,7 +103,7 @@ class Eventcallbackurl implements ModelInterface
     /**
      * Sets the Numerical event type.
      *
-     * @param int
+     * @param string
      * @return Eventcallbackurl
      */
     public function setEventType($EventType = null)
@@ -121,7 +115,7 @@ class Eventcallbackurl implements ModelInterface
     /**
      * Gets the Numerical event type.
      *
-     * @return int
+     * @return string
      */
     public function getEventType()
     {
@@ -129,7 +123,7 @@ class Eventcallbackurl implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Eventcallbackurl
@@ -141,7 +135,7 @@ class Eventcallbackurl implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -151,7 +145,7 @@ class Eventcallbackurl implements ModelInterface
     }
 
     /**
-     * Sets the Is this a backup URL ?
+     * Sets the Is this a backup URL ?.
      *
      * @param bool
      * @return Eventcallbackurl
@@ -163,7 +157,7 @@ class Eventcallbackurl implements ModelInterface
     }
 
     /**
-     * Gets the Is this a backup URL ?
+     * Gets the Is this a backup URL ?.
      *
      * @return bool
      */
@@ -173,9 +167,9 @@ class Eventcallbackurl implements ModelInterface
     }
 
     /**
-     * Sets the Status of the event
+     * Sets the Status of the event.
      *
-     * @param int
+     * @param string
      * @return Eventcallbackurl
      */
     public function setStatus($Status = null)
@@ -185,9 +179,9 @@ class Eventcallbackurl implements ModelInterface
     }
 
     /**
-     * Gets the Status of the event
+     * Gets the Status of the event.
      *
-     * @return int
+     * @return string
      */
     public function getStatus()
     {
@@ -195,29 +189,7 @@ class Eventcallbackurl implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp indicating when this object was last modified.
-     *
-     * @param \Datetime
-     * @return Eventcallbackurl
-     */
-    public function setUpdatedAt(\Datetime $UpdatedAt = null)
-    {
-        $this->UpdatedAt = $UpdatedAt;
-        return $this;
-    }
-
-    /**
-     * Gets the Timestamp indicating when this object was last modified.
-     *
-     * @return \Datetime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->UpdatedAt;
-    }
-
-    /**
-     * Sets the URL to use
+     * Sets the URL to use.
      *
      * @param string
      * @return Eventcallbackurl
@@ -229,7 +201,7 @@ class Eventcallbackurl implements ModelInterface
     }
 
     /**
-     * Gets the URL to use
+     * Gets the URL to use.
      *
      * @return string
      */

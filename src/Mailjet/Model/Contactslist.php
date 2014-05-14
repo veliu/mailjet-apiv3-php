@@ -39,7 +39,8 @@ use \Datetime;
 /**
  * Contactslist Model
  *
- * API key contact lists
+ * Manage your contact lists. One Contact might be associated to one or more
+ * ContactsList.
  */
 class Contactslist implements ModelInterface
 {
@@ -47,15 +48,15 @@ class Contactslist implements ModelInterface
     /**
      * Email address at which this contacts of this list can be reached.
      */
-    protected $Address = null;
+    protected $Address = 'Random HEX string';
 
     /**
-     * Timestamp when object was created in database
+     * Timestamp when object was created in database.
      */
-    protected $CreatedAt = null;
+    protected $CreatedAt = 'Current time';
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
@@ -65,7 +66,7 @@ class Contactslist implements ModelInterface
     protected $IsDeleted = false;
 
     /**
-     * User-specified name for this contact list (must be unique)
+     * User-specified name for this contact list (must be unique).
      */
     protected $Name = null;
 
@@ -73,11 +74,6 @@ class Contactslist implements ModelInterface
      * Number of subscribers for this list.
      */
     protected $SubscriberCount = null;
-
-    /**
-     * UMP status for this list.
-     */
-    protected $UMPStatus = null;
 
     /**
      * Sets the Email address at which this contacts of this list can be reached.
@@ -102,7 +98,7 @@ class Contactslist implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp when object was created in database
+     * Sets the Timestamp when object was created in database.
      *
      * @param \Datetime
      * @return Contactslist
@@ -114,7 +110,7 @@ class Contactslist implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when object was created in database
+     * Gets the Timestamp when object was created in database.
      *
      * @return \Datetime
      */
@@ -124,7 +120,7 @@ class Contactslist implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Contactslist
@@ -136,7 +132,7 @@ class Contactslist implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -168,7 +164,7 @@ class Contactslist implements ModelInterface
     }
 
     /**
-     * Sets the User-specified name for this contact list (must be unique)
+     * Sets the User-specified name for this contact list (must be unique).
      *
      * @param string
      * @return Contactslist
@@ -180,7 +176,7 @@ class Contactslist implements ModelInterface
     }
 
     /**
-     * Gets the User-specified name for this contact list (must be unique)
+     * Gets the User-specified name for this contact list (must be unique).
      *
      * @return string
      */
@@ -209,28 +205,6 @@ class Contactslist implements ModelInterface
     public function getSubscriberCount()
     {
         return $this->SubscriberCount;
-    }
-
-    /**
-     * Sets the UMP status for this list.
-     *
-     * @param int
-     * @return Contactslist
-     */
-    public function setUMPStatus($UMPStatus = null)
-    {
-        $this->UMPStatus = $UMPStatus;
-        return $this;
-    }
-
-    /**
-     * Gets the UMP status for this list.
-     *
-     * @return int
-     */
-    public function getUMPStatus()
-    {
-        return $this->UMPStatus;
     }
 
 

@@ -44,7 +44,9 @@ use \Datetime;
 /**
  * Useragentstatistics Api
  *
- * API Key message Open/Click statistical data grouped per user agent (browser)
+ * View statistics on User Agents. See total counts or filter per Campaign or
+ * Contacts List.API Key message Open/Click statistical data grouped per user agent
+ * (browser).
  *
  * @see http://mjdemo.poxx.net/~shubham/useragentstatistics.html
  */
@@ -74,6 +76,10 @@ class Useragentstatistics extends AbstractApi
             ),
         'CustomCampaign' => array(
             'name' => 'CustomCampaign',
+            'required' => false
+            ),
+        'Event' => array(
+            'name' => 'Event',
             'required' => false
             ),
         'ExcludePlatform' => array(
@@ -224,6 +230,18 @@ class Useragentstatistics extends AbstractApi
     public function getByCustomCampaign($CustomCampaign)
     {
         $result = $this->getList(array('CustomCampaign' => $CustomCampaign));
+        return $result;
+    }
+
+    /**
+     * Return list of Mailjet\Model\Useragentstatistics with Event = $Event
+     *
+     * @param string
+     * @return ResultSet\ResultSet
+     */
+    public function getByEvent($Event)
+    {
+        $result = $this->getList(array('Event' => $Event));
         return $result;
     }
 

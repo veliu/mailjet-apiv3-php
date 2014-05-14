@@ -39,70 +39,35 @@ use \Datetime;
 /**
  * User Model
  *
- * Mailjet User account definition
+ * User account definition for Mailjet.
  */
 class User implements ModelInterface
 {
 
     /**
-     * Reference to administrator assigned to this user
+     * Timestamp when object was created in database.
      */
-    protected $AccountManagerAdminId = null;
+    protected $CreatedAt = 'Current time';
 
     /**
-     * Timestamp when object was created in database
-     */
-    protected $CreatedAt = null;
-
-    /**
-     * Email address of user
+     * Email address of user.
      */
     protected $Email = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Is the user activated
-     */
-    protected $IsActivated = false;
-
-    /**
-     * Is the user banned ?
-     */
-    protected $IsBanned = false;
-
-    /**
-     * Is the user part of the Beta testers [?]
-     */
-    protected $IsBeta = false;
-
-    /**
-     * Is the user allowed to pay cash ?
-     */
-    protected $IsCashAllowed = false;
-
-    /**
-     * Is the user information complete ?
-     */
-    protected $IsCompleted = false;
-
-    /**
-     * Is the user profile complete ?
-     */
-    protected $IsProfileCompleted = false;
-
-    /**
-     * Has the user accepted the Mailjet Rules ?
+     * Has the user accepted the Mailjet Rules ?.
      */
     protected $IsRulesAccepted = false;
 
     /**
-     * Has the user been temporarily blocked ?
+     * IP address of last contact from user.
      */
-    protected $IsTemporaryBlocked = false;
+    protected $LastIp = 'The same as FirstIP';
 
     /**
      * Timestamp when user last logged in.
@@ -112,47 +77,22 @@ class User implements ModelInterface
     /**
      * Locale in which the information in this record is recorded.
      */
-    protected $Locale = null;
+    protected $Locale = 'en_US';
 
     /**
      * Maximum number of API keys the user is allowed to have.
      */
-    protected $MaxAllowedAPIKeys = null;
+    protected $MaxAllowedAPIKeys = 5;
 
     /**
-     * Timestamp when user data was last modified.
+     * Timezone for this user.
      */
-    protected $ModifiedAt = null;
+    protected $Timezone = 'etc/UTC';
 
     /**
-     * New email in case of email change
+     * User name.
      */
-    protected $NewEmail = null;
-
-    /**
-     * Timestamp when new password was requested.
-     */
-    protected $NewPasswordRequestedAt = null;
-
-    /**
-     * Timezone for this user
-     */
-    protected $Timezone = null;
-
-    /**
-     * User's Last UMP score
-     */
-    protected $UMPScoreLast = null;
-
-    /**
-     * User's original UMP score
-     */
-    protected $UMPScoreOrig = null;
-
-    /**
-     * User name
-     */
-    protected $Username = null;
+    protected $Username = 'Undefined';
 
     /**
      * Timestamp when user was last warned about hitting his rate limit.
@@ -160,29 +100,7 @@ class User implements ModelInterface
     protected $WarnedRatelimitAt = null;
 
     /**
-     * Sets the Reference to administrator assigned to this user
-     *
-     * @param int
-     * @return User
-     */
-    public function setAccountManagerAdminId($AccountManagerAdminId = null)
-    {
-        $this->AccountManagerAdminId = $AccountManagerAdminId;
-        return $this;
-    }
-
-    /**
-     * Gets the Reference to administrator assigned to this user
-     *
-     * @return int
-     */
-    public function getAccountManagerAdminId()
-    {
-        return $this->AccountManagerAdminId;
-    }
-
-    /**
-     * Sets the Timestamp when object was created in database
+     * Sets the Timestamp when object was created in database.
      *
      * @param \Datetime
      * @return User
@@ -194,7 +112,7 @@ class User implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when object was created in database
+     * Gets the Timestamp when object was created in database.
      *
      * @return \Datetime
      */
@@ -204,7 +122,7 @@ class User implements ModelInterface
     }
 
     /**
-     * Sets the Email address of user
+     * Sets the Email address of user.
      *
      * @param string
      * @return User
@@ -216,7 +134,7 @@ class User implements ModelInterface
     }
 
     /**
-     * Gets the Email address of user
+     * Gets the Email address of user.
      *
      * @return string
      */
@@ -226,7 +144,7 @@ class User implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return User
@@ -238,7 +156,7 @@ class User implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -248,139 +166,7 @@ class User implements ModelInterface
     }
 
     /**
-     * Sets the Is the user activated
-     *
-     * @param bool
-     * @return User
-     */
-    public function setIsActivated($IsActivated = null)
-    {
-        $this->IsActivated = $IsActivated;
-        return $this;
-    }
-
-    /**
-     * Gets the Is the user activated
-     *
-     * @return bool
-     */
-    public function getIsActivated()
-    {
-        return $this->IsActivated;
-    }
-
-    /**
-     * Sets the Is the user banned ?
-     *
-     * @param bool
-     * @return User
-     */
-    public function setIsBanned($IsBanned = null)
-    {
-        $this->IsBanned = $IsBanned;
-        return $this;
-    }
-
-    /**
-     * Gets the Is the user banned ?
-     *
-     * @return bool
-     */
-    public function getIsBanned()
-    {
-        return $this->IsBanned;
-    }
-
-    /**
-     * Sets the Is the user part of the Beta testers [?]
-     *
-     * @param bool
-     * @return User
-     */
-    public function setIsBeta($IsBeta = null)
-    {
-        $this->IsBeta = $IsBeta;
-        return $this;
-    }
-
-    /**
-     * Gets the Is the user part of the Beta testers [?]
-     *
-     * @return bool
-     */
-    public function getIsBeta()
-    {
-        return $this->IsBeta;
-    }
-
-    /**
-     * Sets the Is the user allowed to pay cash ?
-     *
-     * @param bool
-     * @return User
-     */
-    public function setIsCashAllowed($IsCashAllowed = null)
-    {
-        $this->IsCashAllowed = $IsCashAllowed;
-        return $this;
-    }
-
-    /**
-     * Gets the Is the user allowed to pay cash ?
-     *
-     * @return bool
-     */
-    public function getIsCashAllowed()
-    {
-        return $this->IsCashAllowed;
-    }
-
-    /**
-     * Sets the Is the user information complete ?
-     *
-     * @param bool
-     * @return User
-     */
-    public function setIsCompleted($IsCompleted = null)
-    {
-        $this->IsCompleted = $IsCompleted;
-        return $this;
-    }
-
-    /**
-     * Gets the Is the user information complete ?
-     *
-     * @return bool
-     */
-    public function getIsCompleted()
-    {
-        return $this->IsCompleted;
-    }
-
-    /**
-     * Sets the Is the user profile complete ?
-     *
-     * @param bool
-     * @return User
-     */
-    public function setIsProfileCompleted($IsProfileCompleted = null)
-    {
-        $this->IsProfileCompleted = $IsProfileCompleted;
-        return $this;
-    }
-
-    /**
-     * Gets the Is the user profile complete ?
-     *
-     * @return bool
-     */
-    public function getIsProfileCompleted()
-    {
-        return $this->IsProfileCompleted;
-    }
-
-    /**
-     * Sets the Has the user accepted the Mailjet Rules ?
+     * Sets the Has the user accepted the Mailjet Rules ?.
      *
      * @param bool
      * @return User
@@ -392,7 +178,7 @@ class User implements ModelInterface
     }
 
     /**
-     * Gets the Has the user accepted the Mailjet Rules ?
+     * Gets the Has the user accepted the Mailjet Rules ?.
      *
      * @return bool
      */
@@ -402,25 +188,25 @@ class User implements ModelInterface
     }
 
     /**
-     * Sets the Has the user been temporarily blocked ?
+     * Sets the IP address of last contact from user.
      *
-     * @param bool
+     * @param string
      * @return User
      */
-    public function setIsTemporaryBlocked($IsTemporaryBlocked = null)
+    public function setLastIp($LastIp)
     {
-        $this->IsTemporaryBlocked = $IsTemporaryBlocked;
+        $this->LastIp = $LastIp;
         return $this;
     }
 
     /**
-     * Gets the Has the user been temporarily blocked ?
+     * Gets the IP address of last contact from user.
      *
-     * @return bool
+     * @return string
      */
-    public function getIsTemporaryBlocked()
+    public function getLastIp()
     {
-        return $this->IsTemporaryBlocked;
+        return $this->LastIp;
     }
 
     /**
@@ -490,73 +276,7 @@ class User implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp when user data was last modified.
-     *
-     * @param \Datetime
-     * @return User
-     */
-    public function setModifiedAt(\Datetime $ModifiedAt = null)
-    {
-        $this->ModifiedAt = $ModifiedAt;
-        return $this;
-    }
-
-    /**
-     * Gets the Timestamp when user data was last modified.
-     *
-     * @return \Datetime
-     */
-    public function getModifiedAt()
-    {
-        return $this->ModifiedAt;
-    }
-
-    /**
-     * Sets the New email in case of email change
-     *
-     * @param string
-     * @return User
-     */
-    public function setNewEmail($NewEmail = null)
-    {
-        $this->NewEmail = $NewEmail;
-        return $this;
-    }
-
-    /**
-     * Gets the New email in case of email change
-     *
-     * @return string
-     */
-    public function getNewEmail()
-    {
-        return $this->NewEmail;
-    }
-
-    /**
-     * Sets the Timestamp when new password was requested.
-     *
-     * @param \Datetime
-     * @return User
-     */
-    public function setNewPasswordRequestedAt(\Datetime $NewPasswordRequestedAt = null)
-    {
-        $this->NewPasswordRequestedAt = $NewPasswordRequestedAt;
-        return $this;
-    }
-
-    /**
-     * Gets the Timestamp when new password was requested.
-     *
-     * @return \Datetime
-     */
-    public function getNewPasswordRequestedAt()
-    {
-        return $this->NewPasswordRequestedAt;
-    }
-
-    /**
-     * Sets the Timezone for this user
+     * Sets the Timezone for this user.
      *
      * @param string
      * @return User
@@ -568,7 +288,7 @@ class User implements ModelInterface
     }
 
     /**
-     * Gets the Timezone for this user
+     * Gets the Timezone for this user.
      *
      * @return string
      */
@@ -578,51 +298,7 @@ class User implements ModelInterface
     }
 
     /**
-     * Sets the User's Last UMP score
-     *
-     * @param string
-     * @return User
-     */
-    public function setUMPScoreLast($UMPScoreLast = null)
-    {
-        $this->UMPScoreLast = $UMPScoreLast;
-        return $this;
-    }
-
-    /**
-     * Gets the User's Last UMP score
-     *
-     * @return string
-     */
-    public function getUMPScoreLast()
-    {
-        return $this->UMPScoreLast;
-    }
-
-    /**
-     * Sets the User's original UMP score
-     *
-     * @param string
-     * @return User
-     */
-    public function setUMPScoreOrig($UMPScoreOrig = null)
-    {
-        $this->UMPScoreOrig = $UMPScoreOrig;
-        return $this;
-    }
-
-    /**
-     * Gets the User's original UMP score
-     *
-     * @return string
-     */
-    public function getUMPScoreOrig()
-    {
-        return $this->UMPScoreOrig;
-    }
-
-    /**
-     * Sets the User name
+     * Sets the User name.
      *
      * @param string
      * @return User
@@ -634,7 +310,7 @@ class User implements ModelInterface
     }
 
     /**
-     * Gets the User name
+     * Gets the User name.
      *
      * @return string
      */

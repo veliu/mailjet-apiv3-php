@@ -45,7 +45,7 @@ use \Datetime;
 /**
  * Campaignstatistics Api
  *
- * Message statistics grouped by campaign
+ * Statistics related to emails processed by Mailjet, grouped in a Campaign.
  *
  * @see http://mjdemo.poxx.net/~shubham/campaignstatistics.html
  */
@@ -69,8 +69,16 @@ class Campaignstatistics extends AbstractApi
             'name' => 'Bounced',
             'required' => false
             ),
+        'CampaignStatus' => array(
+            'name' => 'CampaignStatus',
+            'required' => false
+            ),
         'Click' => array(
             'name' => 'Click',
+            'required' => false
+            ),
+        'ContactsList' => array(
+            'name' => 'ContactsList',
             'required' => false
             ),
         'FromType' => array(
@@ -97,12 +105,20 @@ class Campaignstatistics extends AbstractApi
             'name' => 'MinLastActivityAt',
             'required' => false
             ),
+        'NewsLetter' => array(
+            'name' => 'NewsLetter',
+            'required' => false
+            ),
         'Open' => array(
             'name' => 'Open',
             'required' => false
             ),
         'Queued' => array(
             'name' => 'Queued',
+            'required' => false
+            ),
+        'Sender' => array(
+            'name' => 'Sender',
             'required' => false
             ),
         'Sent' => array(
@@ -181,6 +197,11 @@ class Campaignstatistics extends AbstractApi
             'name' => 'SpamComplaintCount',
             'dataType' => 'int',
             'required' => false
+            ),
+        'UnsubscribedCount' => array(
+            'name' => 'UnsubscribedCount',
+            'dataType' => 'int',
+            'required' => false
             )
         );
 
@@ -234,6 +255,19 @@ class Campaignstatistics extends AbstractApi
     }
 
     /**
+     * Return list of Mailjet\Model\Campaignstatistics with CampaignStatus =
+     * $CampaignStatus
+     *
+     * @param int
+     * @return ResultSet\ResultSet
+     */
+    public function getByCampaignStatus($CampaignStatus)
+    {
+        $result = $this->getList(array('CampaignStatus' => $CampaignStatus));
+        return $result;
+    }
+
+    /**
      * Return list of Mailjet\Model\Campaignstatistics with Click = $Click
      *
      * @param bool
@@ -242,6 +276,19 @@ class Campaignstatistics extends AbstractApi
     public function getByClick($Click)
     {
         $result = $this->getList(array('Click' => $Click));
+        return $result;
+    }
+
+    /**
+     * Return list of Mailjet\Model\Campaignstatistics with ContactsList =
+     * $ContactsList
+     *
+     * @param int
+     * @return ResultSet\ResultSet
+     */
+    public function getByContactsList($ContactsList)
+    {
+        $result = $this->getList(array('ContactsList' => $ContactsList));
         return $result;
     }
 
@@ -321,6 +368,18 @@ class Campaignstatistics extends AbstractApi
     }
 
     /**
+     * Return list of Mailjet\Model\Campaignstatistics with NewsLetter = $NewsLetter
+     *
+     * @param int
+     * @return ResultSet\ResultSet
+     */
+    public function getByNewsLetter($NewsLetter)
+    {
+        $result = $this->getList(array('NewsLetter' => $NewsLetter));
+        return $result;
+    }
+
+    /**
      * Return list of Mailjet\Model\Campaignstatistics with Open = $Open
      *
      * @param bool
@@ -341,6 +400,18 @@ class Campaignstatistics extends AbstractApi
     public function getByQueued($Queued)
     {
         $result = $this->getList(array('Queued' => $Queued));
+        return $result;
+    }
+
+    /**
+     * Return list of Mailjet\Model\Campaignstatistics with Sender = $Sender
+     *
+     * @param int
+     * @return ResultSet\ResultSet
+     */
+    public function getBySender($Sender)
+    {
+        $result = $this->getList(array('Sender' => $Sender));
         return $result;
     }
 

@@ -41,58 +41,44 @@ use Mailjet\Type\TRunLevel;
 /**
  * Apikey Model
  *
- * Mailjet API Keys
+ * Manage your Mailjet API Keys. API keys are used as credentials to access the API
+ * and SMTP server.
  */
 class Apikey implements ModelInterface
 {
 
     /**
-     * The unique key for this API Key
+     * The unique key for this API Key.
      */
-    protected $APIKey = null;
+    protected $APIKey = 'Automatically generated value';
 
     /**
-     * Timestamp when object was created in database
+     * Timestamp when object was created in database.
      */
-    protected $CreatedAt = null;
+    protected $CreatedAt = 'Current time';
 
     /**
-     * Status of this API Key
+     * Status of this API Key.
      */
-    protected $CustomStatus = 'undefined';
+    protected $CustomStatus = 'up';
 
     /**
-     * Timestamp of API Key expiration. Zero if not expired.
-     */
-    protected $ExpiredAt = null;
-
-    /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Is this API Key active ?
+     * Is this API Key active ?.
      */
     protected $IsActive = false;
 
     /**
-     * Is this API Key the master key for the user
+     * Is this API Key the master key for the user.
      */
     protected $IsMaster = false;
 
     /**
-     * Allow to set sender in mails.
-     */
-    protected $IsSenderAllowed = false;
-
-    /**
-     * Timestamp when the API key was last modified.
-     */
-    protected $LastUpdateAt = null;
-
-    /**
-     * User readable name for this API Key
+     * User readable name for this API Key.
      */
     protected $Name = null;
 
@@ -102,7 +88,22 @@ class Apikey implements ModelInterface
     protected $Runlevel = 'Normal';
 
     /**
-     * Sets the The unique key for this API Key
+     * Secret key for this API Key (equivalent to password).
+     */
+    protected $SecretKey = 'Automatically generated value';
+
+    /**
+     * Host to be used when tracking clicks, opens, unsub requests for this API Key.
+     */
+    protected $TrackHost = 'r.mailjet.com';
+
+    /**
+     * User ID for this API key
+     */
+    protected $UserID = null;
+
+    /**
+     * Sets the The unique key for this API Key.
      *
      * @param string
      * @return Apikey
@@ -114,7 +115,7 @@ class Apikey implements ModelInterface
     }
 
     /**
-     * Gets the The unique key for this API Key
+     * Gets the The unique key for this API Key.
      *
      * @return string
      */
@@ -124,7 +125,7 @@ class Apikey implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp when object was created in database
+     * Sets the Timestamp when object was created in database.
      *
      * @param \Datetime
      * @return Apikey
@@ -136,7 +137,7 @@ class Apikey implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when object was created in database
+     * Gets the Timestamp when object was created in database.
      *
      * @return \Datetime
      */
@@ -146,7 +147,7 @@ class Apikey implements ModelInterface
     }
 
     /**
-     * Sets the Status of this API Key
+     * Sets the Status of this API Key.
      *
      * @param TCustomStatus
      * @return Apikey
@@ -158,7 +159,7 @@ class Apikey implements ModelInterface
     }
 
     /**
-     * Gets the Status of this API Key
+     * Gets the Status of this API Key.
      *
      * @return TCustomStatus
      */
@@ -168,29 +169,7 @@ class Apikey implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp of API Key expiration. Zero if not expired.
-     *
-     * @param \Datetime
-     * @return Apikey
-     */
-    public function setExpiredAt(\Datetime $ExpiredAt = null)
-    {
-        $this->ExpiredAt = $ExpiredAt;
-        return $this;
-    }
-
-    /**
-     * Gets the Timestamp of API Key expiration. Zero if not expired.
-     *
-     * @return \Datetime
-     */
-    public function getExpiredAt()
-    {
-        return $this->ExpiredAt;
-    }
-
-    /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Apikey
@@ -202,7 +181,7 @@ class Apikey implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -212,7 +191,7 @@ class Apikey implements ModelInterface
     }
 
     /**
-     * Sets the Is this API Key active ?
+     * Sets the Is this API Key active ?.
      *
      * @param bool
      * @return Apikey
@@ -224,7 +203,7 @@ class Apikey implements ModelInterface
     }
 
     /**
-     * Gets the Is this API Key active ?
+     * Gets the Is this API Key active ?.
      *
      * @return bool
      */
@@ -234,7 +213,7 @@ class Apikey implements ModelInterface
     }
 
     /**
-     * Sets the Is this API Key the master key for the user
+     * Sets the Is this API Key the master key for the user.
      *
      * @param bool
      * @return Apikey
@@ -246,7 +225,7 @@ class Apikey implements ModelInterface
     }
 
     /**
-     * Gets the Is this API Key the master key for the user
+     * Gets the Is this API Key the master key for the user.
      *
      * @return bool
      */
@@ -256,51 +235,7 @@ class Apikey implements ModelInterface
     }
 
     /**
-     * Sets the Allow to set sender in mails.
-     *
-     * @param bool
-     * @return Apikey
-     */
-    public function setIsSenderAllowed($IsSenderAllowed = null)
-    {
-        $this->IsSenderAllowed = $IsSenderAllowed;
-        return $this;
-    }
-
-    /**
-     * Gets the Allow to set sender in mails.
-     *
-     * @return bool
-     */
-    public function getIsSenderAllowed()
-    {
-        return $this->IsSenderAllowed;
-    }
-
-    /**
-     * Sets the Timestamp when the API key was last modified.
-     *
-     * @param \Datetime
-     * @return Apikey
-     */
-    public function setLastUpdateAt(\Datetime $LastUpdateAt = null)
-    {
-        $this->LastUpdateAt = $LastUpdateAt;
-        return $this;
-    }
-
-    /**
-     * Gets the Timestamp when the API key was last modified.
-     *
-     * @return \Datetime
-     */
-    public function getLastUpdateAt()
-    {
-        return $this->LastUpdateAt;
-    }
-
-    /**
-     * Sets the User readable name for this API Key
+     * Sets the User readable name for this API Key.
      *
      * @param string
      * @return Apikey
@@ -312,7 +247,7 @@ class Apikey implements ModelInterface
     }
 
     /**
-     * Gets the User readable name for this API Key
+     * Gets the User readable name for this API Key.
      *
      * @return string
      */
@@ -343,6 +278,74 @@ class Apikey implements ModelInterface
     public function getRunlevel()
     {
         return $this->Runlevel;
+    }
+
+    /**
+     * Sets the Secret key for this API Key (equivalent to password).
+     *
+     * @param string
+     * @return Apikey
+     */
+    public function setSecretKey($SecretKey = null)
+    {
+        $this->SecretKey = $SecretKey;
+        return $this;
+    }
+
+    /**
+     * Gets the Secret key for this API Key (equivalent to password).
+     *
+     * @return string
+     */
+    public function getSecretKey()
+    {
+        return $this->SecretKey;
+    }
+
+    /**
+     * Sets the Host to be used when tracking clicks, opens, unsub requests for this
+     * API Key.
+     *
+     * @param string
+     * @return Apikey
+     */
+    public function setTrackHost($TrackHost = null)
+    {
+        $this->TrackHost = $TrackHost;
+        return $this;
+    }
+
+    /**
+     * Gets the Host to be used when tracking clicks, opens, unsub requests for this
+     * API Key.
+     *
+     * @return string
+     */
+    public function getTrackHost()
+    {
+        return $this->TrackHost;
+    }
+
+    /**
+     * Sets the User ID for this API key
+     *
+     * @param int
+     * @return Apikey
+     */
+    public function setUserID($UserID = null)
+    {
+        $this->UserID = $UserID;
+        return $this;
+    }
+
+    /**
+     * Gets the User ID for this API key
+     *
+     * @return int
+     */
+    public function getUserID()
+    {
+        return $this->UserID;
     }
 
 

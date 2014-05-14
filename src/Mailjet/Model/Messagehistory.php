@@ -39,7 +39,7 @@ use Mailjet\Type\TMessageEventType;
 /**
  * Messagehistory Model
  *
- * Event history of a message
+ * Event history of a message.
  */
 class Messagehistory implements ModelInterface
 {
@@ -50,12 +50,12 @@ class Messagehistory implements ModelInterface
     protected $EventAt = null;
 
     /**
-     * Type of event
+     * Type of event.
      */
     protected $EventType = 'sent';
 
     /**
-     * Useragent used to trigger the event (when applicable)
+     * Useragent used to trigger the event (when applicable).
      */
     protected $Useragent = null;
 
@@ -82,7 +82,7 @@ class Messagehistory implements ModelInterface
     }
 
     /**
-     * Sets the Type of event
+     * Sets the Type of event.
      *
      * @param TMessageEventType
      * @return Messagehistory
@@ -94,7 +94,7 @@ class Messagehistory implements ModelInterface
     }
 
     /**
-     * Gets the Type of event
+     * Gets the Type of event.
      *
      * @return TMessageEventType
      */
@@ -104,7 +104,7 @@ class Messagehistory implements ModelInterface
     }
 
     /**
-     * Sets the Useragent used to trigger the event (when applicable)
+     * Sets the Useragent used to trigger the event (when applicable).
      *
      * @param string
      * @return Messagehistory
@@ -116,7 +116,7 @@ class Messagehistory implements ModelInterface
     }
 
     /**
-     * Gets the Useragent used to trigger the event (when applicable)
+     * Gets the Useragent used to trigger the event (when applicable).
      *
      * @return string
      */

@@ -39,18 +39,20 @@ use \Datetime;
 /**
  * Metasender Model
  *
- * Definition of send domains authorized to send mails for an API Key
+ * Management of domains used for sending messages. A domain or address must be
+ * registered and validated before being used. See the related Sender object if you
+ * wish to register a given e-mail address.
  */
 class Metasender implements ModelInterface
 {
 
     /**
-     * Timestamp when object was created in database
+     * Timestamp when object was created in database.
      */
-    protected $CreatedAt = null;
+    protected $CreatedAt = 'Current time';
 
     /**
-     * User provided readable description of the domain
+     * User provided readable description of the domain.
      */
     protected $Description = null;
 
@@ -64,10 +66,10 @@ class Metasender implements ModelInterface
      * Filename expected on the domain name webserver, used for verifying the domain,
      * in case of a catch-all address.
      */
-    protected $Filename = null;
+    protected $Filename = 'Automatically generated value';
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
@@ -77,7 +79,7 @@ class Metasender implements ModelInterface
     protected $IsEnabled = false;
 
     /**
-     * Sets the Timestamp when object was created in database
+     * Sets the Timestamp when object was created in database.
      *
      * @param \Datetime
      * @return Metasender
@@ -89,7 +91,7 @@ class Metasender implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when object was created in database
+     * Gets the Timestamp when object was created in database.
      *
      * @return \Datetime
      */
@@ -99,7 +101,7 @@ class Metasender implements ModelInterface
     }
 
     /**
-     * Sets the User provided readable description of the domain
+     * Sets the User provided readable description of the domain.
      *
      * @param string
      * @return Metasender
@@ -111,7 +113,7 @@ class Metasender implements ModelInterface
     }
 
     /**
-     * Gets the User provided readable description of the domain
+     * Gets the User provided readable description of the domain.
      *
      * @return string
      */
@@ -169,7 +171,7 @@ class Metasender implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Metasender
@@ -181,7 +183,7 @@ class Metasender implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */

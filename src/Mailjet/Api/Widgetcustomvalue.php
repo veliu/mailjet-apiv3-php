@@ -43,7 +43,8 @@ use Zend\InputFilter;
 /**
  * Widgetcustomvalue Api
  *
- * Mailjet widget settings
+ * Specifics settings for a given Mailjet Widget. See Widget.Mailjet widget
+ * settings.
  *
  * @see http://mjdemo.poxx.net/~shubham/widgetcustomvalue.html
  */

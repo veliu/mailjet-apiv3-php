@@ -43,7 +43,9 @@ use Zend\InputFilter;
 /**
  * Widget Api
  *
- * Mailjet widget definitions.
+ * Manage settings for Widgets. Widgets are small registration forms that you may
+ * include on your website to ease the process of subscribing to a Contacts
+ * List.Mailjet widget definitions.
  *
  * @see http://mjdemo.poxx.net/~shubham/widget.html
  */

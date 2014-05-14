@@ -39,7 +39,7 @@ use \Datetime;
 /**
  * Listrecipient Model
  *
- * Member of a contacts list (link between contact and contactslist)
+ * Manage the relationship between a contact and a contactslists.
  */
 class Listrecipient implements ModelInterface
 {
@@ -50,22 +50,22 @@ class Listrecipient implements ModelInterface
     protected $ContactID = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Is this subscription active
+     * Is this subscription active.
      */
     protected $IsActive = false;
 
     /**
-     * Has the contact been unsubscribed from the list ?
+     * Has the contact been unsubscribed from the list ?.
      */
     protected $IsUnsubscribed = false;
 
     /**
-     * Contacts list to which contact is subscribed
+     * Contacts list to which contact is subscribed.
      */
     protected $ListID = null;
 
@@ -97,7 +97,7 @@ class Listrecipient implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Listrecipient
@@ -109,7 +109,7 @@ class Listrecipient implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -119,7 +119,7 @@ class Listrecipient implements ModelInterface
     }
 
     /**
-     * Sets the Is this subscription active
+     * Sets the Is this subscription active.
      *
      * @param bool
      * @return Listrecipient
@@ -131,7 +131,7 @@ class Listrecipient implements ModelInterface
     }
 
     /**
-     * Gets the Is this subscription active
+     * Gets the Is this subscription active.
      *
      * @return bool
      */
@@ -141,7 +141,7 @@ class Listrecipient implements ModelInterface
     }
 
     /**
-     * Sets the Has the contact been unsubscribed from the list ?
+     * Sets the Has the contact been unsubscribed from the list ?.
      *
      * @param bool
      * @return Listrecipient
@@ -153,7 +153,7 @@ class Listrecipient implements ModelInterface
     }
 
     /**
-     * Gets the Has the contact been unsubscribed from the list ?
+     * Gets the Has the contact been unsubscribed from the list ?.
      *
      * @return bool
      */
@@ -163,7 +163,7 @@ class Listrecipient implements ModelInterface
     }
 
     /**
-     * Sets the Contacts list to which contact is subscribed
+     * Sets the Contacts list to which contact is subscribed.
      *
      * @param int
      * @return Listrecipient
@@ -175,7 +175,7 @@ class Listrecipient implements ModelInterface
     }
 
     /**
-     * Gets the Contacts list to which contact is subscribed
+     * Gets the Contacts list to which contact is subscribed.
      *
      * @return int
      */

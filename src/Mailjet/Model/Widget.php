@@ -37,28 +37,30 @@ namespace Mailjet\Model;
 /**
  * Widget Model
  *
- * Mailjet widget definitions.
+ * Manage settings for Widgets. Widgets are small registration forms that you may
+ * include on your website to ease the process of subscribing to a Contacts
+ * List.Mailjet widget definitions.
  */
 class Widget implements ModelInterface
 {
 
     /**
-     * Timestamp when widget was created
+     * Timestamp when widget was created.
      */
     protected $CreatedAt = null;
 
     /**
-     * Reference to Sender address for this widget
+     * Reference to Sender address for this widget.
      */
     protected $FromID = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Is thewidget still active.
+     * Is the widget still active.
      */
     protected $IsActive = false;
 
@@ -73,32 +75,32 @@ class Widget implements ModelInterface
     protected $Locale = null;
 
     /**
-     * Name for this widget
+     * Name for this widget.
      */
     protected $Name = null;
 
     /**
-     * Reply To email address for this widhet
+     * Reply To email address for this widhet.
      */
     protected $Replyto = null;
 
     /**
-     * Sender name for this widget
+     * Sender name for this widget.
      */
     protected $Sendername = null;
 
     /**
-     * Subject for this widget
+     * Subject for this widget.
      */
     protected $Subject = null;
 
     /**
-     * Message to send when sending mail for this widget
+     * Message to send when sending mail for this widget.
      */
     protected $TemplateID = null;
 
     /**
-     * Sets the Timestamp when widget was created
+     * Sets the Timestamp when widget was created.
      *
      * @param int
      * @return Widget
@@ -110,7 +112,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when widget was created
+     * Gets the Timestamp when widget was created.
      *
      * @return int
      */
@@ -120,7 +122,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Sets the Reference to Sender address for this widget
+     * Sets the Reference to Sender address for this widget.
      *
      * @param int
      * @return Widget
@@ -132,7 +134,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Gets the Reference to Sender address for this widget
+     * Gets the Reference to Sender address for this widget.
      *
      * @return int
      */
@@ -142,7 +144,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Widget
@@ -154,7 +156,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -164,7 +166,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Sets the Is thewidget still active.
+     * Sets the Is the widget still active.
      *
      * @param bool
      * @return Widget
@@ -176,7 +178,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Gets the Is thewidget still active.
+     * Gets the Is the widget still active.
      *
      * @return bool
      */
@@ -230,7 +232,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Sets the Name for this widget
+     * Sets the Name for this widget.
      *
      * @param string
      * @return Widget
@@ -242,7 +244,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Gets the Name for this widget
+     * Gets the Name for this widget.
      *
      * @return string
      */
@@ -252,7 +254,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Sets the Reply To email address for this widhet
+     * Sets the Reply To email address for this widhet.
      *
      * @param string
      * @return Widget
@@ -264,7 +266,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Gets the Reply To email address for this widhet
+     * Gets the Reply To email address for this widhet.
      *
      * @return string
      */
@@ -274,7 +276,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Sets the Sender name for this widget
+     * Sets the Sender name for this widget.
      *
      * @param string
      * @return Widget
@@ -286,7 +288,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Gets the Sender name for this widget
+     * Gets the Sender name for this widget.
      *
      * @return string
      */
@@ -296,7 +298,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Sets the Subject for this widget
+     * Sets the Subject for this widget.
      *
      * @param string
      * @return Widget
@@ -308,7 +310,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Gets the Subject for this widget
+     * Gets the Subject for this widget.
      *
      * @return string
      */
@@ -318,7 +320,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Sets the Message to send when sending mail for this widget
+     * Sets the Message to send when sending mail for this widget.
      *
      * @param int
      * @return Widget
@@ -330,7 +332,7 @@ class Widget implements ModelInterface
     }
 
     /**
-     * Gets the Message to send when sending mail for this widget
+     * Gets the Message to send when sending mail for this widget.
      *
      * @return int
      */

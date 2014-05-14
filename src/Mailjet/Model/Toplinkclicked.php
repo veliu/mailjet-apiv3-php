@@ -37,7 +37,7 @@ namespace Mailjet\Model;
 /**
  * Toplinkclicked Model
  *
- * Top links clicked historgram
+ * Top links clicked historgram.
  */
 class Toplinkclicked implements ModelInterface
 {
@@ -48,7 +48,7 @@ class Toplinkclicked implements ModelInterface
     protected $ClickedCount = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
@@ -58,7 +58,7 @@ class Toplinkclicked implements ModelInterface
     protected $LinkId = null;
 
     /**
-     * Actual link clicked
+     * Actual link clicked.
      */
     protected $Url = null;
 
@@ -85,7 +85,7 @@ class Toplinkclicked implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Toplinkclicked
@@ -97,7 +97,7 @@ class Toplinkclicked implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -129,7 +129,7 @@ class Toplinkclicked implements ModelInterface
     }
 
     /**
-     * Sets the Actual link clicked
+     * Sets the Actual link clicked.
      *
      * @param string
      * @return Toplinkclicked
@@ -141,7 +141,7 @@ class Toplinkclicked implements ModelInterface
     }
 
     /**
-     * Gets the Actual link clicked
+     * Gets the Actual link clicked.
      *
      * @return string
      */

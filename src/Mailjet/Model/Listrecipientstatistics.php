@@ -39,7 +39,7 @@ use \Datetime;
 /**
  * Listrecipientstatistics Model
  *
- * Message/Click Statistics for a list recipient
+ * View statistics on Messages sent to the recipients of a given list.
  */
 class Listrecipientstatistics implements ModelInterface
 {
@@ -60,12 +60,18 @@ class Listrecipientstatistics implements ModelInterface
     protected $ClickedCount = null;
 
     /**
+     * Extra data associated with contact. This is only present when ShowExtraData
+     * filter is 1.
+     */
+    protected $Data = null;
+
+    /**
      * Number of messages delivered to their destination.
      */
     protected $DeliveredCount = null;
 
     /**
-     * Timestamp of last registered activity for this contact
+     * Timestamp of last registered activity for this contact.
      */
     protected $LastActivityAt = null;
 
@@ -80,19 +86,24 @@ class Listrecipientstatistics implements ModelInterface
     protected $OpenedCount = null;
 
     /**
-     * Total number of messages processed by Mailjet
+     * Total number of messages processed by Mailjet.
      */
     protected $ProcessedCount = null;
 
     /**
-     * Number of messages waiting in send queue
+     * Number of messages waiting in send queue.
      */
     protected $QueuedCount = null;
 
     /**
-     * Number of spam complaints
+     * Number of spam complaints.
      */
     protected $SpamComplaintCount = null;
+
+    /**
+     *
+     */
+    protected $UnsubscribedCount = null;
 
     /**
      * Sets the Number of blocked messages.
@@ -161,6 +172,30 @@ class Listrecipientstatistics implements ModelInterface
     }
 
     /**
+     * Sets the Extra data associated with contact. This is only present when
+     * ShowExtraData filter is 1.
+     *
+     * @param int
+     * @return Listrecipientstatistics
+     */
+    public function setData($Data = null)
+    {
+        $this->Data = $Data;
+        return $this;
+    }
+
+    /**
+     * Gets the Extra data associated with contact. This is only present when
+     * ShowExtraData filter is 1.
+     *
+     * @return int
+     */
+    public function getData()
+    {
+        return $this->Data;
+    }
+
+    /**
      * Sets the Number of messages delivered to their destination.
      *
      * @param int
@@ -183,7 +218,7 @@ class Listrecipientstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp of last registered activity for this contact
+     * Sets the Timestamp of last registered activity for this contact.
      *
      * @param \Datetime
      * @return Listrecipientstatistics
@@ -195,7 +230,7 @@ class Listrecipientstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp of last registered activity for this contact
+     * Gets the Timestamp of last registered activity for this contact.
      *
      * @return \Datetime
      */
@@ -249,7 +284,7 @@ class Listrecipientstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Total number of messages processed by Mailjet
+     * Sets the Total number of messages processed by Mailjet.
      *
      * @param int
      * @return Listrecipientstatistics
@@ -261,7 +296,7 @@ class Listrecipientstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Total number of messages processed by Mailjet
+     * Gets the Total number of messages processed by Mailjet.
      *
      * @return int
      */
@@ -271,7 +306,7 @@ class Listrecipientstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of messages waiting in send queue
+     * Sets the Number of messages waiting in send queue.
      *
      * @param int
      * @return Listrecipientstatistics
@@ -283,7 +318,7 @@ class Listrecipientstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of messages waiting in send queue
+     * Gets the Number of messages waiting in send queue.
      *
      * @return int
      */
@@ -293,7 +328,7 @@ class Listrecipientstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of spam complaints
+     * Sets the Number of spam complaints.
      *
      * @param int
      * @return Listrecipientstatistics
@@ -305,13 +340,35 @@ class Listrecipientstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of spam complaints
+     * Gets the Number of spam complaints.
      *
      * @return int
      */
     public function getSpamComplaintCount()
     {
         return $this->SpamComplaintCount;
+    }
+
+    /**
+     * Sets the 
+     *
+     * @param int
+     * @return Listrecipientstatistics
+     */
+    public function setUnsubscribedCount($UnsubscribedCount = null)
+    {
+        $this->UnsubscribedCount = $UnsubscribedCount;
+        return $this;
+    }
+
+    /**
+     * Gets the 
+     *
+     * @return int
+     */
+    public function getUnsubscribedCount()
+    {
+        return $this->UnsubscribedCount;
     }
 
 

@@ -44,7 +44,8 @@ use Zend\InputFilter;
 /**
  * Contactslist Api
  *
- * API key contact lists
+ * Manage your contact lists. One Contact might be associated to one or more
+ * ContactsList.
  *
  * @see http://mjdemo.poxx.net/~shubham/contactslist.html
  */
@@ -109,11 +110,6 @@ class Contactslist extends AbstractApi
             ),
         'SubscriberCount' => array(
             'name' => 'SubscriberCount',
-            'dataType' => 'int',
-            'required' => false
-            ),
-        'UMPStatus' => array(
-            'name' => 'UMPStatus',
             'dataType' => 'int',
             'required' => false
             )

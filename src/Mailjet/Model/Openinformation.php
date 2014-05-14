@@ -39,7 +39,7 @@ use \Datetime;
 /**
  * Openinformation Model
  *
- * API Key message open information
+ * Retrieve informations about messages opened at least once by their recipients.
  */
 class Openinformation implements ModelInterface
 {
@@ -50,7 +50,7 @@ class Openinformation implements ModelInterface
     protected $ArrivedAt = null;
 
     /**
-     * Reference to Campaign in which message is sent
+     * Reference to Campaign in which message is sent.
      */
     protected $CampaignID = null;
 
@@ -60,24 +60,29 @@ class Openinformation implements ModelInterface
     protected $ContactID = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $MessageID = null;
 
     /**
-     * Timestamp when message open registration was received.
+     * Timestamp of when then message was opened by the reader for the first time.
      */
     protected $OpenedAt = null;
 
     /**
-     * Useragent used to view the message.
+     * Reference to canonicalized User Agent based on UserAgentFull
      */
     protected $UserAgent = null;
+
+    /**
+     * Original User Agent string used to view this message.
+     */
+    protected $UserAgentFull = null;
 
     /**
      * Sets the Timestamp indicating when the message arrived.
@@ -102,7 +107,7 @@ class Openinformation implements ModelInterface
     }
 
     /**
-     * Sets the Reference to Campaign in which message is sent
+     * Sets the Reference to Campaign in which message is sent.
      *
      * @param int
      * @return Openinformation
@@ -114,7 +119,7 @@ class Openinformation implements ModelInterface
     }
 
     /**
-     * Gets the Reference to Campaign in which message is sent
+     * Gets the Reference to Campaign in which message is sent.
      *
      * @return int
      */
@@ -146,7 +151,7 @@ class Openinformation implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Openinformation
@@ -158,7 +163,7 @@ class Openinformation implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -168,7 +173,7 @@ class Openinformation implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Openinformation
@@ -180,7 +185,7 @@ class Openinformation implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -190,7 +195,8 @@ class Openinformation implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp when message open registration was received.
+     * Sets the Timestamp of when then message was opened by the reader for the first
+     * time.
      *
      * @param \Datetime
      * @return Openinformation
@@ -202,7 +208,8 @@ class Openinformation implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when message open registration was received.
+     * Gets the Timestamp of when then message was opened by the reader for the first
+     * time.
      *
      * @return \Datetime
      */
@@ -212,7 +219,7 @@ class Openinformation implements ModelInterface
     }
 
     /**
-     * Sets the Useragent used to view the message.
+     * Sets the Reference to canonicalized User Agent based on UserAgentFull
      *
      * @param int
      * @return Openinformation
@@ -224,13 +231,35 @@ class Openinformation implements ModelInterface
     }
 
     /**
-     * Gets the Useragent used to view the message.
+     * Gets the Reference to canonicalized User Agent based on UserAgentFull
      *
      * @return int
      */
     public function getUserAgent()
     {
         return $this->UserAgent;
+    }
+
+    /**
+     * Sets the Original User Agent string used to view this message.
+     *
+     * @param string
+     * @return Openinformation
+     */
+    public function setUserAgentFull($UserAgentFull = null)
+    {
+        $this->UserAgentFull = $UserAgentFull;
+        return $this;
+    }
+
+    /**
+     * Gets the Original User Agent string used to view this message.
+     *
+     * @return string
+     */
+    public function getUserAgentFull()
+    {
+        return $this->UserAgentFull;
     }
 
 

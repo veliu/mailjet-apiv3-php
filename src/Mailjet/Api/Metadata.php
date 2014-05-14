@@ -44,7 +44,7 @@ use Zend\InputFilter;
 /**
  * Metadata Api
  *
- * Mailjet API meta data
+ * Mailjet API meta data.
  *
  * @see http://mjdemo.poxx.net/~shubham/metadata.html
  */

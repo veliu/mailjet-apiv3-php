@@ -44,7 +44,7 @@ use Zend\InputFilter;
 /**
  * Liststatistics Api
  *
- * API Key campaign/message/click statistics grouped by contacts list.
+ * View Campaign/message/click statistics grouped by ContactsList.
  *
  * @see http://mjdemo.poxx.net/~shubham/liststatistics.html
  */

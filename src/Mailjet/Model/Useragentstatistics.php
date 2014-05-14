@@ -37,18 +37,20 @@ namespace Mailjet\Model;
 /**
  * Useragentstatistics Model
  *
- * API Key message Open/Click statistical data grouped per user agent (browser)
+ * View statistics on User Agents. See total counts or filter per Campaign or
+ * Contacts List.API Key message Open/Click statistical data grouped per user agent
+ * (browser).
  */
 class Useragentstatistics implements ModelInterface
 {
 
     /**
-     * Number of clicks using this browser
+     * Number of clicks using this browser.
      */
     protected $Count = null;
 
     /**
-     * User of messages clicked using this browser
+     * User of messages clicked using this browser.
      */
     protected $DistinctCount = null;
 
@@ -58,12 +60,12 @@ class Useragentstatistics implements ModelInterface
     protected $Platform = null;
 
     /**
-     * Description of user agent
+     * Description of user agent.
      */
     protected $UserAgent = null;
 
     /**
-     * Sets the Number of clicks using this browser
+     * Sets the Number of clicks using this browser.
      *
      * @param int
      * @return Useragentstatistics
@@ -75,7 +77,7 @@ class Useragentstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of clicks using this browser
+     * Gets the Number of clicks using this browser.
      *
      * @return int
      */
@@ -85,7 +87,7 @@ class Useragentstatistics implements ModelInterface
     }
 
     /**
-     * Sets the User of messages clicked using this browser
+     * Sets the User of messages clicked using this browser.
      *
      * @param int
      * @return Useragentstatistics
@@ -97,7 +99,7 @@ class Useragentstatistics implements ModelInterface
     }
 
     /**
-     * Gets the User of messages clicked using this browser
+     * Gets the User of messages clicked using this browser.
      *
      * @return int
      */
@@ -129,7 +131,7 @@ class Useragentstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Description of user agent
+     * Sets the Description of user agent.
      *
      * @param string
      * @return Useragentstatistics
@@ -141,7 +143,7 @@ class Useragentstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Description of user agent
+     * Gets the Description of user agent.
      *
      * @return string
      */

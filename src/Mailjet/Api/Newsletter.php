@@ -45,7 +45,7 @@ use \Datetime;
 /**
  * Newsletter Api
  *
- * Newsletter data
+ * Newsletter data.
  *
  * @see http://mjdemo.poxx.net/~shubham/newsletter.html
  */
@@ -81,6 +81,10 @@ class Newsletter extends AbstractApi
             'name' => 'IsArchived',
             'required' => false
             ),
+        'IsCampaign' => array(
+            'name' => 'IsCampaign',
+            'required' => false
+            ),
         'IsDeleted' => array(
             'name' => 'IsDeleted',
             'required' => false
@@ -99,6 +103,10 @@ class Newsletter extends AbstractApi
             ),
         'NewsLetterTemplate' => array(
             'name' => 'NewsLetterTemplate',
+            'required' => false
+            ),
+        'Segmentation' => array(
+            'name' => 'Segmentation',
             'required' => false
             ),
         'Status' => array(
@@ -147,11 +155,6 @@ class Newsletter extends AbstractApi
             ),
         'EditType' => array(
             'name' => 'EditType',
-            'dataType' => 'string',
-            'required' => false
-            ),
-        'EmailSMTPMsg' => array(
-            'name' => 'EmailSMTPMsg',
             'dataType' => 'string',
             'required' => false
             ),
@@ -225,11 +228,6 @@ class Newsletter extends AbstractApi
             'dataType' => '\Datetime',
             'required' => false
             ),
-        'ModStatus' => array(
-            'name' => 'ModStatus',
-            'dataType' => 'int',
-            'required' => false
-            ),
         'Permalink' => array(
             'name' => 'Permalink',
             'dataType' => 'string',
@@ -253,6 +251,11 @@ class Newsletter extends AbstractApi
         'ReplyEmail' => array(
             'name' => 'ReplyEmail',
             'dataType' => 'string',
+            'required' => false
+            ),
+        'Segmentation' => array(
+            'name' => 'Segmentation',
+            'dataType' => 'int',
             'required' => false
             ),
         'Sender' => array(
@@ -295,11 +298,6 @@ class Newsletter extends AbstractApi
             'dataType' => 'string',
             'required' => false
             ),
-        'UpdatedAt' => array(
-            'name' => 'UpdatedAt',
-            'dataType' => '\Datetime',
-            'required' => false
-            ),
         'Url' => array(
             'name' => 'Url',
             'dataType' => 'string',
@@ -318,7 +316,6 @@ class Newsletter extends AbstractApi
         $hydrator->addStrategy('CreatedAt', new TRFC3339DateTimeStrategy());
         $hydrator->addStrategy('DeliveredAt', new TRFC3339DateTimeStrategy());
         $hydrator->addStrategy('ModifiedAt', new TRFC3339DateTimeStrategy());
-        $hydrator->addStrategy('UpdatedAt', new TRFC3339DateTimeStrategy());
     }
 
     /**
@@ -396,6 +393,18 @@ class Newsletter extends AbstractApi
     }
 
     /**
+     * Return list of Mailjet\Model\Newsletter with IsCampaign = $IsCampaign
+     *
+     * @param bool
+     * @return ResultSet\ResultSet
+     */
+    public function getByIsCampaign($IsCampaign)
+    {
+        $result = $this->getList(array('IsCampaign' => $IsCampaign));
+        return $result;
+    }
+
+    /**
      * Return list of Mailjet\Model\Newsletter with IsDeleted = $IsDeleted
      *
      * @param bool
@@ -453,6 +462,18 @@ class Newsletter extends AbstractApi
     public function getByNewsLetterTemplate($NewsLetterTemplate)
     {
         $result = $this->getList(array('NewsLetterTemplate' => $NewsLetterTemplate));
+        return $result;
+    }
+
+    /**
+     * Return list of Mailjet\Model\Newsletter with Segmentation = $Segmentation
+     *
+     * @param int
+     * @return ResultSet\ResultSet
+     */
+    public function getBySegmentation($Segmentation)
+    {
+        $result = $this->getList(array('Segmentation' => $Segmentation));
         return $result;
     }
 

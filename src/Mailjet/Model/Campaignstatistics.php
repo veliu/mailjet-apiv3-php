@@ -39,7 +39,7 @@ use \Datetime;
 /**
  * Campaignstatistics Model
  *
- * Message statistics grouped by campaign
+ * Statistics related to emails processed by Mailjet, grouped in a Campaign.
  */
 class Campaignstatistics implements ModelInterface
 {
@@ -55,7 +55,7 @@ class Campaignstatistics implements ModelInterface
     protected $BouncedCount = null;
 
     /**
-     * Reference to campaign
+     * Reference to campaign.
      */
     protected $CampaignID = null;
 
@@ -70,7 +70,7 @@ class Campaignstatistics implements ModelInterface
     protected $DeliveredCount = null;
 
     /**
-     * Timestamp of last registered activity for this Campaign
+     * Timestamp of last registered activity for this Campaign.
      */
     protected $LastActivityAt = null;
 
@@ -85,19 +85,24 @@ class Campaignstatistics implements ModelInterface
     protected $OpenedCount = null;
 
     /**
-     * Total number of messages processed by Mailjet
+     * Total number of messages processed by Mailjet.
      */
     protected $ProcessedCount = null;
 
     /**
-     * Number of messages waiting in send queue
+     * Number of messages waiting in send queue.
      */
     protected $QueuedCount = null;
 
     /**
-     * Number of spam complaints
+     * Number of spam complaints.
      */
     protected $SpamComplaintCount = null;
+
+    /**
+     *
+     */
+    protected $UnsubscribedCount = null;
 
     /**
      * Sets the Number of blocked messages.
@@ -144,7 +149,7 @@ class Campaignstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Reference to campaign
+     * Sets the Reference to campaign.
      *
      * @param int
      * @return Campaignstatistics
@@ -156,7 +161,7 @@ class Campaignstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Reference to campaign
+     * Gets the Reference to campaign.
      *
      * @return int
      */
@@ -210,7 +215,7 @@ class Campaignstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp of last registered activity for this Campaign
+     * Sets the Timestamp of last registered activity for this Campaign.
      *
      * @param \Datetime
      * @return Campaignstatistics
@@ -222,7 +227,7 @@ class Campaignstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp of last registered activity for this Campaign
+     * Gets the Timestamp of last registered activity for this Campaign.
      *
      * @return \Datetime
      */
@@ -276,7 +281,7 @@ class Campaignstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Total number of messages processed by Mailjet
+     * Sets the Total number of messages processed by Mailjet.
      *
      * @param int
      * @return Campaignstatistics
@@ -288,7 +293,7 @@ class Campaignstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Total number of messages processed by Mailjet
+     * Gets the Total number of messages processed by Mailjet.
      *
      * @return int
      */
@@ -298,7 +303,7 @@ class Campaignstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of messages waiting in send queue
+     * Sets the Number of messages waiting in send queue.
      *
      * @param int
      * @return Campaignstatistics
@@ -310,7 +315,7 @@ class Campaignstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of messages waiting in send queue
+     * Gets the Number of messages waiting in send queue.
      *
      * @return int
      */
@@ -320,7 +325,7 @@ class Campaignstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of spam complaints
+     * Sets the Number of spam complaints.
      *
      * @param int
      * @return Campaignstatistics
@@ -332,13 +337,35 @@ class Campaignstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of spam complaints
+     * Gets the Number of spam complaints.
      *
      * @return int
      */
     public function getSpamComplaintCount()
     {
         return $this->SpamComplaintCount;
+    }
+
+    /**
+     * Sets the 
+     *
+     * @param int
+     * @return Campaignstatistics
+     */
+    public function setUnsubscribedCount($UnsubscribedCount = null)
+    {
+        $this->UnsubscribedCount = $UnsubscribedCount;
+        return $this;
+    }
+
+    /**
+     * Gets the 
+     *
+     * @return int
+     */
+    public function getUnsubscribedCount()
+    {
+        return $this->UnsubscribedCount;
     }
 
 

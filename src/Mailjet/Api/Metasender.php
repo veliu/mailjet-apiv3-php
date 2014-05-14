@@ -44,7 +44,9 @@ use Zend\InputFilter;
 /**
  * Metasender Api
  *
- * Definition of send domains authorized to send mails for an API Key
+ * Management of domains used for sending messages. A domain or address must be
+ * registered and validated before being used. See the related Sender object if you
+ * wish to register a given e-mail address.
  *
  * @see http://mjdemo.poxx.net/~shubham/metasender.html
  */

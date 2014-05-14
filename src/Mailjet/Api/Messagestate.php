@@ -43,7 +43,7 @@ use Zend\InputFilter;
 /**
  * Messagestate Api
  *
- * Message state reference
+ * Message state reference.
  *
  * @see http://mjdemo.poxx.net/~shubham/messagestate.html
  */

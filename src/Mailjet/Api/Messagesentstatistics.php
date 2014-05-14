@@ -61,12 +61,20 @@ class Messagesentstatistics extends AbstractApi
      * Supported Filters
      */
     protected $filters = array(
+        'AllMessages' => array(
+            'name' => 'AllMessages',
+            'required' => false
+            ),
         'CampaignID' => array(
             'name' => 'CampaignID',
             'required' => false
             ),
         'CampaignStatus' => array(
             'name' => 'CampaignStatus',
+            'required' => false
+            ),
+        'Contact' => array(
+            'name' => 'Contact',
             'required' => false
             ),
         'ContactsList' => array(
@@ -107,6 +115,10 @@ class Messagesentstatistics extends AbstractApi
             ),
         'IsStarred' => array(
             'name' => 'IsStarred',
+            'required' => false
+            ),
+        'MessageStatus' => array(
+            'name' => 'MessageStatus',
             'required' => false
             ),
         'Period' => array(
@@ -158,8 +170,8 @@ class Messagesentstatistics extends AbstractApi
             'dataType' => 'int',
             'required' => true
             ),
-        'ID' => array(
-            'name' => 'ID',
+        'MessageID' => array(
+            'name' => 'MessageID',
             'dataType' => 'int',
             'required' => false
             ),
@@ -227,6 +239,19 @@ class Messagesentstatistics extends AbstractApi
     }
 
     /**
+     * Return list of Mailjet\Model\Messagesentstatistics with AllMessages =
+     * $AllMessages
+     *
+     * @param bool
+     * @return ResultSet\ResultSet
+     */
+    public function getByAllMessages($AllMessages)
+    {
+        $result = $this->getList(array('AllMessages' => $AllMessages));
+        return $result;
+    }
+
+    /**
      * Return list of Mailjet\Model\Messagesentstatistics with CampaignID = $CampaignID
      *
      * @param int
@@ -248,6 +273,18 @@ class Messagesentstatistics extends AbstractApi
     public function getByCampaignStatus($CampaignStatus)
     {
         $result = $this->getList(array('CampaignStatus' => $CampaignStatus));
+        return $result;
+    }
+
+    /**
+     * Return list of Mailjet\Model\Messagesentstatistics with Contact = $Contact
+     *
+     * @param int
+     * @return ResultSet\ResultSet
+     */
+    public function getByContact($Contact)
+    {
+        $result = $this->getList(array('Contact' => $Contact));
         return $result;
     }
 
@@ -371,6 +408,19 @@ class Messagesentstatistics extends AbstractApi
     public function getByIsStarred($IsStarred)
     {
         $result = $this->getList(array('IsStarred' => $IsStarred));
+        return $result;
+    }
+
+    /**
+     * Return list of Mailjet\Model\Messagesentstatistics with MessageStatus =
+     * $MessageStatus
+     *
+     * @param int
+     * @return ResultSet\ResultSet
+     */
+    public function getByMessageStatus($MessageStatus)
+    {
+        $result = $this->getList(array('MessageStatus' => $MessageStatus));
         return $result;
     }
 

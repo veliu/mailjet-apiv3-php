@@ -39,24 +39,24 @@ use \Datetime;
 /**
  * Liststatistics Model
  *
- * API Key campaign/message/click statistics grouped by contacts list.
+ * View Campaign/message/click statistics grouped by ContactsList.
  */
 class Liststatistics implements ModelInterface
 {
 
     /**
-     * Number of active list members
+     * Number of active list members.
      */
     protected $ActiveCount = null;
 
     /**
      * Number of registered unsubscribe requests. (only calculated when CalcActiveUnsub
-     * filter is active)
+     * filter is active).
      */
     protected $ActiveUnsubscribedCount = null;
 
     /**
-     * List address
+     * List address.
      */
     protected $Address = null;
 
@@ -76,7 +76,7 @@ class Liststatistics implements ModelInterface
     protected $ClickedCount = null;
 
     /**
-     * Timestamp when object was created in database
+     * Timestamp when object was created in database.
      */
     protected $CreatedAt = null;
 
@@ -86,22 +86,22 @@ class Liststatistics implements ModelInterface
     protected $DeliveredCount = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Is the list Deleted or not ?
+     * Is the list Deleted or not ?.
      */
     protected $IsDeleted = false;
 
     /**
-     * Timestamp of last registered activity for this contactlist
+     * Timestamp of last registered activity for this contactlist.
      */
     protected $LastActivityAt = null;
 
     /**
-     * List name
+     * List name.
      */
     protected $Name = null;
 
@@ -111,12 +111,12 @@ class Liststatistics implements ModelInterface
     protected $OpenedCount = null;
 
     /**
-     * Number of spam complaints
+     * Number of spam complaints.
      */
     protected $SpamComplaintCount = null;
 
     /**
-     * Number of subscribers
+     * Number of subscribers.
      */
     protected $SubscriberCount = null;
 
@@ -126,7 +126,7 @@ class Liststatistics implements ModelInterface
     protected $UnsubscribedCount = null;
 
     /**
-     * Sets the Number of active list members
+     * Sets the Number of active list members.
      *
      * @param int
      * @return Liststatistics
@@ -138,7 +138,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of active list members
+     * Gets the Number of active list members.
      *
      * @return int
      */
@@ -149,7 +149,7 @@ class Liststatistics implements ModelInterface
 
     /**
      * Sets the Number of registered unsubscribe requests. (only calculated when
-     * CalcActiveUnsub filter is active)
+     * CalcActiveUnsub filter is active).
      *
      * @param int
      * @return Liststatistics
@@ -162,7 +162,7 @@ class Liststatistics implements ModelInterface
 
     /**
      * Gets the Number of registered unsubscribe requests. (only calculated when
-     * CalcActiveUnsub filter is active)
+     * CalcActiveUnsub filter is active).
      *
      * @return int
      */
@@ -172,7 +172,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Sets the List address
+     * Sets the List address.
      *
      * @param string
      * @return Liststatistics
@@ -184,7 +184,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Gets the List address
+     * Gets the List address.
      *
      * @return string
      */
@@ -260,7 +260,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp when object was created in database
+     * Sets the Timestamp when object was created in database.
      *
      * @param \Datetime
      * @return Liststatistics
@@ -272,7 +272,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when object was created in database
+     * Gets the Timestamp when object was created in database.
      *
      * @return \Datetime
      */
@@ -304,7 +304,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Liststatistics
@@ -316,7 +316,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -326,7 +326,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Sets the Is the list Deleted or not ?
+     * Sets the Is the list Deleted or not ?.
      *
      * @param bool
      * @return Liststatistics
@@ -338,7 +338,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Gets the Is the list Deleted or not ?
+     * Gets the Is the list Deleted or not ?.
      *
      * @return bool
      */
@@ -348,7 +348,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp of last registered activity for this contactlist
+     * Sets the Timestamp of last registered activity for this contactlist.
      *
      * @param \Datetime
      * @return Liststatistics
@@ -360,7 +360,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp of last registered activity for this contactlist
+     * Gets the Timestamp of last registered activity for this contactlist.
      *
      * @return \Datetime
      */
@@ -370,7 +370,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Sets the List name
+     * Sets the List name.
      *
      * @param string
      * @return Liststatistics
@@ -382,7 +382,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Gets the List name
+     * Gets the List name.
      *
      * @return string
      */
@@ -414,7 +414,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of spam complaints
+     * Sets the Number of spam complaints.
      *
      * @param int
      * @return Liststatistics
@@ -426,7 +426,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of spam complaints
+     * Gets the Number of spam complaints.
      *
      * @return int
      */
@@ -436,7 +436,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of subscribers
+     * Sets the Number of subscribers.
      *
      * @param int
      * @return Liststatistics
@@ -448,7 +448,7 @@ class Liststatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of subscribers
+     * Gets the Number of subscribers.
      *
      * @return int
      */

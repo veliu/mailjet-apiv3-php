@@ -45,7 +45,7 @@ use \Datetime;
 /**
  * Listrecipient Api
  *
- * Member of a contacts list (link between contact and contactslist)
+ * Manage the relationship between a contact and a contactslists.
  *
  * @see http://mjdemo.poxx.net/~shubham/listrecipient.html
  */

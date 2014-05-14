@@ -39,73 +39,68 @@ use \Datetime;
 /**
  * Myprofile Model
  *
- * User profile data: payment information etc.
+ * Manage user profile data such as address, payment information etc.
  */
 class Myprofile implements ModelInterface
 {
 
     /**
-     * City part of address
+     * City part of address.
      */
     protected $AddressCity = null;
 
     /**
-     * Country part of address
+     * Country part of address.
      */
     protected $AddressCountry = null;
 
     /**
-     * Postal code of address (ZIP)
+     * Postal code of address (ZIP).
      */
     protected $AddressPostalCode = null;
 
     /**
-     * Street and house number
+     * Street and house number.
      */
     protected $AddressStreet = null;
 
     /**
-     * Billing email address
+     * Billing email address.
      */
     protected $BillingEmail = null;
 
     /**
-     * User's birthday
+     * User's birthday.
      */
     protected $BirthdayAt = null;
 
     /**
-     * Name of the company
+     * Name of the company.
      */
     protected $CompanyName = null;
 
     /**
-     * EU name of the company
-     */
-    protected $CompanyNameEu = null;
-
-    /**
-     * Contact telephone
+     * Contact telephone.
      */
     protected $ContactPhone = null;
 
     /**
-     * Estimated volume of messages
+     * Estimated volume of messages.
      */
     protected $EstimatedVolume = null;
 
     /**
-     * ?
+     * ?.
      */
     protected $Features = null;
 
     /**
-     * Contact person's first name
+     * Contact person's first name.
      */
     protected $Firstname = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
@@ -115,19 +110,19 @@ class Myprofile implements ModelInterface
     protected $Industry = null;
 
     /**
-     * Contact person's last name
+     * Contact person's last name.
      */
     protected $Lastname = null;
 
     /**
-     * Reference to user
+     * Reference to user.
      */
     protected $UserID = null;
 
     /**
      * VAT rate for this user.
      */
-    protected $VAT = null;
+    protected $VAT = 'Depends on AddressCountry\'s value';
 
     /**
      * User supplied VAT number.
@@ -135,22 +130,12 @@ class Myprofile implements ModelInterface
     protected $VATNumber = null;
 
     /**
-     * Status of VAT number checking.
-     */
-    protected $VATNumberStatus = null;
-
-    /**
-     * Mailjet determined VAT number
-     */
-    protected $VATNumberTrusted = null;
-
-    /**
-     * URL of user's website
+     * URL of user's website.
      */
     protected $Website = null;
 
     /**
-     * Sets the City part of address
+     * Sets the City part of address.
      *
      * @param string
      * @return Myprofile
@@ -162,7 +147,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the City part of address
+     * Gets the City part of address.
      *
      * @return string
      */
@@ -172,7 +157,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the Country part of address
+     * Sets the Country part of address.
      *
      * @param string
      * @return Myprofile
@@ -184,7 +169,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the Country part of address
+     * Gets the Country part of address.
      *
      * @return string
      */
@@ -194,7 +179,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the Postal code of address (ZIP)
+     * Sets the Postal code of address (ZIP).
      *
      * @param string
      * @return Myprofile
@@ -206,7 +191,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the Postal code of address (ZIP)
+     * Gets the Postal code of address (ZIP).
      *
      * @return string
      */
@@ -216,7 +201,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the Street and house number
+     * Sets the Street and house number.
      *
      * @param string
      * @return Myprofile
@@ -228,7 +213,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the Street and house number
+     * Gets the Street and house number.
      *
      * @return string
      */
@@ -238,7 +223,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the Billing email address
+     * Sets the Billing email address.
      *
      * @param string
      * @return Myprofile
@@ -250,7 +235,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the Billing email address
+     * Gets the Billing email address.
      *
      * @return string
      */
@@ -260,7 +245,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the User's birthday
+     * Sets the User's birthday.
      *
      * @param \Datetime
      * @return Myprofile
@@ -272,7 +257,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the User's birthday
+     * Gets the User's birthday.
      *
      * @return \Datetime
      */
@@ -282,7 +267,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the Name of the company
+     * Sets the Name of the company.
      *
      * @param string
      * @return Myprofile
@@ -294,7 +279,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the Name of the company
+     * Gets the Name of the company.
      *
      * @return string
      */
@@ -304,29 +289,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the EU name of the company
-     *
-     * @param string
-     * @return Myprofile
-     */
-    public function setCompanyNameEu($CompanyNameEu = null)
-    {
-        $this->CompanyNameEu = $CompanyNameEu;
-        return $this;
-    }
-
-    /**
-     * Gets the EU name of the company
-     *
-     * @return string
-     */
-    public function getCompanyNameEu()
-    {
-        return $this->CompanyNameEu;
-    }
-
-    /**
-     * Sets the Contact telephone
+     * Sets the Contact telephone.
      *
      * @param string
      * @return Myprofile
@@ -338,7 +301,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the Contact telephone
+     * Gets the Contact telephone.
      *
      * @return string
      */
@@ -348,7 +311,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the Estimated volume of messages
+     * Sets the Estimated volume of messages.
      *
      * @param int
      * @return Myprofile
@@ -360,7 +323,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the Estimated volume of messages
+     * Gets the Estimated volume of messages.
      *
      * @return int
      */
@@ -370,7 +333,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the ?
+     * Sets the ?.
      *
      * @param string
      * @return Myprofile
@@ -382,7 +345,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the ?
+     * Gets the ?.
      *
      * @return string
      */
@@ -392,7 +355,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the Contact person's first name
+     * Sets the Contact person's first name.
      *
      * @param string
      * @return Myprofile
@@ -404,7 +367,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the Contact person's first name
+     * Gets the Contact person's first name.
      *
      * @return string
      */
@@ -414,7 +377,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Myprofile
@@ -426,7 +389,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -458,7 +421,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the Contact person's last name
+     * Sets the Contact person's last name.
      *
      * @param string
      * @return Myprofile
@@ -470,7 +433,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the Contact person's last name
+     * Gets the Contact person's last name.
      *
      * @return string
      */
@@ -480,7 +443,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the Reference to user
+     * Sets the Reference to user.
      *
      * @param int
      * @return Myprofile
@@ -492,7 +455,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the Reference to user
+     * Gets the Reference to user.
      *
      * @return int
      */
@@ -546,51 +509,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Sets the Status of VAT number checking.
-     *
-     * @param int
-     * @return Myprofile
-     */
-    public function setVATNumberStatus($VATNumberStatus = null)
-    {
-        $this->VATNumberStatus = $VATNumberStatus;
-        return $this;
-    }
-
-    /**
-     * Gets the Status of VAT number checking.
-     *
-     * @return int
-     */
-    public function getVATNumberStatus()
-    {
-        return $this->VATNumberStatus;
-    }
-
-    /**
-     * Sets the Mailjet determined VAT number
-     *
-     * @param string
-     * @return Myprofile
-     */
-    public function setVATNumberTrusted($VATNumberTrusted = null)
-    {
-        $this->VATNumberTrusted = $VATNumberTrusted;
-        return $this;
-    }
-
-    /**
-     * Gets the Mailjet determined VAT number
-     *
-     * @return string
-     */
-    public function getVATNumberTrusted()
-    {
-        return $this->VATNumberTrusted;
-    }
-
-    /**
-     * Sets the URL of user's website
+     * Sets the URL of user's website.
      *
      * @param string
      * @return Myprofile
@@ -602,7 +521,7 @@ class Myprofile implements ModelInterface
     }
 
     /**
-     * Gets the URL of user's website
+     * Gets the URL of user's website.
      *
      * @return string
      */

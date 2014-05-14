@@ -39,7 +39,7 @@ use Mailjet\Type\TResourceOps;
 /**
  * Metadata Model
  *
- * Mailjet API meta data
+ * Mailjet API meta data.
  */
 class Metadata implements ModelInterface
 {
@@ -50,22 +50,22 @@ class Metadata implements ModelInterface
     protected $Description = null;
 
     /**
-     * Applicable filters for this resource
+     * Applicable filters for this resource.
      */
     protected $Filters = null;
 
     /**
-     * Is the resource inherently read-only
+     * Is the resource inherently read-only.
      */
     protected $IsReadOnly = false;
 
     /**
-     * Unique name of the resource
+     * Unique name of the resource.
      */
     protected $Name = null;
 
     /**
-     * List of allowed operations in private API
+     * List of allowed operations in private API.
      */
     protected $PrivateOperations = null;
 
@@ -75,7 +75,7 @@ class Metadata implements ModelInterface
     protected $Properties = null;
 
     /**
-     * List of allowed operations in public API
+     * List of allowed operations in public API.
      */
     protected $PublicOperations = null;
 
@@ -86,7 +86,7 @@ class Metadata implements ModelInterface
 
     /**
      * Name of the property which can be used as an alternative unique key in the URL
-     * (other than the ID)
+     * (other than the ID).
      */
     protected $UniqueKey = null;
 
@@ -113,7 +113,7 @@ class Metadata implements ModelInterface
     }
 
     /**
-     * Sets the Applicable filters for this resource
+     * Sets the Applicable filters for this resource.
      *
      * @param int
      * @return Metadata
@@ -125,7 +125,7 @@ class Metadata implements ModelInterface
     }
 
     /**
-     * Gets the Applicable filters for this resource
+     * Gets the Applicable filters for this resource.
      *
      * @return int
      */
@@ -135,7 +135,7 @@ class Metadata implements ModelInterface
     }
 
     /**
-     * Sets the Is the resource inherently read-only
+     * Sets the Is the resource inherently read-only.
      *
      * @param bool
      * @return Metadata
@@ -147,7 +147,7 @@ class Metadata implements ModelInterface
     }
 
     /**
-     * Gets the Is the resource inherently read-only
+     * Gets the Is the resource inherently read-only.
      *
      * @return bool
      */
@@ -157,7 +157,7 @@ class Metadata implements ModelInterface
     }
 
     /**
-     * Sets the Unique name of the resource
+     * Sets the Unique name of the resource.
      *
      * @param string
      * @return Metadata
@@ -169,7 +169,7 @@ class Metadata implements ModelInterface
     }
 
     /**
-     * Gets the Unique name of the resource
+     * Gets the Unique name of the resource.
      *
      * @return string
      */
@@ -179,7 +179,7 @@ class Metadata implements ModelInterface
     }
 
     /**
-     * Sets the List of allowed operations in private API
+     * Sets the List of allowed operations in private API.
      *
      * @param TResourceOps
      * @return Metadata
@@ -191,7 +191,7 @@ class Metadata implements ModelInterface
     }
 
     /**
-     * Gets the List of allowed operations in private API
+     * Gets the List of allowed operations in private API.
      *
      * @return TResourceOps
      */
@@ -223,7 +223,7 @@ class Metadata implements ModelInterface
     }
 
     /**
-     * Sets the List of allowed operations in public API
+     * Sets the List of allowed operations in public API.
      *
      * @param TResourceOps
      * @return Metadata
@@ -235,7 +235,7 @@ class Metadata implements ModelInterface
     }
 
     /**
-     * Gets the List of allowed operations in public API
+     * Gets the List of allowed operations in public API.
      *
      * @return TResourceOps
      */
@@ -270,7 +270,7 @@ class Metadata implements ModelInterface
 
     /**
      * Sets the Name of the property which can be used as an alternative unique key in
-     * the URL (other than the ID)
+     * the URL (other than the ID).
      *
      * @param string
      * @return Metadata
@@ -283,7 +283,7 @@ class Metadata implements ModelInterface
 
     /**
      * Gets the Name of the property which can be used as an alternative unique key in
-     * the URL (other than the ID)
+     * the URL (other than the ID).
      *
      * @return string
      */

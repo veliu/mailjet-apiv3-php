@@ -39,7 +39,7 @@ use \Datetime;
 /**
  * Clickstatistics Model
  *
- * Click statistics for messages
+ * Click statistics for messages.
  */
 class Clickstatistics implements ModelInterface
 {
@@ -50,7 +50,7 @@ class Clickstatistics implements ModelInterface
     protected $ClickedAt = null;
 
     /**
-     * Delay between registration of click and sending of message.
+     * Delay between registration of the click and sending of message.
      */
     protected $ClickedDelay = null;
 
@@ -60,7 +60,7 @@ class Clickstatistics implements ModelInterface
     protected $ContactID = null;
 
     /**
-     * Unique numerical ID for the click event
+     * Unique numerical ID for the click event.
      */
     protected $ID = null;
 
@@ -70,7 +70,7 @@ class Clickstatistics implements ModelInterface
     protected $MessageID = null;
 
     /**
-     * URL that was clicked
+     * URL that was clicked.
      */
     protected $Url = null;
 
@@ -102,7 +102,7 @@ class Clickstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Delay between registration of click and sending of message.
+     * Sets the Delay between registration of the click and sending of message.
      *
      * @param int
      * @return Clickstatistics
@@ -114,7 +114,7 @@ class Clickstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Delay between registration of click and sending of message.
+     * Gets the Delay between registration of the click and sending of message.
      *
      * @return int
      */
@@ -146,7 +146,7 @@ class Clickstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for the click event
+     * Sets the Unique numerical ID for the click event.
      *
      * @param int
      * @return Clickstatistics
@@ -158,7 +158,7 @@ class Clickstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for the click event
+     * Gets the Unique numerical ID for the click event.
      *
      * @return int
      */
@@ -190,7 +190,7 @@ class Clickstatistics implements ModelInterface
     }
 
     /**
-     * Sets the URL that was clicked
+     * Sets the URL that was clicked.
      *
      * @param string
      * @return Clickstatistics
@@ -202,7 +202,7 @@ class Clickstatistics implements ModelInterface
     }
 
     /**
-     * Gets the URL that was clicked
+     * Gets the URL that was clicked.
      *
      * @return string
      */

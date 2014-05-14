@@ -43,7 +43,7 @@ use Zend\InputFilter;
 /**
  * Newsletterproperties Api
  *
- * CSS data for a newsletter
+ * CSS data for a newsletter.
  *
  * @see http://mjdemo.poxx.net/~shubham/newsletterproperties.html
  */

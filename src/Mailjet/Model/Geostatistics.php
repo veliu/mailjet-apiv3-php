@@ -37,7 +37,7 @@ namespace Mailjet\Model;
 /**
  * Geostatistics Model
  *
- * API Key click statistics grouped per country.
+ * Message click/open statistics grouped per country
  */
 class Geostatistics implements ModelInterface
 {
@@ -48,7 +48,7 @@ class Geostatistics implements ModelInterface
     protected $ClickedCount = null;
 
     /**
-     * Country
+     * Country.
      */
     protected $Country = null;
 
@@ -80,7 +80,7 @@ class Geostatistics implements ModelInterface
     }
 
     /**
-     * Sets the Country
+     * Sets the Country.
      *
      * @param string
      * @return Geostatistics
@@ -92,7 +92,7 @@ class Geostatistics implements ModelInterface
     }
 
     /**
-     * Gets the Country
+     * Gets the Country.
      *
      * @return string
      */

@@ -39,25 +39,25 @@ use \Datetime;
 /**
  * Newslettertemplate Model
  *
- * Newsletter templates
+ * Manages a Newsletter Template Properties.
  */
 class Newslettertemplate implements ModelInterface
 {
 
     /**
-     * Category for this newsletter
+     * Category for this newsletter.
      */
     protected $CategoryID = null;
 
     /**
-     * Timestamp when object was created in database
+     * Timestamp when object was created in database.
      */
-    protected $CreatedAt = null;
+    protected $CreatedAt = 'Current time';
 
     /**
      * Footer type to generate.
      */
-    protected $Footer = null;
+    protected $Footer = 'default';
 
     /**
      * Address to use in footer.
@@ -70,27 +70,27 @@ class Newslettertemplate implements ModelInterface
     protected $FooterWYSIWYGType = null;
 
     /**
-     * Filename to use in header
+     * Filename to use in header.
      */
     protected $HeaderFilename = null;
 
     /**
-     * Link used in header
+     * Link used in header.
      */
     protected $HeaderLink = null;
 
     /**
-     * Text of header
+     * Text of header.
      */
     protected $HeaderText = null;
 
     /**
-     * URL used in header
+     * URL used in header.
      */
     protected $HeaderUrl = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
@@ -100,17 +100,17 @@ class Newslettertemplate implements ModelInterface
     protected $Locale = null;
 
     /**
-     * Name for this newsletter
+     * Name for this newsletter.
      */
     protected $Name = null;
 
     /**
      * Type of permalink that should be added to the newsletter.
      */
-    protected $Permalink = null;
+    protected $Permalink = 'default';
 
     /**
-     * ?
+     * ?.
      */
     protected $PermalinkWYSIWYGType = null;
 
@@ -120,17 +120,12 @@ class Newslettertemplate implements ModelInterface
     protected $SourceNewsLetterID = null;
 
     /**
-     * Status of the newsletter template
+     * Status of the newsletter template.
      */
     protected $Status = null;
 
     /**
-     * Timestamp when newsletter template data was last updated.
-     */
-    protected $UpdatedAt = null;
-
-    /**
-     * Sets the Category for this newsletter
+     * Sets the Category for this newsletter.
      *
      * @param int
      * @return Newslettertemplate
@@ -142,7 +137,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Gets the Category for this newsletter
+     * Gets the Category for this newsletter.
      *
      * @return int
      */
@@ -152,7 +147,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp when object was created in database
+     * Sets the Timestamp when object was created in database.
      *
      * @param \Datetime
      * @return Newslettertemplate
@@ -164,7 +159,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when object was created in database
+     * Gets the Timestamp when object was created in database.
      *
      * @return \Datetime
      */
@@ -240,7 +235,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Sets the Filename to use in header
+     * Sets the Filename to use in header.
      *
      * @param string
      * @return Newslettertemplate
@@ -252,7 +247,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Gets the Filename to use in header
+     * Gets the Filename to use in header.
      *
      * @return string
      */
@@ -262,7 +257,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Sets the Link used in header
+     * Sets the Link used in header.
      *
      * @param string
      * @return Newslettertemplate
@@ -274,7 +269,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Gets the Link used in header
+     * Gets the Link used in header.
      *
      * @return string
      */
@@ -284,7 +279,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Sets the Text of header
+     * Sets the Text of header.
      *
      * @param string
      * @return Newslettertemplate
@@ -296,7 +291,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Gets the Text of header
+     * Gets the Text of header.
      *
      * @return string
      */
@@ -306,7 +301,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Sets the URL used in header
+     * Sets the URL used in header.
      *
      * @param string
      * @return Newslettertemplate
@@ -318,7 +313,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Gets the URL used in header
+     * Gets the URL used in header.
      *
      * @return string
      */
@@ -328,7 +323,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Newslettertemplate
@@ -340,7 +335,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -372,7 +367,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Sets the Name for this newsletter
+     * Sets the Name for this newsletter.
      *
      * @param string
      * @return Newslettertemplate
@@ -384,7 +379,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Gets the Name for this newsletter
+     * Gets the Name for this newsletter.
      *
      * @return string
      */
@@ -416,7 +411,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Sets the ?
+     * Sets the ?.
      *
      * @param int
      * @return Newslettertemplate
@@ -428,7 +423,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Gets the ?
+     * Gets the ?.
      *
      * @return int
      */
@@ -460,7 +455,7 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Sets the Status of the newsletter template
+     * Sets the Status of the newsletter template.
      *
      * @param int
      * @return Newslettertemplate
@@ -472,35 +467,13 @@ class Newslettertemplate implements ModelInterface
     }
 
     /**
-     * Gets the Status of the newsletter template
+     * Gets the Status of the newsletter template.
      *
      * @return int
      */
     public function getStatus()
     {
         return $this->Status;
-    }
-
-    /**
-     * Sets the Timestamp when newsletter template data was last updated.
-     *
-     * @param \Datetime
-     * @return Newslettertemplate
-     */
-    public function setUpdatedAt(\Datetime $UpdatedAt = null)
-    {
-        $this->UpdatedAt = $UpdatedAt;
-        return $this;
-    }
-
-    /**
-     * Gets the Timestamp when newsletter template data was last updated.
-     *
-     * @return \Datetime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->UpdatedAt;
     }
 
 

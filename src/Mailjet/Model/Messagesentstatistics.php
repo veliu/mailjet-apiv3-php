@@ -45,17 +45,17 @@ class Messagesentstatistics implements ModelInterface
 {
 
     /**
-     * When did the message arrive at Mailjet
+     * When did the message arrive at Mailjet.
      */
     protected $ArrivalTs = null;
 
     /**
-     * Was the message blocked ?
+     * Was the message blocked ?.
      */
     protected $Blocked = false;
 
     /**
-     * Has the message bounced ?
+     * Has the message bounced ?.
      */
     protected $Bounce = false;
 
@@ -65,7 +65,7 @@ class Messagesentstatistics implements ModelInterface
     protected $CampaignID = null;
 
     /**
-     * Was a click registered for this message ?
+     * Was a click registered for this message ?.
      */
     protected $Click = false;
 
@@ -80,27 +80,27 @@ class Messagesentstatistics implements ModelInterface
     protected $ContactID = null;
 
     /**
-     * Unique numerical ID for this object
+     * Only retrieve statistics for the selected message
      */
-    protected $ID = null;
+    protected $MessageID = null;
 
     /**
-     * Was the message opened ?
+     * Was the message opened ?.
      */
     protected $Open = false;
 
     /**
-     * Is the message still in the queue ?
+     * Is the message still in the queue ?.
      */
     protected $Queued = false;
 
     /**
-     * Was the message sent ?
+     * Was the message sent ?.
      */
     protected $Sent = false;
 
     /**
-     * Was a spam complaint registered for this message ?
+     * Was a spam complaint registered for this message ?.
      */
     protected $Spam = false;
 
@@ -110,7 +110,7 @@ class Messagesentstatistics implements ModelInterface
     protected $StateID = null;
 
     /**
-     * Is the current state of the message permanent ?
+     * Is the current state of the message permanent ?.
      */
     protected $StatePermanent = false;
 
@@ -120,7 +120,7 @@ class Messagesentstatistics implements ModelInterface
     protected $Status = null;
 
     /**
-     * Sets the When did the message arrive at Mailjet
+     * Sets the When did the message arrive at Mailjet.
      *
      * @param \Datetime
      * @return Messagesentstatistics
@@ -132,7 +132,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Gets the When did the message arrive at Mailjet
+     * Gets the When did the message arrive at Mailjet.
      *
      * @return \Datetime
      */
@@ -142,7 +142,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Was the message blocked ?
+     * Sets the Was the message blocked ?.
      *
      * @param bool
      * @return Messagesentstatistics
@@ -154,7 +154,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Was the message blocked ?
+     * Gets the Was the message blocked ?.
      *
      * @return bool
      */
@@ -164,7 +164,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Has the message bounced ?
+     * Sets the Has the message bounced ?.
      *
      * @param bool
      * @return Messagesentstatistics
@@ -176,7 +176,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Has the message bounced ?
+     * Gets the Has the message bounced ?.
      *
      * @return bool
      */
@@ -208,7 +208,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Was a click registered for this message ?
+     * Sets the Was a click registered for this message ?.
      *
      * @param bool
      * @return Messagesentstatistics
@@ -220,7 +220,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Was a click registered for this message ?
+     * Gets the Was a click registered for this message ?.
      *
      * @return bool
      */
@@ -274,29 +274,29 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Only retrieve statistics for the selected message
      *
      * @param int
      * @return Messagesentstatistics
      */
-    public function setID($ID = null)
+    public function setMessageID($MessageID = null)
     {
-        $this->ID = $ID;
+        $this->MessageID = $MessageID;
         return $this;
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Only retrieve statistics for the selected message
      *
      * @return int
      */
-    public function getID()
+    public function getMessageID()
     {
-        return $this->ID;
+        return $this->MessageID;
     }
 
     /**
-     * Sets the Was the message opened ?
+     * Sets the Was the message opened ?.
      *
      * @param bool
      * @return Messagesentstatistics
@@ -308,7 +308,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Was the message opened ?
+     * Gets the Was the message opened ?.
      *
      * @return bool
      */
@@ -318,7 +318,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Is the message still in the queue ?
+     * Sets the Is the message still in the queue ?.
      *
      * @param bool
      * @return Messagesentstatistics
@@ -330,7 +330,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Is the message still in the queue ?
+     * Gets the Is the message still in the queue ?.
      *
      * @return bool
      */
@@ -340,7 +340,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Was the message sent ?
+     * Sets the Was the message sent ?.
      *
      * @param bool
      * @return Messagesentstatistics
@@ -352,7 +352,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Was the message sent ?
+     * Gets the Was the message sent ?.
      *
      * @return bool
      */
@@ -362,7 +362,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Was a spam complaint registered for this message ?
+     * Sets the Was a spam complaint registered for this message ?.
      *
      * @param bool
      * @return Messagesentstatistics
@@ -374,7 +374,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Was a spam complaint registered for this message ?
+     * Gets the Was a spam complaint registered for this message ?.
      *
      * @return bool
      */
@@ -406,7 +406,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Sets the Is the current state of the message permanent ?
+     * Sets the Is the current state of the message permanent ?.
      *
      * @param bool
      * @return Messagesentstatistics
@@ -418,7 +418,7 @@ class Messagesentstatistics implements ModelInterface
     }
 
     /**
-     * Gets the Is the current state of the message permanent ?
+     * Gets the Is the current state of the message permanent ?.
      *
      * @return bool
      */

@@ -43,7 +43,7 @@ use Zend\InputFilter;
 /**
  * Preferences Api
  *
- * User preferences in key=value format
+ * User preferences in key=value format.
  *
  * @see http://mjdemo.poxx.net/~shubham/preferences.html
  */

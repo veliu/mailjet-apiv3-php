@@ -39,15 +39,17 @@ use \Datetime;
 /**
  * Apitoken Model
  *
- * Access token for API
+ * Access token for API, used to give access to an API Key in conjunction with our
+ * IFrame API.
  */
 class Apitoken implements ModelInterface
 {
 
     /**
-     * Access rights of this token, in serialized PHP.
+     * Access rights of this token. Options are one or all the following: 'campaigns',
+     * 'contacts','reports', 'stats', 'preferences'.
      */
-    protected $AllowedAccess = null;
+    protected $AllowedAccess = 'campaigns, contacts, reports, stats, preferences';
 
     /**
      * Reference to API Key to which this token belongs.
@@ -57,12 +59,12 @@ class Apitoken implements ModelInterface
     /**
      * Last registered IP address for this token.
      */
-    protected $CatchedIp = null;
+    protected $CatchedIp = 'Caller\'s IP address';
 
     /**
-     * Timestamp when object was created in database
+     * Timestamp when object was created in database.
      */
-    protected $CreatedAt = null;
+    protected $CreatedAt = 'Current time';
 
     /**
      * Timestamp of first use of this token.
@@ -70,12 +72,12 @@ class Apitoken implements ModelInterface
     protected $FirstUsedAt = null;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Is this token still active
+     * Is this token still active.
      */
     protected $IsActive = false;
 
@@ -102,12 +104,12 @@ class Apitoken implements ModelInterface
     /**
      * Unique identifier for this token, to be used by user.
      */
-    protected $Token = null;
+    protected $Token = 'Automatically generated value';
 
     /**
-     * Type of token
+     * Type of token: options are 'url','iframe','page'
      */
-    protected $TokenType = null;
+    protected $TokenType = 'url';
 
     /**
      * Period during which token is considered valid.
@@ -115,7 +117,8 @@ class Apitoken implements ModelInterface
     protected $ValidFor = null;
 
     /**
-     * Sets the Access rights of this token, in serialized PHP.
+     * Sets the Access rights of this token. Options are one or all the following:
+     * 'campaigns', 'contacts','reports', 'stats', 'preferences'.
      *
      * @param string
      * @return Apitoken
@@ -127,7 +130,8 @@ class Apitoken implements ModelInterface
     }
 
     /**
-     * Gets the Access rights of this token, in serialized PHP.
+     * Gets the Access rights of this token. Options are one or all the following:
+     * 'campaigns', 'contacts','reports', 'stats', 'preferences'.
      *
      * @return string
      */
@@ -181,7 +185,7 @@ class Apitoken implements ModelInterface
     }
 
     /**
-     * Sets the Timestamp when object was created in database
+     * Sets the Timestamp when object was created in database.
      *
      * @param \Datetime
      * @return Apitoken
@@ -193,7 +197,7 @@ class Apitoken implements ModelInterface
     }
 
     /**
-     * Gets the Timestamp when object was created in database
+     * Gets the Timestamp when object was created in database.
      *
      * @return \Datetime
      */
@@ -225,7 +229,7 @@ class Apitoken implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Apitoken
@@ -237,7 +241,7 @@ class Apitoken implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -247,7 +251,7 @@ class Apitoken implements ModelInterface
     }
 
     /**
-     * Sets the Is this token still active
+     * Sets the Is this token still active.
      *
      * @param bool
      * @return Apitoken
@@ -259,7 +263,7 @@ class Apitoken implements ModelInterface
     }
 
     /**
-     * Gets the Is this token still active
+     * Gets the Is this token still active.
      *
      * @return bool
      */
@@ -379,7 +383,7 @@ class Apitoken implements ModelInterface
     }
 
     /**
-     * Sets the Type of token
+     * Sets the Type of token: options are 'url','iframe','page'
      *
      * @param string
      * @return Apitoken
@@ -391,7 +395,7 @@ class Apitoken implements ModelInterface
     }
 
     /**
-     * Gets the Type of token
+     * Gets the Type of token: options are 'url','iframe','page'
      *
      * @return string
      */

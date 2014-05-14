@@ -45,7 +45,7 @@ use \Datetime;
 /**
  * Openinformation Api
  *
- * API Key message open information
+ * Retrieve informations about messages opened at least once by their recipients.
  *
  * @see http://mjdemo.poxx.net/~shubham/openinformation.html
  */
@@ -160,6 +160,11 @@ class Openinformation extends AbstractApi
         'UserAgent' => array(
             'name' => 'UserAgent',
             'dataType' => 'int',
+            'required' => false
+            ),
+        'UserAgentFull' => array(
+            'name' => 'UserAgentFull',
+            'dataType' => 'string',
             'required' => false
             )
         );

@@ -43,7 +43,7 @@ use Zend\InputFilter;
 /**
  * Apikeytotals Api
  *
- * Global counts for a API Key (not temporal)
+ * Global counts for an API Key, since its creation.
  *
  * @see http://mjdemo.poxx.net/~shubham/apikeytotals.html
  */
@@ -81,11 +81,6 @@ class Apikeytotals extends AbstractApi
             ),
         'DeliveredCount' => array(
             'name' => 'DeliveredCount',
-            'dataType' => 'int',
-            'required' => false
-            ),
-        'ID' => array(
-            'name' => 'ID',
             'dataType' => 'int',
             'required' => false
             ),

@@ -44,7 +44,7 @@ use \Datetime;
 /**
  * Openstatistics Api
  *
- * API Key Statistical message open information
+ * Retrieve statistics on e-mails opened at least once by their recipients.
  *
  * @see http://mjdemo.poxx.net/~shubham/openstatistics.html
  */

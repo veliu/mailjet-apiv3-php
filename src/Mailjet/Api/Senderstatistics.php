@@ -44,7 +44,7 @@ use Zend\InputFilter;
 /**
  * Senderstatistics Api
  *
- * API Key sender email address message/open/click statistical information
+ * API Key sender email address message/open/click statistical information.
  *
  * @see http://mjdemo.poxx.net/~shubham/senderstatistics.html
  */

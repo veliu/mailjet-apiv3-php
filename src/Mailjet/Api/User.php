@@ -44,7 +44,7 @@ use Zend\InputFilter;
 /**
  * User Api
  *
- * Mailjet User account definition
+ * User account definition for Mailjet.
  *
  * @see http://mjdemo.poxx.net/~shubham/user.html
  */
@@ -78,11 +78,6 @@ class User extends AbstractApi
      * Supported properties
      */
     protected $properties = array(
-        'AccountManagerAdminId' => array(
-            'name' => 'AccountManagerAdminId',
-            'dataType' => 'int',
-            'required' => false
-            ),
         'CreatedAt' => array(
             'name' => 'CreatedAt',
             'dataType' => '\Datetime',
@@ -98,45 +93,15 @@ class User extends AbstractApi
             'dataType' => 'int',
             'required' => false
             ),
-        'IsActivated' => array(
-            'name' => 'IsActivated',
-            'dataType' => 'bool',
-            'required' => false
-            ),
-        'IsBanned' => array(
-            'name' => 'IsBanned',
-            'dataType' => 'bool',
-            'required' => false
-            ),
-        'IsBeta' => array(
-            'name' => 'IsBeta',
-            'dataType' => 'bool',
-            'required' => false
-            ),
-        'IsCashAllowed' => array(
-            'name' => 'IsCashAllowed',
-            'dataType' => 'bool',
-            'required' => false
-            ),
-        'IsCompleted' => array(
-            'name' => 'IsCompleted',
-            'dataType' => 'bool',
-            'required' => false
-            ),
-        'IsProfileCompleted' => array(
-            'name' => 'IsProfileCompleted',
-            'dataType' => 'bool',
-            'required' => false
-            ),
         'IsRulesAccepted' => array(
             'name' => 'IsRulesAccepted',
             'dataType' => 'bool',
             'required' => false
             ),
-        'IsTemporaryBlocked' => array(
-            'name' => 'IsTemporaryBlocked',
-            'dataType' => 'bool',
-            'required' => false
+        'LastIp' => array(
+            'name' => 'LastIp',
+            'dataType' => 'string',
+            'required' => true
             ),
         'LastLoginAt' => array(
             'name' => 'LastLoginAt',
@@ -153,33 +118,8 @@ class User extends AbstractApi
             'dataType' => 'int',
             'required' => false
             ),
-        'ModifiedAt' => array(
-            'name' => 'ModifiedAt',
-            'dataType' => '\Datetime',
-            'required' => false
-            ),
-        'NewEmail' => array(
-            'name' => 'NewEmail',
-            'dataType' => 'string',
-            'required' => false
-            ),
-        'NewPasswordRequestedAt' => array(
-            'name' => 'NewPasswordRequestedAt',
-            'dataType' => '\Datetime',
-            'required' => false
-            ),
         'Timezone' => array(
             'name' => 'Timezone',
-            'dataType' => 'string',
-            'required' => false
-            ),
-        'UMPScoreLast' => array(
-            'name' => 'UMPScoreLast',
-            'dataType' => 'string',
-            'required' => false
-            ),
-        'UMPScoreOrig' => array(
-            'name' => 'UMPScoreOrig',
             'dataType' => 'string',
             'required' => false
             ),
@@ -205,8 +145,6 @@ class User extends AbstractApi
         $hydrator = $this->getResultSetPrototype()->getHydrator();
         $hydrator->addStrategy('CreatedAt', new TRFC3339DateTimeStrategy());
         $hydrator->addStrategy('LastLoginAt', new TRFC3339DateTimeStrategy());
-        $hydrator->addStrategy('ModifiedAt', new TRFC3339DateTimeStrategy());
-        $hydrator->addStrategy('NewPasswordRequestedAt', new TRFC3339DateTimeStrategy());
         $hydrator->addStrategy('WarnedRatelimitAt', new TRFC3339DateTimeStrategy());
     }
 

@@ -37,14 +37,14 @@ namespace Mailjet\Api;
 use Mailjet;
 use Mailjet\Model;
 use Mailjet\Api\ResultSet;
-use Mailjet\Hydrator\Strategy\TRFC3339DateTimeStrategy;
 use Zend\Json\Json;
 use Zend\InputFilter;
 
 /**
  * Eventcallbackurl Api
  *
- * URLs for event mechanisms (triggers) of Mailjet
+ * Manage event-driven callback URLs, also called webhooks, used by the Mailjet
+ * platform when a specific action is triggered
  *
  * @see http://mjdemo.poxx.net/~shubham/eventcallbackurl.html
  */
@@ -93,7 +93,7 @@ class Eventcallbackurl extends AbstractApi
             ),
         'EventType' => array(
             'name' => 'EventType',
-            'dataType' => 'int',
+            'dataType' => 'string',
             'required' => false
             ),
         'ID' => array(
@@ -108,12 +108,7 @@ class Eventcallbackurl extends AbstractApi
             ),
         'Status' => array(
             'name' => 'Status',
-            'dataType' => 'int',
-            'required' => false
-            ),
-        'UpdatedAt' => array(
-            'name' => 'UpdatedAt',
-            'dataType' => '\Datetime',
+            'dataType' => 'string',
             'required' => false
             ),
         'Url' => array(
@@ -135,8 +130,6 @@ class Eventcallbackurl extends AbstractApi
     {
         $this->getResultSetPrototype()->setObjectPrototype(new Mailjet\Model\Eventcallbackurl);
         $this->setUrl('http://api.mailjet.com/v3/REST/eventcallbackurl/');
-        $hydrator = $this->getResultSetPrototype()->getHydrator();
-        $hydrator->addStrategy('UpdatedAt', new TRFC3339DateTimeStrategy());
     }
 
     /**

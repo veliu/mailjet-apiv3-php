@@ -37,7 +37,7 @@ namespace Mailjet\Model;
 /**
  * Messagestatistics Model
  *
- * API key Campaign/Message statistics
+ * API key Campaign/Message statistics.
  */
 class Messagestatistics implements ModelInterface
 {
@@ -48,12 +48,12 @@ class Messagestatistics implements ModelInterface
     protected $AverageClickDelay = null;
 
     /**
-     *
+     * Average number of times a click was registered for a message.
      */
     protected $AverageClickedCount = null;
 
     /**
-     *
+     * Average delay between message delivery and first message open.
      */
     protected $AverageOpenDelay = null;
 
@@ -73,7 +73,7 @@ class Messagestatistics implements ModelInterface
     protected $BouncedCount = null;
 
     /**
-     * Number of distinct campaigns
+     * Number of distinct campaigns.
      */
     protected $CampaignCount = null;
 
@@ -93,17 +93,17 @@ class Messagestatistics implements ModelInterface
     protected $OpenedCount = null;
 
     /**
-     * Total number of messages processed by Mailjet
+     * Total number of messages processed by Mailjet.
      */
     protected $ProcessedCount = null;
 
     /**
-     * Number of messages waiting in send queue
+     * Number of messages waiting in send queue.
      */
     protected $QueuedCount = null;
 
     /**
-     * Number of spam complaints
+     * Number of spam complaints.
      */
     protected $SpamComplaintCount = null;
 
@@ -140,7 +140,7 @@ class Messagestatistics implements ModelInterface
     }
 
     /**
-     * Sets the 
+     * Sets the Average number of times a click was registered for a message.
      *
      * @param int
      * @return Messagestatistics
@@ -152,7 +152,7 @@ class Messagestatistics implements ModelInterface
     }
 
     /**
-     * Gets the 
+     * Gets the Average number of times a click was registered for a message.
      *
      * @return int
      */
@@ -162,7 +162,7 @@ class Messagestatistics implements ModelInterface
     }
 
     /**
-     * Sets the 
+     * Sets the Average delay between message delivery and first message open.
      *
      * @param int
      * @return Messagestatistics
@@ -174,7 +174,7 @@ class Messagestatistics implements ModelInterface
     }
 
     /**
-     * Gets the 
+     * Gets the Average delay between message delivery and first message open.
      *
      * @return int
      */
@@ -250,7 +250,7 @@ class Messagestatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of distinct campaigns
+     * Sets the Number of distinct campaigns.
      *
      * @param int
      * @return Messagestatistics
@@ -262,7 +262,7 @@ class Messagestatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of distinct campaigns
+     * Gets the Number of distinct campaigns.
      *
      * @return int
      */
@@ -338,7 +338,7 @@ class Messagestatistics implements ModelInterface
     }
 
     /**
-     * Sets the Total number of messages processed by Mailjet
+     * Sets the Total number of messages processed by Mailjet.
      *
      * @param int
      * @return Messagestatistics
@@ -350,7 +350,7 @@ class Messagestatistics implements ModelInterface
     }
 
     /**
-     * Gets the Total number of messages processed by Mailjet
+     * Gets the Total number of messages processed by Mailjet.
      *
      * @return int
      */
@@ -360,7 +360,7 @@ class Messagestatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of messages waiting in send queue
+     * Sets the Number of messages waiting in send queue.
      *
      * @param int
      * @return Messagestatistics
@@ -372,7 +372,7 @@ class Messagestatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of messages waiting in send queue
+     * Gets the Number of messages waiting in send queue.
      *
      * @return int
      */
@@ -382,7 +382,7 @@ class Messagestatistics implements ModelInterface
     }
 
     /**
-     * Sets the Number of spam complaints
+     * Sets the Number of spam complaints.
      *
      * @param int
      * @return Messagestatistics
@@ -394,7 +394,7 @@ class Messagestatistics implements ModelInterface
     }
 
     /**
-     * Gets the Number of spam complaints
+     * Gets the Number of spam complaints.
      *
      * @return int
      */

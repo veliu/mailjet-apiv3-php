@@ -37,33 +37,34 @@ namespace Mailjet\Model;
 /**
  * Widgetcustomvalue Model
  *
- * Mailjet widget settings
+ * Specifics settings for a given Mailjet Widget. See Widget.Mailjet widget
+ * settings.
  */
 class Widgetcustomvalue implements ModelInterface
 {
 
     /**
-     * APIKey to which the widget and custom value belongs
+     * APIKey to which the widget and custom value belongs.
      */
     protected $APIKeyID = null;
 
     /**
-     * Should the value be displayed
+     * Should the value be displayed.
      */
     protected $Display = false;
 
     /**
-     * Unique numerical ID for this object
+     * Unique numerical ID for this object.
      */
     protected $ID = null;
 
     /**
-     * Name of the custom value
+     * Name of the custom value.
      */
     protected $Name = null;
 
     /**
-     * Value of the custom value
+     * Value of the custom value.
      */
     protected $Value = null;
 
@@ -73,7 +74,7 @@ class Widgetcustomvalue implements ModelInterface
     protected $WidgetID = null;
 
     /**
-     * Sets the APIKey to which the widget and custom value belongs
+     * Sets the APIKey to which the widget and custom value belongs.
      *
      * @param int
      * @return Widgetcustomvalue
@@ -85,7 +86,7 @@ class Widgetcustomvalue implements ModelInterface
     }
 
     /**
-     * Gets the APIKey to which the widget and custom value belongs
+     * Gets the APIKey to which the widget and custom value belongs.
      *
      * @return int
      */
@@ -95,7 +96,7 @@ class Widgetcustomvalue implements ModelInterface
     }
 
     /**
-     * Sets the Should the value be displayed
+     * Sets the Should the value be displayed.
      *
      * @param bool
      * @return Widgetcustomvalue
@@ -107,7 +108,7 @@ class Widgetcustomvalue implements ModelInterface
     }
 
     /**
-     * Gets the Should the value be displayed
+     * Gets the Should the value be displayed.
      *
      * @return bool
      */
@@ -117,7 +118,7 @@ class Widgetcustomvalue implements ModelInterface
     }
 
     /**
-     * Sets the Unique numerical ID for this object
+     * Sets the Unique numerical ID for this object.
      *
      * @param int
      * @return Widgetcustomvalue
@@ -129,7 +130,7 @@ class Widgetcustomvalue implements ModelInterface
     }
 
     /**
-     * Gets the Unique numerical ID for this object
+     * Gets the Unique numerical ID for this object.
      *
      * @return int
      */
@@ -139,7 +140,7 @@ class Widgetcustomvalue implements ModelInterface
     }
 
     /**
-     * Sets the Name of the custom value
+     * Sets the Name of the custom value.
      *
      * @param string
      * @return Widgetcustomvalue
@@ -151,7 +152,7 @@ class Widgetcustomvalue implements ModelInterface
     }
 
     /**
-     * Gets the Name of the custom value
+     * Gets the Name of the custom value.
      *
      * @return string
      */
@@ -161,7 +162,7 @@ class Widgetcustomvalue implements ModelInterface
     }
 
     /**
-     * Sets the Value of the custom value
+     * Sets the Value of the custom value.
      *
      * @param string
      * @return Widgetcustomvalue
@@ -173,7 +174,7 @@ class Widgetcustomvalue implements ModelInterface
     }
 
     /**
-     * Gets the Value of the custom value
+     * Gets the Value of the custom value.
      *
      * @return string
      */
