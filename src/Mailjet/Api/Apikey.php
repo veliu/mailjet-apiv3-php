@@ -122,6 +122,11 @@ class Apikey extends AbstractApi
             'dataType' => 'int',
             'required' => false
             ),
+        'InactiveReason' => array(
+            'name' => 'InactiveReason',
+            'dataType' => 'string',
+            'required' => false
+            ),
         'IsActive' => array(
             'name' => 'IsActive',
             'dataType' => 'bool',

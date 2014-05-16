@@ -63,6 +63,10 @@ class Sender extends AbstractApi
      * Supported Filters
      */
     protected $filters = array(
+        'ConfirmKey' => array(
+            'name' => 'ConfirmKey',
+            'required' => false
+            ),
         'Domain' => array(
             'name' => 'Domain',
             'required' => false
@@ -89,6 +93,11 @@ class Sender extends AbstractApi
      * Supported properties
      */
     protected $properties = array(
+        'ConfirmKey' => array(
+            'name' => 'ConfirmKey',
+            'dataType' => 'string',
+            'required' => false
+            ),
         'CreatedAt' => array(
             'name' => 'CreatedAt',
             'dataType' => '\Datetime',
@@ -160,6 +169,18 @@ class Sender extends AbstractApi
     public function getList(array $filters = array())
     {
         return parent::_list($filters);
+    }
+
+    /**
+     * Return list of Mailjet\Model\Sender with ConfirmKey = $ConfirmKey
+     *
+     * @param string
+     * @return ResultSet\ResultSet
+     */
+    public function getByConfirmKey($ConfirmKey)
+    {
+        $result = $this->getList(array('ConfirmKey' => $ConfirmKey));
+        return $result;
     }
 
     /**

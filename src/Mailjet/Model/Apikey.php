@@ -68,6 +68,11 @@ class Apikey implements ModelInterface
     protected $ID = null;
 
     /**
+     * Reason why this API Key is inactive.
+     */
+    protected $InactiveReason = null;
+
+    /**
      * Is this API Key active ?.
      */
     protected $IsActive = false;
@@ -188,6 +193,28 @@ class Apikey implements ModelInterface
     public function getID()
     {
         return $this->ID;
+    }
+
+    /**
+     * Sets the Reason why this API Key is inactive.
+     *
+     * @param string
+     * @return Apikey
+     */
+    public function setInactiveReason($InactiveReason = null)
+    {
+        $this->InactiveReason = $InactiveReason;
+        return $this;
+    }
+
+    /**
+     * Gets the Reason why this API Key is inactive.
+     *
+     * @return string
+     */
+    public function getInactiveReason()
+    {
+        return $this->InactiveReason;
     }
 
     /**

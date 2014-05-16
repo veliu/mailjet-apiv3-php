@@ -48,6 +48,11 @@ class Sender implements ModelInterface
 {
 
     /**
+     * Key used when confirming validity of this sender.
+     */
+    protected $ConfirmKey = 'Automatically generated value';
+
+    /**
      * Timestamp when object was created in database.
      */
     protected $CreatedAt = 'Current time';
@@ -92,6 +97,28 @@ class Sender implements ModelInterface
      * Status of the sender.
      */
     protected $Status = 'Calculated from the Email';
+
+    /**
+     * Sets the Key used when confirming validity of this sender.
+     *
+     * @param string
+     * @return Sender
+     */
+    public function setConfirmKey($ConfirmKey = null)
+    {
+        $this->ConfirmKey = $ConfirmKey;
+        return $this;
+    }
+
+    /**
+     * Gets the Key used when confirming validity of this sender.
+     *
+     * @return string
+     */
+    public function getConfirmKey()
+    {
+        return $this->ConfirmKey;
+    }
 
     /**
      * Sets the Timestamp when object was created in database.
