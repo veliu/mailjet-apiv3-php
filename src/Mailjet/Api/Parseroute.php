@@ -45,7 +45,7 @@ use Zend\InputFilter;
  *
  * ParseRoute description
  *
- * @see http://mjdemo.poxx.net/~shubham/parseroute.html
+ * @see http://dev.mailjet.com/email-api/v3/parseroute/
  */
 class Parseroute extends AbstractApi
 {

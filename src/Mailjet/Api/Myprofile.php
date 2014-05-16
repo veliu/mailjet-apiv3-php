@@ -46,7 +46,7 @@ use Zend\InputFilter;
  *
  * Manage user profile data such as address, payment information etc.
  *
- * @see http://mjdemo.poxx.net/~shubham/myprofile.html
+ * @see http://dev.mailjet.com/email-api/v3/myprofile/
  */
 class Myprofile extends AbstractApi
 {

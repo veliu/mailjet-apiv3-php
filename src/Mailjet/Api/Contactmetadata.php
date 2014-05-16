@@ -45,7 +45,7 @@ use Zend\InputFilter;
  *
  * Definition of available extra data items for contacts.
  *
- * @see http://mjdemo.poxx.net/~shubham/contactmetadata.html
+ * @see http://dev.mailjet.com/email-api/v3/contactmetadata/
  */
 class Contactmetadata extends AbstractApi
 {

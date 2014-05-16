@@ -46,7 +46,7 @@ use \Datetime;
  *
  * API Campaign/message/click statistics grouped over intervals.
  *
- * @see http://mjdemo.poxx.net/~shubham/graphstatistics.html
+ * @see http://dev.mailjet.com/email-api/v3/graphstatistics/
  */
 class Graphstatistics extends AbstractApi
 {

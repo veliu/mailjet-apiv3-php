@@ -47,7 +47,7 @@ use \Datetime;
  *
  * Newsletter data.
  *
- * @see http://mjdemo.poxx.net/~shubham/newsletter.html
+ * @see http://dev.mailjet.com/email-api/v3/newsletter/
  */
 class Newsletter extends AbstractApi
 {

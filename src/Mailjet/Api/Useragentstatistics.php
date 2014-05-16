@@ -48,7 +48,7 @@ use \Datetime;
  * Contacts List.API Key message Open/Click statistical data grouped per user agent
  * (browser).
  *
- * @see http://mjdemo.poxx.net/~shubham/useragentstatistics.html
+ * @see http://dev.mailjet.com/email-api/v3/useragentstatistics/
  */
 class Useragentstatistics extends AbstractApi
 {

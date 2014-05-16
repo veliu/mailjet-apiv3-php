@@ -46,7 +46,7 @@ use Zend\InputFilter;
  * Describes a block of HTML data contained inside a Newsletter Template.HTML data
  * for a block from a newsletter template.
  *
- * @see http://mjdemo.poxx.net/~shubham/newslettertemplateblock.html
+ * @see http://dev.mailjet.com/email-api/v3/newslettertemplateblock/
  */
 class Newslettertemplateblock extends AbstractApi
 {

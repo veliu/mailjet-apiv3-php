@@ -45,7 +45,7 @@ use Zend\InputFilter;
  *
  * Global counts for an API Key, since its creation.
  *
- * @see http://mjdemo.poxx.net/~shubham/apikeytotals.html
+ * @see http://dev.mailjet.com/email-api/v3/apikeytotals/
  */
 class Apikeytotals extends AbstractApi
 {

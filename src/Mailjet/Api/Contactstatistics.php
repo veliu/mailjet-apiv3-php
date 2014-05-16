@@ -47,7 +47,7 @@ use \Datetime;
  *
  * View message statistics for a given contact.
  *
- * @see http://mjdemo.poxx.net/~shubham/contactstatistics.html
+ * @see http://dev.mailjet.com/email-api/v3/contactstatistics/
  */
 class Contactstatistics extends AbstractApi
 {

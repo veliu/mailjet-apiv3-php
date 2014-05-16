@@ -45,7 +45,7 @@ use Zend\InputFilter;
  *
  * Message state reference.
  *
- * @see http://mjdemo.poxx.net/~shubham/messagestate.html
+ * @see http://dev.mailjet.com/email-api/v3/messagestate/
  */
 class Messagestate extends AbstractApi
 {

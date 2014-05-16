@@ -46,7 +46,7 @@ use Zend\InputFilter;
  *
  * Event history of a message.
  *
- * @see http://mjdemo.poxx.net/~shubham/messagehistory.html
+ * @see http://dev.mailjet.com/email-api/v3/messagehistory/
  */
 class Messagehistory extends AbstractApi
 {

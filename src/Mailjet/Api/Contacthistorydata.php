@@ -48,7 +48,7 @@ use \Datetime;
  * This resource can be used to examine the associated extra historical data of a
  * contact.
  *
- * @see http://mjdemo.poxx.net/~shubham/contacthistorydata.html
+ * @see http://dev.mailjet.com/email-api/v3/contacthistorydata/
  */
 class Contacthistorydata extends AbstractApi
 {

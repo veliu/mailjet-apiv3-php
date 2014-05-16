@@ -47,7 +47,7 @@ use \Datetime;
  *
  * Statistics related to emails processed by Mailjet, grouped in a Campaign.
  *
- * @see http://mjdemo.poxx.net/~shubham/campaignstatistics.html
+ * @see http://dev.mailjet.com/email-api/v3/campaignstatistics/
  */
 class Campaignstatistics extends AbstractApi
 {

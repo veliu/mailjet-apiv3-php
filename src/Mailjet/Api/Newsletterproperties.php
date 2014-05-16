@@ -45,7 +45,7 @@ use Zend\InputFilter;
  *
  * CSS data for a newsletter.
  *
- * @see http://mjdemo.poxx.net/~shubham/newsletterproperties.html
+ * @see http://dev.mailjet.com/email-api/v3/newsletterproperties/
  */
 class Newsletterproperties extends AbstractApi
 {

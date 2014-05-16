@@ -50,7 +50,7 @@ use Mailjet\Type\TCustomStatus;
  * Manage your Mailjet API Keys. API keys are used as credentials to access the API
  * and SMTP server.
  *
- * @see http://mjdemo.poxx.net/~shubham/apikey.html
+ * @see http://dev.mailjet.com/email-api/v3/apikey/
  */
 class Apikey extends AbstractApi
 {

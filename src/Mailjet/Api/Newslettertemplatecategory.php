@@ -46,7 +46,7 @@ use Zend\InputFilter;
  * Manage categories for your newsletters. Allows you to group newsletters by
  * category.
  *
- * @see http://mjdemo.poxx.net/~shubham/newslettertemplatecategory.html
+ * @see http://dev.mailjet.com/email-api/v3/newslettertemplatecategory/
  */
 class Newslettertemplatecategory extends AbstractApi
 {

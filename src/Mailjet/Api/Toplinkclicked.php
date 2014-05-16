@@ -46,7 +46,7 @@ use \Datetime;
  *
  * Top links clicked historgram.
  *
- * @see http://mjdemo.poxx.net/~shubham/toplinkclicked.html
+ * @see http://dev.mailjet.com/email-api/v3/toplinkclicked/
  */
 class Toplinkclicked extends AbstractApi
 {

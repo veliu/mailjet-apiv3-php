@@ -47,7 +47,7 @@ use \Datetime;
  *
  * Click statistics for messages.
  *
- * @see http://mjdemo.poxx.net/~shubham/clickstatistics.html
+ * @see http://dev.mailjet.com/email-api/v3/clickstatistics/
  */
 class Clickstatistics extends AbstractApi
 {

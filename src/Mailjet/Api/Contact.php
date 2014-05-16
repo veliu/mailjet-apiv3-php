@@ -47,7 +47,7 @@ use \Datetime;
  *
  * Manage the details of a Contact.
  *
- * @see http://mjdemo.poxx.net/~shubham/contact.html
+ * @see http://dev.mailjet.com/email-api/v3/contact/
  */
 class Contact extends AbstractApi
 {

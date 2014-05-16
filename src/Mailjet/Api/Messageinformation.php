@@ -47,7 +47,7 @@ use \Datetime;
  *
  * API Key campaign/message information.
  *
- * @see http://mjdemo.poxx.net/~shubham/messageinformation.html
+ * @see http://dev.mailjet.com/email-api/v3/messageinformation/
  */
 class Messageinformation extends AbstractApi
 {

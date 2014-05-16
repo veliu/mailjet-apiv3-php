@@ -45,7 +45,7 @@ use Zend\InputFilter;
  *
  * Contacts list signup request.
  *
- * @see http://mjdemo.poxx.net/~shubham/contactslistsignup.html
+ * @see http://dev.mailjet.com/email-api/v3/contactslistsignup/
  */
 class Contactslistsignup extends AbstractApi
 {

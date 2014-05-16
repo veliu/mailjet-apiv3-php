@@ -47,7 +47,7 @@ use Zend\InputFilter;
  * Manage your contact lists. One Contact might be associated to one or more
  * ContactsList.
  *
- * @see http://mjdemo.poxx.net/~shubham/contactslist.html
+ * @see http://dev.mailjet.com/email-api/v3/contactslist/
  */
 class Contactslist extends AbstractApi
 {

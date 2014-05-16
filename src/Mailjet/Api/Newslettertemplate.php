@@ -46,7 +46,7 @@ use Zend\InputFilter;
  *
  * Manages a Newsletter Template Properties.
  *
- * @see http://mjdemo.poxx.net/~shubham/newslettertemplate.html
+ * @see http://dev.mailjet.com/email-api/v3/newslettertemplate/
  */
 class Newslettertemplate extends AbstractApi
 {

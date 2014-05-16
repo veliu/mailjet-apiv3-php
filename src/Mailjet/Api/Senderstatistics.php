@@ -46,7 +46,7 @@ use Zend\InputFilter;
  *
  * API Key sender email address message/open/click statistical information.
  *
- * @see http://mjdemo.poxx.net/~shubham/senderstatistics.html
+ * @see http://dev.mailjet.com/email-api/v3/senderstatistics/
  */
 class Senderstatistics extends AbstractApi
 {

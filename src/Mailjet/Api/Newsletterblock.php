@@ -45,7 +45,7 @@ use Zend\InputFilter;
  *
  * HTML data for a block from a newsletter.
  *
- * @see http://mjdemo.poxx.net/~shubham/newsletterblock.html
+ * @see http://dev.mailjet.com/email-api/v3/newsletterblock/
  */
 class Newsletterblock extends AbstractApi
 {

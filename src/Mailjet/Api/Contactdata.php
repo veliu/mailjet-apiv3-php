@@ -47,7 +47,7 @@ use \Datetime;
  * This resource can be used to examine and manipulate the associated extra static
  * data of a contact.
  *
- * @see http://mjdemo.poxx.net/~shubham/contactdata.html
+ * @see http://dev.mailjet.com/email-api/v3/contactdata/
  */
 class Contactdata extends AbstractApi
 {

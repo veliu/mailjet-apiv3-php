@@ -45,7 +45,7 @@ use Zend\InputFilter;
  *
  * A list of filter expressions for use in newsletters.
  *
- * @see http://mjdemo.poxx.net/~shubham/contactfilter.html
+ * @see http://dev.mailjet.com/email-api/v3/contactfilter/
  */
 class Contactfilter extends AbstractApi
 {
