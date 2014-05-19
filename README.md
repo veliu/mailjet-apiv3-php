@@ -25,18 +25,26 @@ or download the zip tarball
 https://github.com/mailjet/mailjet-apiv3-php/archive/master.zip
 ```
 
+Go into the mailjet-apiv3-php folder and create a empty file named ```mailjetapi.php```
+```
+cd mailjet-apiv3-php
+touch mailjetapi.php
+```
+
 Then use Composer install
 ```
 curl -s https://getcomposer.org/installer | php
 php composer.phar install
 ```
 
+You are now ready to go !
+
 ## Usage
 
 To use the Mailjet PHP library ensure you've installed it correctly then simply create a file in which you will write your code.
-Create an empty file and name it ```mailjetapi.php```.
 
 The first thing to do is to import the required namespaces and files:
+**Be Careful:** Make sure that you are in the correct folder
 ```php
 include_once __DIR__ . '/vendor/autoload.php';
 use Mailjet\Api as MailjetApi;
@@ -57,55 +65,39 @@ Now the fun begins, create a new object which takes as arguments your credential
 $wrapper = new MailjetApi\Api($APIKey, $secretKey);
 ```
 
-This basically, starts the engine. Now what you're going to do next depends on what you want to POST, DELETE, PUT or GET from the Mailjet servers throught the API.
+This basically starts the engine. Now what you're going to do next depends on what you want to POST, DELETE, PUT or GET from the Mailjet servers throught the API.
+Take a tour on the [Reference documentation](http://dev.mailjet.com/email-api/v3/apikey/) to see all the resources available.
 
-Next you will specifying which resource to call this way:
+Next you will specify which resource to call this way:
 ```php
-$wrapper->resourceName()
+$wrapper->resourceName();
 ```
-For example if I want to use the resource ApiKey (which tells me a bunch of information about my ApiKey) I will do:
-```php
-$wrapper->apikey()
-```
-
-*NOTE:* Make sure you've been using the correct namespace at the start of the file, each resource has its own namespace.
-
 ## Examples
+For example if I want to use the resource Contact (which tells me a bunch of information about my Contacts) I will do:
+```php
+$contact = $wrapper->contact()->init();
+$myContactList = $contact->getList()->toArray();
+
+// Here is how to list all your contacts
+print_r($myContactList);
+```
+
+
 A function that creates a list of contacts ```$Lname```
 ```php
 function createList($wrapper,$Lname) {
-     $apicall = $wrapper->contactslist();
-     $newList = new Contactslist();
-     $newList->setName($Lname);
-     $createList = $apicall->create($newList);
-     echo "success - created list\n";
-     return $createList->getID();
-}
-```
+  $apicall = $wrapper->contactslist();
+  $apicall->init();
 
-A function that creates a Contact ```$buddy```
-```php
-function createContact($wrapper, $buddy) {
-     $apicall = $wrapper->contact();
-     $newContact = new Contact();
-     $newContact->setEmail($buddy);
-     $createContact = $apicall->create($newContact);
-     echo "success - created contact\n";
-     return $createContact->getID();
-}
-```
+  $newList = new Mailjet\Model\Contactslist();
+  $newList->setName("MyListName");
 
-A function that adds a given contact ID ```$buddyID``` to a given list ```$ListID```
-```php
-function addContactToList($wrapper,$ListID,$buddyID) {
-    $apicall = $wrapper->Listrecipient();
-    $newContactToList = new Listrecipient();
-    $newContactToList->setListID($ListID);
-    $newContactToList->setContactID($buddyID);
-    $addContactToList = $apicall->create($newContactToList);
-    echo "success - created contact to list\n";
-    return $addContactToList;
+  $createList = $apicall->create($newList);
+
+  echo "success - created list\n";
+  return $createList->getID();
 }
+
 ```
 
 ## Reporting issues
