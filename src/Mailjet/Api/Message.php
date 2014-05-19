@@ -47,7 +47,7 @@ use Zend\InputFilter;
  * Allows you to list and view the details of a Message (an e-mail) processed by
  * Mailjet
  *
- * @see http://dev.mailjet.com/email-api/v3/message/
+ * @see http://mjdemo.poxx.net/~shubham/message.html
  */
 class Message extends AbstractApi
 {

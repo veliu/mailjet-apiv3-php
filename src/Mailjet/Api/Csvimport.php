@@ -44,7 +44,7 @@ use Zend\InputFilter;
 /**
  * Csvimport Api
  *
- * @see http://dev.mailjet.com/email-api/v3/csvimport/
+ * @see http://mjdemo.poxx.net/~shubham/csvimport.html
  */
 class Csvimport extends AbstractApi
 {

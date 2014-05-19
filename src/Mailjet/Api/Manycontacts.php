@@ -47,7 +47,7 @@ use Zend\InputFilter;
  *
  * Manage contacts within a contactlist in a single call
  *
- * @see http://dev.mailjet.com/email-api/v3/manycontacts/
+ * @see http://mjdemo.poxx.net/~shubham/manycontacts.html
  */
 class Manycontacts extends AbstractApi
 {

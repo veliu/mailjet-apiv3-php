@@ -46,7 +46,7 @@ use Zend\InputFilter;
  *
  * Mailjet API meta data.
  *
- * @see http://dev.mailjet.com/email-api/v3/metadata/
+ * @see http://mjdemo.poxx.net/~shubham/metadata.html
  */
 class Metadata extends AbstractApi
 {

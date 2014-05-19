@@ -46,7 +46,7 @@ use Zend\InputFilter;
  *
  * User account definition for Mailjet.
  *
- * @see http://dev.mailjet.com/email-api/v3/user/
+ * @see http://mjdemo.poxx.net/~shubham/user.html
  */
 class User extends AbstractApi
 {

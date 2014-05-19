@@ -46,7 +46,7 @@ use \Datetime;
  *
  * View Campaign/Message/Click statistics grouped per domain.
  *
- * @see http://dev.mailjet.com/email-api/v3/domainstatistics/
+ * @see http://mjdemo.poxx.net/~shubham/domainstatistics.html
  */
 class Domainstatistics extends AbstractApi
 {

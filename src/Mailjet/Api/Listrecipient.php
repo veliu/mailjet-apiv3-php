@@ -47,7 +47,7 @@ use \Datetime;
  *
  * Manage the relationship between a contact and a contactslists.
  *
- * @see http://dev.mailjet.com/email-api/v3/listrecipient/
+ * @see http://mjdemo.poxx.net/~shubham/listrecipient.html
  */
 class Listrecipient extends AbstractApi
 {

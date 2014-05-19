@@ -46,7 +46,7 @@ use \Datetime;
  *
  * Retrieve statistics on e-mails opened at least once by their recipients.
  *
- * @see http://dev.mailjet.com/email-api/v3/openstatistics/
+ * @see http://mjdemo.poxx.net/~shubham/openstatistics.html
  */
 class Openstatistics extends AbstractApi
 {

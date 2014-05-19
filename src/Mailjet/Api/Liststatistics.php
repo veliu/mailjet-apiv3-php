@@ -46,7 +46,7 @@ use Zend\InputFilter;
  *
  * View Campaign/message/click statistics grouped by ContactsList.
  *
- * @see http://dev.mailjet.com/email-api/v3/liststatistics/
+ * @see http://mjdemo.poxx.net/~shubham/liststatistics.html
  */
 class Liststatistics extends AbstractApi
 {

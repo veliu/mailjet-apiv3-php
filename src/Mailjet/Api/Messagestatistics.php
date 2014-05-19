@@ -46,7 +46,7 @@ use \Datetime;
  *
  * API key Campaign/Message statistics.
  *
- * @see http://dev.mailjet.com/email-api/v3/messagestatistics/
+ * @see http://mjdemo.poxx.net/~shubham/messagestatistics.html
  */
 class Messagestatistics extends AbstractApi
 {

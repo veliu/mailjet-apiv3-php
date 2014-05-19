@@ -47,7 +47,7 @@ use Zend\InputFilter;
  * include on your website to ease the process of subscribing to a Contacts
  * List.Mailjet widget definitions.
  *
- * @see http://dev.mailjet.com/email-api/v3/widget/
+ * @see http://mjdemo.poxx.net/~shubham/widget.html
  */
 class Widget extends AbstractApi
 {

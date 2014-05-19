@@ -45,7 +45,7 @@ use Zend\InputFilter;
  *
  * User preferences in key=value format.
  *
- * @see http://dev.mailjet.com/email-api/v3/preferences/
+ * @see http://mjdemo.poxx.net/~shubham/preferences.html
  */
 class Preferences extends AbstractApi
 {

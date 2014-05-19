@@ -49,7 +49,7 @@ use Zend\InputFilter;
  * registered and Confirmed before being used to send e-mails. See the related
  * MetaSender object if you wish to register a complete Domain.
  *
- * @see http://dev.mailjet.com/email-api/v3/sender/
+ * @see http://mjdemo.poxx.net/~shubham/sender.html
  */
 class Sender extends AbstractApi
 {

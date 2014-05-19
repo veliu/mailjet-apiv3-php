@@ -47,7 +47,7 @@ use \Datetime;
  *
  * View statistics on Messages sent to the recipients of a given list.
  *
- * @see http://dev.mailjet.com/email-api/v3/listrecipientstatistics/
+ * @see http://mjdemo.poxx.net/~shubham/listrecipientstatistics.html
  */
 class Listrecipientstatistics extends AbstractApi
 {

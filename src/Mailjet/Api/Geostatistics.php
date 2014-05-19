@@ -46,7 +46,7 @@ use \Datetime;
  *
  * Message click/open statistics grouped per country
  *
- * @see http://dev.mailjet.com/email-api/v3/geostatistics/
+ * @see http://mjdemo.poxx.net/~shubham/geostatistics.html
  */
 class Geostatistics extends AbstractApi
 {

@@ -46,7 +46,7 @@ use Zend\InputFilter;
  * Manage event-driven callback URLs, also called webhooks, used by the Mailjet
  * platform when a specific action is triggered
  *
- * @see http://dev.mailjet.com/email-api/v3/eventcallbackurl/
+ * @see http://mjdemo.poxx.net/~shubham/eventcallbackurl.html
  */
 class Eventcallbackurl extends AbstractApi
 {

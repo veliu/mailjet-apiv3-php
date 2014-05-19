@@ -48,7 +48,7 @@ use Zend\InputFilter;
  * registered and validated before being used. See the related Sender object if you
  * wish to register a given e-mail address.
  *
- * @see http://dev.mailjet.com/email-api/v3/metasender/
+ * @see http://mjdemo.poxx.net/~shubham/metasender.html
  */
 class Metasender extends AbstractApi
 {

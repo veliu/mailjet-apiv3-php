@@ -47,7 +47,7 @@ use Zend\InputFilter;
  * Access token for API, used to give access to an API Key in conjunction with our
  * IFrame API.
  *
- * @see http://dev.mailjet.com/email-api/v3/apitoken/
+ * @see http://mjdemo.poxx.net/~shubham/apitoken.html
  */
 class Apitoken extends AbstractApi
 {

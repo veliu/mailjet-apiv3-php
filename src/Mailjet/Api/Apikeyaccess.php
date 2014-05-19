@@ -46,7 +46,7 @@ use Zend\InputFilter;
  *
  * Access rights description on API keys for subaccounts/users.
  *
- * @see http://dev.mailjet.com/email-api/v3/apikeyaccess/
+ * @see http://mjdemo.poxx.net/~shubham/apikeyaccess.html
  */
 class Apikeyaccess extends AbstractApi
 {

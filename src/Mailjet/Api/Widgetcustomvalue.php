@@ -46,7 +46,7 @@ use Zend\InputFilter;
  * Specifics settings for a given Mailjet Widget. See Widget.Mailjet widget
  * settings.
  *
- * @see http://dev.mailjet.com/email-api/v3/widgetcustomvalue/
+ * @see http://mjdemo.poxx.net/~shubham/widgetcustomvalue.html
  */
 class Widgetcustomvalue extends AbstractApi
 {

@@ -45,7 +45,7 @@ use Zend\InputFilter;
  *
  * Triggers for outgoing events.
  *
- * @see http://dev.mailjet.com/email-api/v3/trigger/
+ * @see http://mjdemo.poxx.net/~shubham/trigger.html
  */
 class Trigger extends AbstractApi
 {

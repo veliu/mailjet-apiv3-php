@@ -47,7 +47,7 @@ use \Datetime;
  *
  * Retrieve informations about messages opened at least once by their recipients.
  *
- * @see http://dev.mailjet.com/email-api/v3/openinformation/
+ * @see http://mjdemo.poxx.net/~shubham/openinformation.html
  */
 class Openinformation extends AbstractApi
 {

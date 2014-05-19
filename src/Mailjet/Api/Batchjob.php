@@ -46,7 +46,7 @@ use \Datetime;
  *
  * Batch jobs running on the Mailjet infrastructure. Currently not documented.
  *
- * @see hhttp://dev.mailjet.com/email-api/v3/batchjob/
+ * @see http://mjdemo.poxx.net/~shubham/batchjob.html
  */
 class Batchjob extends AbstractApi
 {
