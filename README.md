@@ -25,7 +25,7 @@ or download the zip tarball
 https://github.com/mailjet/mailjet-apiv3-php/archive/master.zip
 ```
 
-Go into the mailjet-apiv3-php folder and create a empty file named ```mailjetapi.php```
+Go into the mailjet-apiv3-php folder and create an empty file named ```mailjetapi.php```
 ```
 cd mailjet-apiv3-php
 touch mailjetapi.php
@@ -41,7 +41,7 @@ You are now ready to go !
 
 ## Usage
 
-To use the Mailjet PHP library ensure you've installed it correctly then simply create a file in which you will write your code.
+To use the Mailjet PHP library, ensure you've installed it correctly, then simply create a file in which you will write your code.
 
 The first thing to do is to import the required namespaces and files:
 **Be Careful:** Make sure that you are in the correct folder
@@ -51,7 +51,7 @@ use Mailjet\Api as MailjetApi;
 use Mailjet\Model\Apitoken;
 ```
 
-**Be Careful:** Make sure you've kept the directory structure intact or the include function will not be able to find the file which autoloads the wrapper's classes
+**Be Careful:** Make sure you've kept the directory structure intact or the include function will not be able to find the file which autoloads the wrapper's classes.
 Next, you will add your credentials:
 ```php
 $APIKey    = 'MY_API_KEY_VALUE';
@@ -77,15 +77,26 @@ For example if I want to use the resource Contact (which tells me a bunch of inf
 ```php
 $contact = $wrapper->contact()->init();
 $myContactList = $contact->getList()->toArray();
+```
 
-// Here is how to list all your contacts
+Now I print them
+```php
 print_r($myContactList);
 ```
 
-
-A function that creates a list of contacts ```$Lname```
+In summary, here is a function to list your contacts:
 ```php
-function createList($wrapper,$Lname) {
+function listContacts() {
+  $contact = $wrapper->contact()->init();
+  $myContactList = $contact->getList()->toArray();
+  
+  return $myContactList;
+}
+```
+
+A function that creates a list of contacts with name ```$Lname```
+```php
+function createList($wrapper, $Lname) {
   $apicall = $wrapper->contactslist();
   $apicall->init();
 
@@ -94,10 +105,67 @@ function createList($wrapper,$Lname) {
 
   $createList = $apicall->create($newList);
 
-  echo "success - created list\n";
+  echo "success - created list";
   return $createList->getID();
 }
+```
 
+A function that creates a contact with name ```$Cname```
+```php
+function createContact($wrapper, $Cname) {
+  $apicall = $wrapper->contact();
+  $apicall->init();
+
+  $newContact = new Mailjet\Model\Contact();
+  $newContact->setName($Cname);
+
+  $createContact = $apicall->create($newContact);
+
+  echo "success - created contact";
+  return $createContact->getID();
+}
+```
+
+A function that adds the contact with contact ID ```$contactID``` to the list with list ID ```$listID```
+```php
+function addContactToList($wrapper, $ListID, $contactID) {
+  $apicall = $wrapper->Listrecipient();
+  $apicall->init();
+  $newContactToList = new Mailjet\Model\Listrecipient();
+  $newContactToList->setListID($ListID);
+  $newContactToList->setContactID($contactID);
+
+  $addContactToList = $apicall->create($newContactToList);
+  echo "success - created contact to list";
+
+  return $addContactToList;
+}
+```
+
+A function that prints your profile information
+```php
+function viewProfileInfo($wrapper) {
+  $apicall = $wrapper->myprofile();
+  $apicall->init();
+  
+  $myProfile = $apicall->getList()->toArray()[0];
+
+  print_r($myProfile);
+}
+```
+
+A function that updates the website field of your profile information
+```php
+function updateProfileInfo($wrapper, $userID) {
+  $apicall = $wrapper->myprofile();
+  $apicall->init();
+
+  $newProfile = $apicall->getbyuser($userID);
+  $updateP = $newProfile->current()->setWebsite("www.mailjet.com");
+  $apicall->update($updateP);
+
+  echo "success - field website changed";
+}
 ```
 
 ## Reporting issues
