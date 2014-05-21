@@ -1,4 +1,4 @@
-# Mailjet PHP Wrapper for API v3
+# Mailjet (Zend) PHP Wrapper for API v3
 
 ## Introduction
 
