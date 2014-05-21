@@ -110,14 +110,14 @@ function createList($wrapper, $Lname) {
 }
 ```
 
-A function that creates a contact with name ```$Cname```
+A function that creates a contact with email ```$Cemail```
 ```php
-function createContact($wrapper, $Cname) {
+function createContact($wrapper, $Cemail) {
   $apicall = $wrapper->contact();
   $apicall->init();
 
   $newContact = new Mailjet\Model\Contact();
-  $newContact->setName($Cname);
+  $newContact->setEmail($Cemail);
 
   $createContact = $apicall->create($newContact);
 
