@@ -65,7 +65,7 @@ Now the fun begins, create a new object which takes as arguments your credential
 $wrapper = new MailjetApi\Api($APIKey, $secretKey);
 ```
 
-This basically starts the engine. Now what you're going to do next depends on what you want to POST, DELETE, PUT or GET from the Mailjet servers throught the API.
+This basically starts the engine. Now what you're going to do next depends on what you want to POST, DELETE, PUT or GET from the Mailjet servers through the API.
 Take a tour on the [Reference documentation](http://dev.mailjet.com/email-api/v3/apikey/) to see all the resources available.
 
 Next you will specify which resource to call this way:
