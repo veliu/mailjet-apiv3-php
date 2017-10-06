@@ -1,6 +1,7 @@
 
 [doc]: http://dev.mailjet.com/guides/?php#
 [api_credential]: https://app.mailjet.com/account/api_keys
+[Add slack integration]
 [mailjet]: http://www.mailjet.com
 
 ![alt text](http://cdn.appstorm.net/web.appstorm.net/files/2012/02/mailjet_logo_200x200.png "Mailjet")
