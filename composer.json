@@ -1,14 +1,14 @@
 {
-    "name": "mailjet/mailjet-apiv3-php",
-    "description": "PHP wrapper for the Mailjet API",
+    "name": "lyska/mailjet-apiv3-php",
+    "description": "PHP wrapper for the Mailjet API with updated dependencies",
     "keywords": ["mailjet", "api", "v3", "php", "email"],
-    "homepage": "https://github.com/mailjet/mailjet-apiv3-php/",
+    "homepage": "https://github.com/veliu/mailjet-apiv3-php",
     "license": "MIT",
     "authors": [
         {
-            "name": "Mailjet",
-            "email": "dev@mailjet.com",
-            "homepage": "https://dev.mailjet.com"
+            "name": "Lyska",
+            "email": "service@lyska.io",
+            "homepage": "https://lyska.cloud"
         }
     ],
     "require": {
